@@ -1,0 +1,175 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * RESUME SCREENING SYSTEM - SECURITY RULES
+     * 
+     * CORE PHILOSOPHY:
+     * This ruleset implements a shared-access model designed for a professional recruiting team. 
+     * Access is strictly restricted to authenticated users. While the system currently treats 
+     * all authenticated users as part of the same organization (allowing team-wide visibility 
+     * of resumes and job descriptions), the rules enforce strict relational integrity to 
+     * ensure data consistency across the hierarchical structure.
+     * 
+     * DATA STRUCTURE:
+     * - /resumes/{resumeId}: Top-level documents for candidate resumes.
+     *   - /education, /experience, /certifications: Subcollections containing parsed data linked to the parent resume.
+     * - /jobDescriptions/{jobDescriptionId}: Top-level documents for job openings.
+     *   - /jobEducationRequirements, etc.: Subcollections detailing specific job needs.
+     * - /skills: A global master list of skills used for semantic matching.
+     * - /matchResults: Computation results linking resumes to job descriptions.
+     * 
+     * KEY SECURITY DECISIONS:
+     * 1. Verified Identity: All read and write operations require a valid Firebase Authentication token.
+     * 2. Team-Based Collaboration: To support a recruiter-team workflow, all authenticated users 
+     *    can view and manage resumes and job descriptions.
+     * 3. Relational Integrity: Rules strictly enforce that subcollection documents correctly 
+     *    reference their parent document's ID (e.g., an Education entry must contain the correct resumeId).
+     * 4. Denormalization for Attribution: The system expects an 'uploaderId' field on primary entities 
+     *    to track document creation, facilitating future migrations to private-ownership models if needed.
+     */
+
+    // --- Helper Functions ---
+
+    /** @description Checks if the request is from a signed-in user. */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /** @description Checks if the document exists for update or delete operations. */
+    function isExistingDoc() {
+      return resource != null;
+    }
+
+    /** @description Validates that the internal 'id' field matches the document ID in the path. */
+    function matchesPathId(fieldId, pathId) {
+      return fieldId == pathId;
+    }
+
+    /** @description Ensures a field remains unchanged during an update. */
+    function isImmutable(fieldName) {
+      return request.resource.data[fieldName] == resource.data[fieldName];
+    }
+
+    // --- Collection Rules ---
+
+    /**
+     * @description Rules for the Resume collection. Allows team-wide access for authenticated users.
+     * @path /resumes/{resumeId}
+     * @allow (create) Signed-in user provides a resume where data.id matches the path ID.
+     * @deny (create) Unauthenticated user or mismatched ID.
+     * @principle Verified Identity and Relational Integrity.
+     */
+    match /resumes/{resumeId} {
+      allow get, list: if isSignedIn();
+      allow create: if isSignedIn() && matchesPathId(request.resource.data.id, resumeId);
+      allow update: if isSignedIn() && isExistingDoc() && isImmutable('id');
+      allow delete: if isSignedIn() && isExistingDoc();
+
+      /**
+       * @description Rules for Education subcollection. Enforces linkage to the parent resume.
+       * @path /resumes/{resumeId}/education/{educationId}
+       * @allow (create) Signed-in user creates entry where data.resumeId matches the parent path.
+       * @deny (create) Entry created with a resumeId that doesn't match the URL path.
+       * @principle Relational Integrity.
+       */
+      match /education/{educationId} {
+        allow get, list: if isSignedIn();
+        allow create: if isSignedIn() && matchesPathId(request.resource.data.resumeId, resumeId);
+        allow update: if isSignedIn() && isExistingDoc() && isImmutable('resumeId');
+        allow delete: if isSignedIn() && isExistingDoc();
+      }
+
+      /**
+       * @description Rules for Experience subcollection.
+       * @path /resumes/{resumeId}/experience/{experienceId}
+       */
+      match /experience/{experienceId} {
+        allow get, list: if isSignedIn();
+        allow create: if isSignedIn() && matchesPathId(request.resource.data.resumeId, resumeId);
+        allow update: if isSignedIn() && isExistingDoc() && isImmutable('resumeId');
+        allow delete: if isSignedIn() && isExistingDoc();
+      }
+
+      /**
+       * @description Rules for Certifications subcollection.
+       * @path /resumes/{resumeId}/certifications/{certificationId}
+       */
+      match /certifications/{certificationId} {
+        allow get, list: if isSignedIn();
+        allow create: if isSignedIn() && matchesPathId(request.resource.data.resumeId, resumeId);
+        allow update: if isSignedIn() && isExistingDoc() && isImmutable('resumeId');
+        allow delete: if isSignedIn() && isExistingDoc();
+      }
+    }
+
+    /**
+     * @description Rules for Job Descriptions. Includes shared team access and path consistency.
+     * @path /jobDescriptions/{jobDescriptionId}
+     * @allow (get) Any authenticated user views a job description.
+     * @deny (delete) Unauthenticated user attempts to remove a job post.
+     * @principle Verified Identity and Relational Integrity.
+     */
+    match /jobDescriptions/{jobDescriptionId} {
+      allow get, list: if isSignedIn();
+      allow create: if isSignedIn() && matchesPathId(request.resource.data.id, jobDescriptionId);
+      allow update: if isSignedIn() && isExistingDoc() && isImmutable('id');
+      allow delete: if isSignedIn() && isExistingDoc();
+
+      /**
+       * @description Rules for Job Requirements subcollections.
+       * @path /jobDescriptions/{jobDescriptionId}/jobEducationRequirements/{id}
+       */
+      match /jobEducationRequirements/{requirementId} {
+        allow get, list: if isSignedIn();
+        allow create: if isSignedIn() && matchesPathId(request.resource.data.jobDescriptionId, jobDescriptionId);
+        allow update: if isSignedIn() && isExistingDoc() && isImmutable('jobDescriptionId');
+        allow delete: if isSignedIn() && isExistingDoc();
+      }
+
+      match /jobExperienceRequirements/{requirementId} {
+        allow get, list: if isSignedIn();
+        allow create: if isSignedIn() && matchesPathId(request.resource.data.jobDescriptionId, jobDescriptionId);
+        allow update: if isSignedIn() && isExistingDoc() && isImmutable('jobDescriptionId');
+        allow delete: if isSignedIn() && isExistingDoc();
+      }
+
+      match /jobCertificationRequirements/{requirementId} {
+        allow get, list: if isSignedIn();
+        allow create: if isSignedIn() && matchesPathId(request.resource.data.jobDescriptionId, jobDescriptionId);
+        allow update: if isSignedIn() && isExistingDoc() && isImmutable('jobDescriptionId');
+        allow delete: if isSignedIn() && isExistingDoc();
+      }
+    }
+
+    /**
+     * @description Rules for the Skills master list. Shared vocabulary for the system.
+     * @path /skills/{skillId}
+     * @allow (list) Signed-in user retrieves the full skills list for tagging/filtering.
+     * @deny (write) Any unauthenticated request.
+     * @principle Verified Identity.
+     */
+    match /skills/{skillId} {
+      allow get, list: if isSignedIn();
+      allow create: if isSignedIn() && matchesPathId(request.resource.data.id, skillId);
+      allow update: if isSignedIn() && isExistingDoc() && isImmutable('id');
+      allow delete: if isSignedIn() && isExistingDoc();
+    }
+
+    /**
+     * @description Rules for MatchResults. Restricted to authenticated users/automated system agents.
+     * @path /matchResults/{matchResultId}
+     * @allow (create) Authenticated system/user stores a calculated matching score.
+     * @deny (update) Attempting to change the resumeId or jobDescriptionId of an existing match.
+     * @principle Relational Integrity.
+     */
+    match /matchResults/{matchResultId} {
+      allow get, list: if isSignedIn();
+      allow create: if isSignedIn() && matchesPathId(request.resource.data.id, matchResultId);
+      allow update: if isSignedIn() && isExistingDoc() && isImmutable('resumeId') && isImmutable('jobDescriptionId');
+      allow delete: if isSignedIn() && isExistingDoc();
+    }
+
+  }
+}

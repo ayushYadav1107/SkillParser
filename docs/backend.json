@@ -1,0 +1,729 @@
+{
+  "entities": {
+    "Resume": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Resume",
+      "type": "object",
+      "description": "Represents a candidate's resume, including raw content, parsed information, and links to extracted details such as skills, education, and experience.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Resume entity."
+        },
+        "originalFileName": {
+          "type": "string",
+          "description": "The original file name of the uploaded resume."
+        },
+        "originalFileContent": {
+          "type": "string",
+          "description": "The raw text content extracted directly from the uploaded resume file (e.g., PDF, DOCX)."
+        },
+        "parsedRawText": {
+          "type": "string",
+          "description": "The cleaned and preprocessed raw text content of the resume, used for detailed analysis and embedding generation."
+        },
+        "uploadDateTime": {
+          "type": "string",
+          "description": "The date and time when the resume was uploaded to the system.",
+          "format": "date-time"
+        },
+        "parsedName": {
+          "type": "string",
+          "description": "The name of the candidate as extracted from the resume."
+        },
+        "parsedEmail": {
+          "type": "string",
+          "description": "The email address of the candidate as extracted from the resume.",
+          "format": "email"
+        },
+        "parsedPhone": {
+          "type": "string",
+          "description": "The phone number of the candidate as extracted from the resume."
+        },
+        "parsedLocation": {
+          "type": "string",
+          "description": "The geographical location or address of the candidate as extracted from the resume."
+        },
+        "parsedSummary": {
+          "type": "string",
+          "description": "A summary or objective statement extracted from the resume."
+        },
+        "skillIds": {
+          "type": "array",
+          "description": "References to Skill entities extracted from this resume. (Relationship: Resume N:N Skill)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "educationIds": {
+          "type": "array",
+          "description": "References to Education entities associated with this resume. (Relationship: Resume 1:N Education)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "experienceIds": {
+          "type": "array",
+          "description": "References to Experience entities associated with this resume. (Relationship: Resume 1:N Experience)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "certificationIds": {
+          "type": "array",
+          "description": "References to Certification entities associated with this resume. (Relationship: Resume 1:N Certification)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tfidfEmbeddingStorageReference": {
+          "type": "string",
+          "description": "Reference or identifier to the externally stored TF-IDF vector embedding for this resume, used for similarity calculations."
+        },
+        "bertEmbeddingStorageReference": {
+          "type": "string",
+          "description": "Reference or identifier to the externally stored BERT embedding for this resume, used for advanced semantic similarity calculations."
+        }
+      },
+      "required": [
+        "id",
+        "originalFileName",
+        "originalFileContent",
+        "parsedRawText",
+        "uploadDateTime",
+        "parsedName",
+        "skillIds",
+        "educationIds",
+        "experienceIds",
+        "certificationIds",
+        "tfidfEmbeddingStorageReference",
+        "bertEmbeddingStorageReference"
+      ]
+    },
+    "JobDescription": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobDescription",
+      "type": "object",
+      "description": "Represents a job opening, including its raw content, parsed information, and links to required skills, education, and experience.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the JobDescription entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the job opening (e.g., 'Software Engineer', 'Data Scientist')."
+        },
+        "company": {
+          "type": "string",
+          "description": "The company offering the job."
+        },
+        "location": {
+          "type": "string",
+          "description": "The geographical location of the job."
+        },
+        "description": {
+          "type": "string",
+          "description": "The raw, original text content of the job description as provided or scraped."
+        },
+        "parsedRawText": {
+          "type": "string",
+          "description": "The cleaned and preprocessed raw text content of the job description, used for analysis and embedding generation."
+        },
+        "uploadDateTime": {
+          "type": "string",
+          "description": "The date and time when the job description was added to the system.",
+          "format": "date-time"
+        },
+        "externalId": {
+          "type": "string",
+          "description": "An identifier from an external Applicant Tracking System (ATS) if integrated, allowing for seamless data transfer."
+        },
+        "skillIds": {
+          "type": "array",
+          "description": "References to Skill entities identified as key requirements for this job. (Relationship: JobDescription N:N Skill)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "jobEducationRequirementIds": {
+          "type": "array",
+          "description": "References to JobEducationRequirement entities detailing educational qualifications required for this job. (Relationship: JobDescription 1:N JobEducationRequirement)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "jobExperienceRequirementIds": {
+          "type": "array",
+          "description": "References to JobExperienceRequirement entities detailing work experience required for this job. (Relationship: JobDescription 1:N JobExperienceRequirement)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "jobCertificationRequirementIds": {
+          "type": "array",
+          "description": "References to JobCertificationRequirement entities detailing professional certifications required for this job. (Relationship: JobDescription 1:N JobCertificationRequirement)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tfidfEmbeddingStorageReference": {
+          "type": "string",
+          "description": "Reference or identifier to the externally stored TF-IDF vector embedding for this job description, used for similarity calculations."
+        },
+        "bertEmbeddingStorageReference": {
+          "type": "string",
+          "description": "Reference or identifier to the externally stored BERT embedding for this job description, used for advanced semantic similarity calculations."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "company",
+        "description",
+        "parsedRawText",
+        "uploadDateTime",
+        "skillIds",
+        "jobEducationRequirementIds",
+        "jobExperienceRequirementIds",
+        "jobCertificationRequirementIds",
+        "tfidfEmbeddingStorageReference",
+        "bertEmbeddingStorageReference"
+      ]
+    },
+    "Skill": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Skill",
+      "type": "object",
+      "description": "Represents an individual skill identified in resumes or job descriptions, serving as a common vocabulary.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Skill entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the skill (e.g., 'Python', 'Machine Learning', 'Project Management')."
+        },
+        "category": {
+          "type": "string",
+          "description": "An optional category for the skill (e.g., 'Programming Language', 'Soft Skill', 'Database')."
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "Education": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Education",
+      "type": "object",
+      "description": "Represents an educational qualification achieved by a candidate, extracted from a resume.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Education entity."
+        },
+        "degree": {
+          "type": "string",
+          "description": "The degree obtained (e.g., 'B.Sc.', 'Master of Engineering', 'Ph.D.')."
+        },
+        "fieldOfStudy": {
+          "type": "string",
+          "description": "The major or field of study (e.g., 'Computer Science', 'Business Administration', 'Electrical Engineering')."
+        },
+        "institution": {
+          "type": "string",
+          "description": "The name of the educational institution (e.g., 'MIT', 'Stanford University', 'University of London')."
+        },
+        "startDate": {
+          "type": "string",
+          "description": "The start date of the education period.",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "The end date of the education period. Can be null if the education is ongoing.",
+          "format": "date"
+        },
+        "grade": {
+          "type": "string",
+          "description": "The GPA, grade, or relevant academic achievement (e.g., '3.8/4.0', 'First Class Honours')."
+        },
+        "resumeId": {
+          "type": "string",
+          "description": "Reference to the Resume this education entry belongs to. (Relationship: Education N:1 Resume)"
+        }
+      },
+      "required": [
+        "id",
+        "degree",
+        "fieldOfStudy",
+        "institution",
+        "startDate",
+        "resumeId"
+      ]
+    },
+    "Experience": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Experience",
+      "type": "object",
+      "description": "Represents a work experience entry for a candidate, extracted from a resume.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Experience entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The job title held (e.g., 'Software Engineer', 'Senior Project Manager', 'Data Analyst')."
+        },
+        "company": {
+          "type": "string",
+          "description": "The name of the company or organization where the experience was gained."
+        },
+        "startDate": {
+          "type": "string",
+          "description": "The start date of the employment period.",
+          "format": "date"
+        },
+        "endDate": {
+          "type": "string",
+          "description": "The end date of the employment period. Can be null if currently employed.",
+          "format": "date"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed description of responsibilities, achievements, and projects during this experience."
+        },
+        "resumeId": {
+          "type": "string",
+          "description": "Reference to the Resume this experience entry belongs to. (Relationship: Experience N:1 Resume)"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "company",
+        "startDate",
+        "description",
+        "resumeId"
+      ]
+    },
+    "Certification": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Certification",
+      "type": "object",
+      "description": "Represents a professional certification obtained by a candidate, extracted from a resume.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Certification entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the certification (e.g., 'AWS Certified Solutions Architect', 'Project Management Professional')."
+        },
+        "issuingAuthority": {
+          "type": "string",
+          "description": "The organization or body that issued the certification."
+        },
+        "issueDate": {
+          "type": "string",
+          "description": "The date when the certification was issued.",
+          "format": "date"
+        },
+        "expirationDate": {
+          "type": "string",
+          "description": "The date when the certification expires. Can be null if it does not expire.",
+          "format": "date"
+        },
+        "resumeId": {
+          "type": "string",
+          "description": "Reference to the Resume this certification belongs to. (Relationship: Certification N:1 Resume)"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "issuingAuthority",
+        "issueDate",
+        "resumeId"
+      ]
+    },
+    "JobEducationRequirement": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobEducationRequirement",
+      "type": "object",
+      "description": "Represents a specific educational requirement for a job description.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the JobEducationRequirement entity."
+        },
+        "jobDescriptionId": {
+          "type": "string",
+          "description": "Reference to the JobDescription this requirement is associated with. (Relationship: JobEducationRequirement N:1 JobDescription)"
+        },
+        "degreeKeywords": {
+          "type": "array",
+          "description": "Keywords or phrases describing the required degree (e.g., ['bachelor', 'master', 'phd']).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fieldOfStudyKeywords": {
+          "type": "array",
+          "description": "Keywords or phrases describing the required field of study (e.g., ['computer science', 'engineering', 'business']).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isPreferred": {
+          "type": "boolean",
+          "description": "Indicates if this education requirement is preferred rather than strictly mandatory."
+        },
+        "description": {
+          "type": "string",
+          "description": "The original or parsed textual description of the education requirement from the job description (e.g., 'Bachelor's degree in CS or related field required')."
+        }
+      },
+      "required": [
+        "id",
+        "jobDescriptionId",
+        "degreeKeywords",
+        "fieldOfStudyKeywords",
+        "isPreferred",
+        "description"
+      ]
+    },
+    "JobExperienceRequirement": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobExperienceRequirement",
+      "type": "object",
+      "description": "Represents a specific work experience requirement for a job description.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the JobExperienceRequirement entity."
+        },
+        "jobDescriptionId": {
+          "type": "string",
+          "description": "Reference to the JobDescription this requirement is associated with. (Relationship: JobExperienceRequirement N:1 JobDescription)"
+        },
+        "minimumYears": {
+          "type": "number",
+          "description": "The minimum number of years of experience required (e.g., 3 for '3+ years experience')."
+        },
+        "relevantKeywords": {
+          "type": "array",
+          "description": "Keywords or phrases describing the type of relevant experience required (e.g., ['software development', 'cloud computing', 'project management']).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isPreferred": {
+          "type": "boolean",
+          "description": "Indicates if this experience requirement is preferred rather than strictly mandatory."
+        },
+        "description": {
+          "type": "string",
+          "description": "The original or parsed textual description of the experience requirement from the job description (e.g., '5+ years of experience with enterprise software development')."
+        }
+      },
+      "required": [
+        "id",
+        "jobDescriptionId",
+        "minimumYears",
+        "relevantKeywords",
+        "isPreferred",
+        "description"
+      ]
+    },
+    "JobCertificationRequirement": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobCertificationRequirement",
+      "type": "object",
+      "description": "Represents a specific professional certification requirement for a job description.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the JobCertificationRequirement entity."
+        },
+        "jobDescriptionId": {
+          "type": "string",
+          "description": "Reference to the JobDescription this requirement is associated with. (Relationship: JobCertificationRequirement N:1 JobDescription)"
+        },
+        "nameKeywords": {
+          "type": "array",
+          "description": "Keywords or phrases describing the required certification (e.g., ['AWS Certified', 'PMP', 'CSM']).",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isPreferred": {
+          "type": "boolean",
+          "description": "Indicates if this certification requirement is preferred rather than strictly mandatory."
+        },
+        "description": {
+          "type": "string",
+          "description": "The original or parsed textual description of the certification requirement from the job description (e.g., 'PMP certification required')."
+        }
+      },
+      "required": [
+        "id",
+        "jobDescriptionId",
+        "nameKeywords",
+        "isPreferred",
+        "description"
+      ]
+    },
+    "MatchResult": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "MatchResult",
+      "type": "object",
+      "description": "Stores the matching score and individual score components between a specific resume and a specific job description.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the MatchResult entity."
+        },
+        "resumeId": {
+          "type": "string",
+          "description": "Reference to the Resume involved in this match. (Relationship: MatchResult N:1 Resume)"
+        },
+        "jobDescriptionId": {
+          "type": "string",
+          "description": "Reference to the JobDescription involved in this match. (Relationship: MatchResult N:1 JobDescription)"
+        },
+        "tfidfScore": {
+          "type": "number",
+          "description": "The similarity score calculated using the TF-IDF matching model."
+        },
+        "bertScore": {
+          "type": "number",
+          "description": "The similarity score calculated using the BERT embeddings matching model."
+        },
+        "skillMatchWeight": {
+          "type": "number",
+          "description": "The additional weight or score component derived from direct skill matching between resume and job description."
+        },
+        "finalScore": {
+          "type": "number",
+          "description": "The final combined matching score between the resume and job description, potentially incorporating availability or other LLM inputs."
+        },
+        "matchDateTime": {
+          "type": "string",
+          "description": "The date and time when this match result was calculated.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "resumeId",
+        "jobDescriptionId",
+        "tfidfScore",
+        "bertScore",
+        "skillMatchWeight",
+        "finalScore",
+        "matchDateTime"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/resumes/{resumeId}",
+        "definition": {
+          "entityName": "Resume",
+          "schema": {
+            "$ref": "#/backend/entities/Resume"
+          },
+          "description": "Stores individual candidate resumes, including original content, parsed data, and a reference to the uploader. Includes denormalized 'uploaderId' for attribution and potential future access control.",
+          "params": [
+            {
+              "name": "resumeId",
+              "description": "Unique identifier for a Resume document."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/resumes/{resumeId}/education/{educationId}",
+        "definition": {
+          "entityName": "Education",
+          "schema": {
+            "$ref": "#/backend/entities/Education"
+          },
+          "description": "Represents an educational qualification extracted from a specific resume. Includes 'resumeId' for data integrity and efficient querying.",
+          "params": [
+            {
+              "name": "resumeId",
+              "description": "Unique identifier of the parent Resume document."
+            },
+            {
+              "name": "educationId",
+              "description": "Unique identifier for an Education entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/resumes/{resumeId}/experience/{experienceId}",
+        "definition": {
+          "entityName": "Experience",
+          "schema": {
+            "$ref": "#/backend/entities/Experience"
+          },
+          "description": "Represents a work experience entry extracted from a specific resume. Includes 'resumeId' for data integrity and efficient querying.",
+          "params": [
+            {
+              "name": "resumeId",
+              "description": "Unique identifier of the parent Resume document."
+            },
+            {
+              "name": "experienceId",
+              "description": "Unique identifier for an Experience entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/resumes/{resumeId}/certifications/{certificationId}",
+        "definition": {
+          "entityName": "Certification",
+          "schema": {
+            "$ref": "#/backend/entities/Certification"
+          },
+          "description": "Represents a professional certification extracted from a specific resume. Includes 'resumeId' for data integrity and efficient querying.",
+          "params": [
+            {
+              "name": "resumeId",
+              "description": "Unique identifier of the parent Resume document."
+            },
+            {
+              "name": "certificationId",
+              "description": "Unique identifier for a Certification entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/jobDescriptions/{jobDescriptionId}",
+        "definition": {
+          "entityName": "JobDescription",
+          "schema": {
+            "$ref": "#/backend/entities/JobDescription"
+          },
+          "description": "Stores individual job descriptions, including raw content, parsed data, and a reference to the uploader. Includes denormalized 'uploaderId' for attribution and potential future access control.",
+          "params": [
+            {
+              "name": "jobDescriptionId",
+              "description": "Unique identifier for a JobDescription document."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/jobDescriptions/{jobDescriptionId}/jobEducationRequirements/{jobEducationRequirementId}",
+        "definition": {
+          "entityName": "JobEducationRequirement",
+          "schema": {
+            "$ref": "#/backend/entities/JobEducationRequirement"
+          },
+          "description": "Represents an educational requirement for a specific job description. Includes 'jobDescriptionId' for data integrity and efficient querying.",
+          "params": [
+            {
+              "name": "jobDescriptionId",
+              "description": "Unique identifier of the parent JobDescription document."
+            },
+            {
+              "name": "jobEducationRequirementId",
+              "description": "Unique identifier for a JobEducationRequirement entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/jobDescriptions/{jobDescriptionId}/jobExperienceRequirements/{jobExperienceRequirementId}",
+        "definition": {
+          "entityName": "JobExperienceRequirement",
+          "schema": {
+            "$ref": "#/backend/entities/JobExperienceRequirement"
+          },
+          "description": "Represents a work experience requirement for a specific job description. Includes 'jobDescriptionId' for data integrity and efficient querying.",
+          "params": [
+            {
+              "name": "jobDescriptionId",
+              "description": "Unique identifier of the parent JobDescription document."
+            },
+            {
+              "name": "jobExperienceRequirementId",
+              "description": "Unique identifier for a JobExperienceRequirement entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/jobDescriptions/{jobDescriptionId}/jobCertificationRequirements/{jobCertificationRequirementId}",
+        "definition": {
+          "entityName": "JobCertificationRequirement",
+          "schema": {
+            "$ref": "#/backend/entities/JobCertificationRequirement"
+          },
+          "description": "Represents a professional certification requirement for a specific job description. Includes 'jobDescriptionId' for data integrity and efficient querying.",
+          "params": [
+            {
+              "name": "jobDescriptionId",
+              "description": "Unique identifier of the parent JobDescription document."
+            },
+            {
+              "name": "jobCertificationRequirementId",
+              "description": "Unique identifier for a JobCertificationRequirement entry."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/skills/{skillId}",
+        "definition": {
+          "entityName": "Skill",
+          "schema": {
+            "$ref": "#/backend/entities/Skill"
+          },
+          "description": "A master list of individual skills identified across resumes and job descriptions, serving as a common vocabulary.",
+          "params": [
+            {
+              "name": "skillId",
+              "description": "Unique identifier for a Skill document."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/matchResults/{matchResultId}",
+        "definition": {
+          "entityName": "MatchResult",
+          "schema": {
+            "$ref": "#/backend/entities/MatchResult"
+          },
+          "description": "Stores the matching scores between a specific resume and a specific job description.",
+          "params": [
+            {
+              "name": "matchResultId",
+              "description": "Unique identifier for a MatchResult document."
+            }
+          ]
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed to be secure, scalable, and debuggable, adhering to the core design principles and strategy mandates. We have modeled top-level collections for core entities like `Resume`, `JobDescription`, `Skill`, and `MatchResult`. Sub-entities related to a resume (e.g., Education, Experience, Certifications) or a job description (e.g., JobEducationRequirements) are implemented as subcollections to maintain hierarchical data organization and simplify rules for nested data.\n\n**Authorization Independence via Denormalization:** While the current access model assumes all uploaded data is accessible to all authenticated users of the system (e.g., a team of recruiters), `uploaderId` is included in `Resume` and `JobDescription` documents for attribution. For subcollections, `resumeId` and `jobDescriptionId` are explicitly included within their respective documents (e.g., `Education` documents have a `resumeId` field). This ensures that each document is self-contained with its direct parent identifier, which is crucial for data integrity and efficient querying. If future requirements introduce fine-grained, user-specific ownership where a subcollection's access depends on its parent's owner, the `uploaderId` (or a specific `ownerId`) would be denormalized into each subcollection document to eliminate the need for `get()` operations in security rules, thereby maintaining authorization independence. For instance, an `Education` document would then also include the `Resume`'s `uploaderId`.\n\n**QAPs (Rules are not Filters):** The structure facilitates secure `list` operations by making collections homogeneous in their security posture. For example, all `Resume` documents are in the `/resumes` collection, allowing an authorized user to fetch all resumes without filtering in security rules. Similarly, all `JobDescription` documents are in `/jobDescriptions`. Subcollections like `/resumes/{resumeId}/education` allow listing all education entries for a specific resume. Since the primary access model is system-wide for authorized users, `list` queries on root collections can return all relevant documents, supporting the 'Ranking and Filtering' feature. If user-specific access were enforced for the parent documents, then `list` operations on subcollections would be inherently secure by being nested under an already authorized parent, or by querying the denormalized `uploaderId` field in the subcollection documents."
+  }
+}
