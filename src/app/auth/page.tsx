@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,10 +8,10 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { UserRole, useAuth } from '@/lib/auth';
 import { BrainCircuit, Briefcase, Mail, Lock } from 'lucide-react';
 
-export default function AuthPage() {
+function AuthContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const defaultMode = searchParams.get('mode') as UserRole || 'candidate';
+  const defaultMode = (searchParams.get('mode') as UserRole) || 'candidate';
   const { login } = useAuth();
   
   const [mode, setMode] = useState<UserRole>(defaultMode);
@@ -155,5 +155,13 @@ export default function AuthPage() {
         </Card>
       </div>
     </div>
+  );
+}
+
+export default function AuthPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-50 flex items-center justify-center">Loading...</div>}>
+      <AuthContent />
+    </Suspense>
   );
 }
