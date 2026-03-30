@@ -80,6 +80,7 @@ export default function AnalyzerPage() {
     essentialQualifications: [],
     status: "idle",
   });
+  const [candidateName, setCandidateName] = useState("");
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [activeCandidateId, setActiveCandidateId] = useState<string | null>(
     null,
@@ -222,9 +223,11 @@ export default function AnalyzerPage() {
         
         // Auto-add to talent pool reliably OUTSIDE the state setter
         const safeJobTitle = jobAnalysis.title || jobAnalysis.description.split('\n')[0]?.slice(0, 60) || 'Unknown Role';
+        const finalCandidateName = candidateName || file.name.split('.')[0];
+        
         addToTalentPool({
           id: candidateId, // Use the unique session ID directly to avoid collisions
-          name: file.name.split('.')[0],
+          name: finalCandidateName,
           fileName: file.name,
           skills: extractedInfo?.skills || [],
           matchScore: matchResults?.matchScore,
@@ -238,7 +241,7 @@ export default function AnalyzerPage() {
         if (role === 'candidate') {
           saveAnalysis(jobAnalysis, [{
             id: candidateId,
-            name: file.name.split('.')[0],
+            name: finalCandidateName,
             fileName: file.name,
             status: "completed",
             extractedInfo: extractedInfo as ExtractResumeInformationOutput,
@@ -270,7 +273,7 @@ export default function AnalyzerPage() {
 
     const newCandidates: Candidate[] = Array.from(files).map((file) => ({
       id: Math.random().toString(36).substr(2, 9),
-      name: file.name.split(".")[0],
+      name: candidateName || file.name.split(".")[0],
       fileName: file.name,
       status: "idle",
     }));
@@ -637,6 +640,21 @@ export default function AnalyzerPage() {
                       </Button>
                     </div>
                   </div>
+
+                  {role === 'candidate' && (
+                    <div className="space-y-2 mb-4">
+                      <Label htmlFor="candidate-name" className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                        Your Full Name
+                      </Label>
+                      <Input
+                        id="candidate-name"
+                        placeholder="e.g. Ronit Kumar"
+                        value={candidateName}
+                        onChange={(e) => setCandidateName(e.target.value)}
+                        className="bg-white border-border/50 text-sm focus-visible:ring-primary shadow-sm"
+                      />
+                    </div>
+                  )}
 
                   <div className="grid w-full items-center gap-1.5">
                     <Label
