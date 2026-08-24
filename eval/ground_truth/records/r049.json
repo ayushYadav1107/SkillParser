@@ -1,0 +1,88 @@
+{
+  "id": "r049",
+  "seed": 20640936,
+  "truth": {
+    "personal": {
+      "name": "Rafael Okoro-Fitzgerald",
+      "email": "rafael_okorofitzgerald@inbox.example",
+      "phone": "+91 81558 44337",
+      "location": "Pune, India"
+    },
+    "skills": [
+      "WebAssembly",
+      "Accessibility (WCAG 2.2)",
+      "Vite",
+      "GraphQL",
+      "Playwright",
+      "TypeScript",
+      "CSS architecture",
+      "Incident command",
+      "Technical writing"
+    ],
+    "experience": [
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Bramblewood Insurance",
+        "duration": "Aug 2024-Current",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android."
+      },
+      {
+        "title": "Web Platform Engineer",
+        "company": "Coriolis Weather Systems",
+        "duration": "Oct 2023-Aug 2024",
+        "description": "Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Coriolis Weather Systems",
+        "duration": "Jun 2022-Aug 2023",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.E. in Information Technology",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "Apr 2015"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WHAT I HAVE BUILT",
+      "education": "Where I Studied",
+      "skills": "STACK",
+      "certifications": "BADGES",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "short-month",
+    "summaryText": "Four years of frontend work with a bias toward measurable outcomes. Writes things down; prefers a short design doc to a long meeting.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [
+      "References available on request"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "mid",
+    "experienceCount": 3,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "short-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

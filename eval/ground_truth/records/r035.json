@@ -1,0 +1,73 @@
+{
+  "id": "r035",
+  "seed": 20530070,
+  "truth": {
+    "personal": {
+      "name": "MATEUS OKORO-FITZGERALD",
+      "email": "mateus_okorofitzgerald@protonpost.io",
+      "phone": "+91 78877 74993",
+      "location": "İzmir, Türkiye"
+    },
+    "skills": [
+      "SQL",
+      "Discovery interviews",
+      "Amplitude",
+      "Experiment design",
+      "Pricing strategy",
+      "Roadmapping",
+      "OKR planning",
+      "Stakeholder management",
+      "Code review"
+    ],
+    "experience": [],
+    "education": [
+      {
+        "degree": "B.Tech in Electronics and Communication",
+        "institution": "Ardennes Polytechnic",
+        "graduationDate": "May 2026"
+      }
+    ],
+    "certifications": [
+      "Certified Scrum Product Owner (CSPO)",
+      "Pragmatic Institute PMC-III"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "EMPLOYMENT HISTORY",
+      "education": "Education",
+      "skills": "CORE COMPETENCIES",
+      "certifications": "Certifications",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "-",
+    "dateFormat": "long-month",
+    "summaryText": "Early-career product work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "Portfolio: mateusokorof.dev",
+      "linkedin.com/in/mateusokorof"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "product",
+    "seniority": "new-grad",
+    "experienceCount": 0,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

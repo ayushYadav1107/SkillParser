@@ -1,0 +1,84 @@
+{
+  "id": "r031",
+  "seed": 20498394,
+  "truth": {
+    "personal": {
+      "name": "ANAYA OKORO-FITZGERALD",
+      "email": "anaya_okorofitzgerald@protonpost.io",
+      "phone": "+86 884 312 979",
+      "location": "Gothenburg, Sweden"
+    },
+    "skills": [
+      "Vite",
+      "CSS architecture",
+      "Playwright",
+      "TypeScript",
+      "Accessibility (WCAG 2.2)",
+      "Next.js",
+      "Design systems",
+      "GraphQL",
+      "WebAssembly",
+      "React",
+      "Code review"
+    ],
+    "experience": [
+      {
+        "title": "Web Platform Engineer",
+        "company": "Copperline Foods",
+        "duration": "03/2024 – Current",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Copperline Foods",
+        "duration": "07/2022 – 03/2024",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Shipped a design-system migration across 210 components without a feature freeze. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      },
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Vantablack Security",
+        "duration": "10/2019 – 07/2022",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      }
+    ],
+    "education": [],
+    "certifications": [
+      "IAAP Certified Professional in Accessibility Core Competencies"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "Education",
+      "skills": "Skills",
+      "certifications": "Certifications",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " · ",
+    "nameCase": "upper",
+    "serifBody": true,
+    "bullet": "–",
+    "dateFormat": "numeric",
+    "summaryText": "Nine years of frontend work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "senior",
+    "experienceCount": 3,
+    "skillCount": 11,
+    "hasEducation": false,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

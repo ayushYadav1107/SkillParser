@@ -1,0 +1,82 @@
+{
+  "id": "r023",
+  "seed": 20435042,
+  "truth": {
+    "personal": {
+      "name": "Yusuf Deshpande",
+      "email": "yusufd@inbox.example",
+      "phone": "+1 (859) 647-6813",
+      "location": "Amman, Jordan"
+    },
+    "skills": [
+      "Threat modelling",
+      "Incident response",
+      "Fuzzing",
+      "Burp Suite",
+      "OAuth 2.1",
+      "SIEM tuning",
+      "Rust",
+      "Cryptographic protocol review",
+      "eBPF"
+    ],
+    "experience": [
+      {
+        "title": "Application Security Engineer",
+        "company": "Tessellate AI",
+        "duration": "02/2024 — Present",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months. Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines."
+      },
+      {
+        "title": "Security Engineer",
+        "company": "Tessellate AI",
+        "duration": "08/2022 — 10/2023",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MBA, Operations",
+        "institution": "University of Rothbury",
+        "graduationDate": "04/2021"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "CORE COMPETENCIES",
+      "certifications": "Certifications",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": [
+      "Built a static-site generator used by ~400 people; still maintained."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "mid",
+    "experienceCount": 2,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

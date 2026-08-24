@@ -1,0 +1,81 @@
+{
+  "id": "r014",
+  "seed": 20363771,
+  "truth": {
+    "personal": {
+      "name": "MEERA DESHPANDE",
+      "email": "meera.deshpande11@quietbox.org",
+      "phone": "273-613-0645",
+      "location": "Wrocław, Poland"
+    },
+    "skills": [
+      "Incident response",
+      "SIEM tuning",
+      "Threat modelling",
+      "Fuzzing",
+      "Burp Suite",
+      "eBPF"
+    ],
+    "experience": [
+      {
+        "title": "Detection Engineer",
+        "company": "Meridian Freight Labs",
+        "duration": "June 2024 – August 2026",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      },
+      {
+        "title": "Security Engineer",
+        "company": "Copperline Foods",
+        "duration": "May 2022 – June 2024",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "June 2016"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "Selected Roles",
+      "education": "Where I Studied",
+      "skills": "STACK",
+      "certifications": "BADGES",
+      "summary": "The Short Version"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": true,
+    "bullet": "–",
+    "dateFormat": "long-month",
+    "summaryText": null,
+    "projects": [
+      "Wrote a from-scratch key-value store to understand write-ahead logging properly."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [
+      "github.com/meeradeshpa"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "mid",
+    "experienceCount": 2,
+    "skillCount": 6,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

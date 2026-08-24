@@ -1,0 +1,103 @@
+{
+  "id": "r025",
+  "seed": 20450880,
+  "truth": {
+    "personal": {
+      "name": "Priyanka Al-Rashid",
+      "email": "priyankaa@inbox.example",
+      "phone": "+91 95876 79727",
+      "location": "Belo Horizonte, Brazil"
+    },
+    "skills": [
+      "Accessibility (WCAG 2.2)",
+      "React",
+      "Vite",
+      "Design systems",
+      "TypeScript",
+      "Playwright",
+      "Next.js"
+    ],
+    "experience": [
+      {
+        "title": "Frontend Engineer",
+        "company": "Sunstone Bioinformatics",
+        "duration": "March 2025 — June 2026",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Orpiment Media",
+        "duration": "January 2022 — December 2024",
+        "description": "Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Shipped a design-system migration across 210 components without a feature freeze. Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      },
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Driftwood Retail Group",
+        "duration": "July 2019 — January 2022",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Shipped a design-system migration across 210 components without a feature freeze."
+      },
+      {
+        "title": "Web Platform Engineer",
+        "company": "Vantablack Security",
+        "duration": "November 2017 — July 2019",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      },
+      {
+        "title": "Frontend Engineer",
+        "company": "Meridian Freight Labs",
+        "duration": "November 2014 — November 2017",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Shipped a design-system migration across 210 components without a feature freeze. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "June 2012"
+      },
+      {
+        "degree": "PhD in Statistical Signal Processing",
+        "institution": "Institute of Data Sciences, Bhopal",
+        "graduationDate": "July 2010"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WHERE I'VE WORKED",
+      "education": "SCHOOLING",
+      "skills": "WHAT I WORK WITH",
+      "certifications": "TRAINING",
+      "summary": "HELLO"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " | ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "long-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [
+      "Portfolio: priyankaalrash.dev"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 7,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

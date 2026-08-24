@@ -1,0 +1,105 @@
+{
+  "id": "r003",
+  "seed": 20276662,
+  "truth": {
+    "personal": {
+      "name": "AMARA Ó SÚILLEABHÁIN",
+      "email": "aosuilleabhain@mailbox.dev",
+      "phone": "+91 74097 09968",
+      "location": "Trondheim, Norway"
+    },
+    "skills": [
+      "SQL",
+      "dbt",
+      "Flink",
+      "Snowflake",
+      "Spark",
+      "Python",
+      "Airflow",
+      "Great Expectations",
+      "Data modelling",
+      "Delta Lake",
+      "Code review"
+    ],
+    "experience": [
+      {
+        "title": "Senior Data Engineer",
+        "company": "Nimbus Freight Exchange",
+        "duration": "Mar 2024 – Jan 2026",
+        "description": "Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Built the lineage graph that the finance team now uses to sign off on revenue reporting. Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget."
+      },
+      {
+        "title": "Data Platform Engineer",
+        "company": "Ravelin Mobility",
+        "duration": "Jan 2023 – Mar 2024",
+        "description": "Built the lineage graph that the finance team now uses to sign off on revenue reporting. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year."
+      },
+      {
+        "title": "Data Engineer",
+        "company": "Copperline Foods",
+        "duration": "May 2019 – Jan 2023",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m. Built the lineage graph that the finance team now uses to sign off on revenue reporting."
+      },
+      {
+        "title": "Analytics Engineer",
+        "company": "Quillon Semiconductor",
+        "duration": "Oct 2016 – May 2019",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m."
+      },
+      {
+        "title": "Senior Data Engineer",
+        "company": "Driftwood Retail Group",
+        "duration": "Sep 2014 – Oct 2016",
+        "description": "Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m. Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Diploma in Software Engineering",
+        "institution": "National Institute of Computing, Surat",
+        "graduationDate": "Apr 2020"
+      }
+    ],
+    "certifications": [
+      "SnowPro Core Certification",
+      "Databricks Certified Data Engineer Professional"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "EMPLOYMENT HISTORY",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "CERTIFICATIONS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " | ",
+    "nameCase": "upper",
+    "serifBody": true,
+    "bullet": "-",
+    "dateFormat": "short-month",
+    "summaryText": null,
+    "projects": [
+      "Built a static-site generator used by ~400 people; still maintained."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 11,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

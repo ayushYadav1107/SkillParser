@@ -1,0 +1,106 @@
+{
+  "id": "r037",
+  "seed": 20545908,
+  "truth": {
+    "personal": {
+      "name": "YUSUF DESHPANDE",
+      "email": "yusufd@mailbox.dev",
+      "phone": "+40 088 681 896",
+      "location": "Trondheim, Norway"
+    },
+    "skills": [
+      "Flink",
+      "Great Expectations",
+      "Airflow",
+      "SQL",
+      "Data modelling",
+      "Delta Lake",
+      "Python",
+      "Snowflake"
+    ],
+    "experience": [
+      {
+        "title": "Data Engineer",
+        "company": "Bramblewood Insurance",
+        "duration": "06/2024 — 06/2026",
+        "description": "Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year."
+      },
+      {
+        "title": "Data Platform Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "02/2021 — 06/2024",
+        "description": "Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Built the lineage graph that the finance team now uses to sign off on revenue reporting. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m."
+      },
+      {
+        "title": "Senior Data Engineer",
+        "company": "Coriolis Weather Systems",
+        "duration": "12/2018 — 02/2021",
+        "description": "Built the lineage graph that the finance team now uses to sign off on revenue reporting."
+      },
+      {
+        "title": "Analytics Engineer",
+        "company": "Saltmarsh Health",
+        "duration": "11/2016 — 12/2018",
+        "description": "Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m."
+      },
+      {
+        "title": "Data Engineer",
+        "company": "Boreal Instrument Co.",
+        "duration": "05/2013 — 11/2016",
+        "description": "Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.E. in Information Technology",
+        "institution": "Indian Institute of Applied Sciences, Pilani",
+        "graduationDate": "06/2020"
+      },
+      {
+        "degree": "M.Tech in Artificial Intelligence",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "06/2017"
+      }
+    ],
+    "certifications": [
+      "Databricks Certified Data Engineer Professional"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL EXPERIENCE",
+      "education": "Education",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": " · ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "numeric",
+    "summaryText": "Nine years of data work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "Portfolio: yusufdeshpa.dev"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

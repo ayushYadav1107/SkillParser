@@ -1,0 +1,92 @@
+{
+  "id": "r029",
+  "seed": 20482556,
+  "truth": {
+    "personal": {
+      "name": "Saoirse Deshpande",
+      "email": "saoirsed@fastpost.email",
+      "phone": "+40 475 892 764",
+      "location": ""
+    },
+    "skills": [
+      "Event sourcing",
+      "Distributed systems",
+      "Go",
+      "Java",
+      "OpenTelemetry",
+      "Redis",
+      "Kubernetes",
+      "PostgreSQL",
+      "gRPC"
+    ],
+    "experience": [
+      {
+        "title": "Platform Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "09/2023 — 06/2026",
+        "description": "Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime. Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms. Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model."
+      },
+      {
+        "title": "Software Development Engineer II",
+        "company": "Umbra Robotics",
+        "duration": "04/2021 — 06/2023",
+        "description": "Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms. Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model. Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike."
+      },
+      {
+        "title": "Backend Engineer",
+        "company": "Umbra Robotics",
+        "duration": "12/2017 — 04/2021",
+        "description": "Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike. Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      },
+      {
+        "title": "Senior Backend Engineer",
+        "company": "Kestrel & Vale",
+        "duration": "05/2016 — 12/2017",
+        "description": "Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike."
+      },
+      {
+        "title": "Staff Software Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "10/2014 — 05/2016",
+        "description": "Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime. Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike."
+      }
+    ],
+    "education": [],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "Selected Roles",
+      "education": "Where I Studied",
+      "skills": "TOOLBOX",
+      "certifications": "ACCREDITATIONS",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-title-date-stacked",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "-",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "backend",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 9,
+    "hasEducation": false,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": false,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-title-date-stacked"
+  }
+}

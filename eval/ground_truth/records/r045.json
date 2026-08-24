@@ -1,0 +1,93 @@
+{
+  "id": "r045",
+  "seed": 20609260,
+  "truth": {
+    "personal": {
+      "name": "DMITRI KOWALCZYK",
+      "email": "dmitrik@northwind-mail.net",
+      "phone": "+1 (714) 527-3798",
+      "location": "Hyderabad, India"
+    },
+    "skills": [
+      "dbt",
+      "Flink",
+      "Data modelling",
+      "Delta Lake",
+      "Python",
+      "Great Expectations",
+      "Airflow",
+      "Code review",
+      "Mentoring"
+    ],
+    "experience": [
+      {
+        "title": "Analytics Engineer",
+        "company": "Kestrel & Vale",
+        "duration": "December 2022-Present",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m. Built the lineage graph that the finance team now uses to sign off on revenue reporting."
+      },
+      {
+        "title": "Data Platform Engineer",
+        "company": "Ferrite Cloud",
+        "duration": "December 2019-December 2022",
+        "description": "Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m. Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Built the lineage graph that the finance team now uses to sign off on revenue reporting."
+      },
+      {
+        "title": "Senior Data Engineer",
+        "company": "Ferrite Cloud",
+        "duration": "October 2018-December 2019",
+        "description": "Built the lineage graph that the finance team now uses to sign off on revenue reporting. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget."
+      }
+    ],
+    "education": [
+      {
+        "degree": "M.Tech in Artificial Intelligence",
+        "institution": "Ardennes Polytechnic",
+        "graduationDate": "July 2012"
+      },
+      {
+        "degree": "MS in Computer Science",
+        "institution": "Kalinga Institute of Engineering",
+        "graduationDate": "April 2008"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "EDUCATION",
+      "skills": "CORE COMPETENCIES",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": " · ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "long-month",
+    "summaryText": null,
+    "projects": [
+      "Wrote a from-scratch key-value store to understand write-ahead logging properly."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "senior",
+    "experienceCount": 3,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "long-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

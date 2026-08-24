@@ -1,0 +1,85 @@
+{
+  "id": "r006",
+  "seed": 20300419,
+  "truth": {
+    "personal": {
+      "name": "NOUR ZHAO",
+      "email": "nourz@quietbox.org",
+      "phone": "+1 (857) 513-4206",
+      "location": "Pune, India"
+    },
+    "skills": [
+      "SQL",
+      "Amplitude",
+      "Discovery interviews",
+      "Pricing strategy",
+      "Stakeholder management",
+      "Experiment design",
+      "Roadmapping",
+      "OKR planning"
+    ],
+    "experience": [
+      {
+        "title": "Product Manager",
+        "company": "Quillon Semiconductor",
+        "duration": "Apr 2024-present",
+        "description": "Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach. Rebuilt the quarterly planning process around measurable bets; on-time delivery went from 48% to 81%."
+      },
+      {
+        "title": "Senior Product Manager",
+        "company": "Quillon Semiconductor",
+        "duration": "Jun 2022-Jan 2024",
+        "description": "Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach. Ran the pricing experiment that raised ARPU 11% without measurable churn impact."
+      },
+      {
+        "title": "Product Analyst",
+        "company": "Meridian Freight Labs",
+        "duration": "Sep 2020-Mar 2022",
+        "description": "Rebuilt the quarterly planning process around measurable bets; on-time delivery went from 48% to 81%. Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computer Science",
+        "institution": "Halgren College of Technology",
+        "graduationDate": "May 2014"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL JOURNEY",
+      "education": "STUDIES",
+      "skills": "Things I Know",
+      "certifications": "TRAINING",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " · ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "short-month",
+    "summaryText": "Four years of product work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "product",
+    "seniority": "mid",
+    "experienceCount": 3,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "short-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

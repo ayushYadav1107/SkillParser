@@ -1,0 +1,82 @@
+{
+  "id": "r048",
+  "seed": 20633017,
+  "truth": {
+    "personal": {
+      "name": "Zeynep Nakamura",
+      "email": "znakamura@inbox.example",
+      "phone": "+35 118 790 796",
+      "location": "Belo Horizonte, Brazil"
+    },
+    "skills": [
+      "Threat modelling",
+      "eBPF",
+      "Incident response",
+      "Cryptographic protocol review",
+      "OAuth 2.1",
+      "SIEM tuning",
+      "Rust",
+      "Public speaking",
+      "Incident command"
+    ],
+    "experience": [
+      {
+        "title": "Senior Security Engineer",
+        "company": "Ptarmigan Analytics",
+        "duration": "Nov 2023-May 2026",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      },
+      {
+        "title": "Detection Engineer",
+        "company": "Boreal Instrument Co.",
+        "duration": "Apr 2022-Aug 2023",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Diploma in Software Engineering",
+        "institution": "Fenwold University",
+        "graduationDate": "May 2023"
+      }
+    ],
+    "certifications": [
+      "CISSP"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "Education",
+      "skills": "CORE COMPETENCIES",
+      "certifications": "Certifications",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "-",
+    "dateFormat": "short-month",
+    "summaryText": "Four years of security work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "mid",
+    "experienceCount": 2,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

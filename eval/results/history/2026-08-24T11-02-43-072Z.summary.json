@@ -1,0 +1,846 @@
+{
+  "metadata": {
+    "runId": "2026-08-24T11-02-43-072Z",
+    "startedAt": "2026-08-24T11:02:43.072Z",
+    "finishedAt": "2026-08-24T11:02:43.128Z",
+    "corpusSeed": 20260824,
+    "corpusGeneratorVersion": "1.0.0",
+    "harnessVersion": "1.0.0",
+    "conditions": [
+      "single-column-digital",
+      "two-column-digital",
+      "single-column-scanned",
+      "two-column-scanned"
+    ],
+    "documentCount": 20
+  },
+  "summaries": [
+    {
+      "spec": {
+        "id": "heuristic",
+        "label": "Rule-based baseline",
+        "provider": "heuristic",
+        "model": "rules-v1",
+        "strategy": "zero-shot",
+        "pdfStrategy": "column-aware",
+        "requestConfidence": true
+      },
+      "documentsAttempted": 20,
+      "documentsScored": 10,
+      "documentsFailed": 0,
+      "documentsSkipped": 10,
+      "failureReasons": {
+        "ocr-unavailable": 10
+      },
+      "micro": {
+        "precision": 0.8974358974358975,
+        "recall": 0.5239520958083832,
+        "f1": 0.661625708884688,
+        "support": 334,
+        "counts": {
+          "tp": 175,
+          "fp": 20,
+          "fn": 159,
+          "tn": 0
+        }
+      },
+      "microF1Interval": {
+        "point": 0.661625708884688,
+        "lower": 0.41484315315910103,
+        "upper": 0.8224573941726222,
+        "level": 0.95,
+        "resamples": 2000
+      },
+      "macroF1": 0.6648579830074032,
+      "macroF1Interval": {
+        "point": 0.6648579830074032,
+        "lower": 0.43567787207109454,
+        "upper": 0.8179470812986991,
+        "level": 0.95,
+        "resamples": 2000
+      },
+      "perField": [
+        {
+          "field": "personal.name",
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 10,
+          "counts": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0
+          },
+          "meanSimilarity": 1
+        },
+        {
+          "field": "personal.email",
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 10,
+          "counts": {
+            "tp": 10,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0
+          },
+          "meanSimilarity": null
+        },
+        {
+          "field": "personal.phone",
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1": 0.8000000000000002,
+          "support": 10,
+          "counts": {
+            "tp": 8,
+            "fp": 2,
+            "fn": 2,
+            "tn": 0
+          },
+          "meanSimilarity": null
+        },
+        {
+          "field": "personal.location",
+          "precision": 0.8571428571428571,
+          "recall": 0.6,
+          "f1": 0.7058823529411764,
+          "support": 10,
+          "counts": {
+            "tp": 6,
+            "fp": 1,
+            "fn": 4,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8831168831168831
+        },
+        {
+          "field": "skills",
+          "precision": 0.9387755102040817,
+          "recall": 0.5227272727272727,
+          "f1": 0.6715328467153285,
+          "support": 88,
+          "counts": {
+            "tp": 46,
+            "fp": 3,
+            "fn": 42,
+            "tn": 0
+          },
+          "meanSimilarity": 1
+        },
+        {
+          "field": "certifications",
+          "precision": 0.75,
+          "recall": 0.42857142857142855,
+          "f1": 0.5454545454545454,
+          "support": 7,
+          "counts": {
+            "tp": 3,
+            "fp": 1,
+            "fn": 4,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9696969696969697
+        },
+        {
+          "field": "experience.entry",
+          "precision": 1,
+          "recall": 0.5483870967741935,
+          "f1": 0.7083333333333333,
+          "support": 31,
+          "counts": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 14,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8235437239284084
+        },
+        {
+          "field": "experience.title",
+          "precision": 0.7058823529411765,
+          "recall": 0.3870967741935484,
+          "f1": 0.5,
+          "support": 31,
+          "counts": {
+            "tp": 12,
+            "fp": 5,
+            "fn": 19,
+            "tn": 0
+          },
+          "meanSimilarity": 0.7553196717283404
+        },
+        {
+          "field": "experience.company",
+          "precision": 0.7058823529411765,
+          "recall": 0.3870967741935484,
+          "f1": 0.5,
+          "support": 31,
+          "counts": {
+            "tp": 12,
+            "fp": 5,
+            "fn": 19,
+            "tn": 0
+          },
+          "meanSimilarity": 0.7553196717283404
+        },
+        {
+          "field": "experience.duration",
+          "precision": 1,
+          "recall": 0.5483870967741935,
+          "f1": 0.7083333333333333,
+          "support": 31,
+          "counts": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 14,
+            "tn": 0
+          },
+          "meanSimilarity": 1
+        },
+        {
+          "field": "experience.description",
+          "precision": 1,
+          "recall": 0.5483870967741935,
+          "f1": 0.7083333333333333,
+          "support": 31,
+          "counts": {
+            "tp": 17,
+            "fp": 0,
+            "fn": 14,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9976130023666933
+        },
+        {
+          "field": "education.entry",
+          "precision": 1,
+          "recall": 0.45454545454545453,
+          "f1": 0.625,
+          "support": 11,
+          "counts": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 6,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8043415294383036
+        },
+        {
+          "field": "education.degree",
+          "precision": 0.8,
+          "recall": 0.36363636363636365,
+          "f1": 0.5000000000000001,
+          "support": 11,
+          "counts": {
+            "tp": 4,
+            "fp": 1,
+            "fn": 7,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9151515151515153
+        },
+        {
+          "field": "education.institution",
+          "precision": 0.6,
+          "recall": 0.2727272727272727,
+          "f1": 0.37499999999999994,
+          "support": 11,
+          "counts": {
+            "tp": 3,
+            "fp": 2,
+            "fn": 8,
+            "tn": 0
+          },
+          "meanSimilarity": 0.6447477253928866
+        },
+        {
+          "field": "education.graduationDate",
+          "precision": 1,
+          "recall": 0.45454545454545453,
+          "f1": 0.625,
+          "support": 11,
+          "counts": {
+            "tp": 5,
+            "fp": 0,
+            "fn": 6,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8666666666666666
+        }
+      ],
+      "perGroup": [
+        {
+          "group": "Contact details",
+          "micro": {
+            "precision": 0.918918918918919,
+            "recall": 0.85,
+            "f1": 0.8831168831168831,
+            "support": 40,
+            "counts": {
+              "tp": 34,
+              "fp": 3,
+              "fn": 6,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Skills",
+          "micro": {
+            "precision": 0.9387755102040817,
+            "recall": 0.5227272727272727,
+            "f1": 0.6715328467153285,
+            "support": 88,
+            "counts": {
+              "tp": 46,
+              "fp": 3,
+              "fn": 42,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Certifications",
+          "micro": {
+            "precision": 0.75,
+            "recall": 0.42857142857142855,
+            "f1": 0.5454545454545454,
+            "support": 7,
+            "counts": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 4,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Experience",
+          "micro": {
+            "precision": 0.8823529411764706,
+            "recall": 0.4838709677419355,
+            "f1": 0.625,
+            "support": 155,
+            "counts": {
+              "tp": 75,
+              "fp": 10,
+              "fn": 80,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Education",
+          "micro": {
+            "precision": 0.85,
+            "recall": 0.38636363636363635,
+            "f1": 0.53125,
+            "support": 44,
+            "counts": {
+              "tp": 17,
+              "fp": 3,
+              "fn": 27,
+              "tn": 0
+            }
+          }
+        }
+      ],
+      "byCondition": [
+        {
+          "label": "single-column-digital",
+          "documents": 5,
+          "micro": {
+            "precision": 0.8521739130434782,
+            "recall": 0.547486033519553,
+            "f1": 0.6666666666666666,
+            "support": 179,
+            "counts": {
+              "tp": 98,
+              "fp": 17,
+              "fn": 81,
+              "tn": 0
+            }
+          },
+          "microF1Interval": {
+            "point": 0.6666666666666666,
+            "lower": 0.35833333333333334,
+            "upper": 0.8710601719197708,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        },
+        {
+          "label": "two-column-digital",
+          "documents": 5,
+          "micro": {
+            "precision": 0.9625,
+            "recall": 0.4967741935483871,
+            "f1": 0.6553191489361703,
+            "support": 155,
+            "counts": {
+              "tp": 77,
+              "fp": 3,
+              "fn": 78,
+              "tn": 0
+            }
+          },
+          "microF1Interval": {
+            "point": 0.6553191489361703,
+            "lower": 0.22360248447204972,
+            "upper": 0.8984615384615384,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "byLayout": [
+        {
+          "label": "single-column",
+          "documents": 5,
+          "micro": {
+            "precision": 0.8521739130434782,
+            "recall": 0.547486033519553,
+            "f1": 0.6666666666666666,
+            "support": 179,
+            "counts": {
+              "tp": 98,
+              "fp": 17,
+              "fn": 81,
+              "tn": 0
+            }
+          },
+          "microF1Interval": {
+            "point": 0.6666666666666666,
+            "lower": 0.35833333333333334,
+            "upper": 0.8710601719197708,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        },
+        {
+          "label": "two-column",
+          "documents": 5,
+          "micro": {
+            "precision": 0.9625,
+            "recall": 0.4967741935483871,
+            "f1": 0.6553191489361703,
+            "support": 155,
+            "counts": {
+              "tp": 77,
+              "fp": 3,
+              "fn": 78,
+              "tn": 0
+            }
+          },
+          "microF1Interval": {
+            "point": 0.6553191489361703,
+            "lower": 0.22360248447204972,
+            "upper": 0.8984615384615384,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "byModality": [
+        {
+          "label": "digital",
+          "documents": 10,
+          "micro": {
+            "precision": 0.8974358974358975,
+            "recall": 0.5239520958083832,
+            "f1": 0.661625708884688,
+            "support": 334,
+            "counts": {
+              "tp": 175,
+              "fp": 20,
+              "fn": 159,
+              "tn": 0
+            }
+          },
+          "microF1Interval": {
+            "point": 0.661625708884688,
+            "lower": 0.41484315315910103,
+            "upper": 0.8224573941726222,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "errorCounts": [
+        {
+          "category": "MISSING_FIELD",
+          "count": 123,
+          "share": 0.7109826589595376,
+          "informational": false,
+          "description": "The document contained the value and the model returned nothing."
+        },
+        {
+          "category": "MISSED_ENTRY",
+          "count": 20,
+          "share": 0.11560693641618497,
+          "informational": false,
+          "description": "An entire experience or education entry was not returned."
+        },
+        {
+          "category": "COLUMN_BLEED",
+          "count": 11,
+          "share": 0.06358381502890173,
+          "informational": false,
+          "description": "The returned value is real text from a different part of the document — the reading order was wrong."
+        },
+        {
+          "category": "OCR_UNAVAILABLE",
+          "count": 10,
+          "share": 0.057803468208092484,
+          "informational": false,
+          "description": "A text-only provider was given a scanned image and no OCR engine was installed."
+        },
+        {
+          "category": "HALLUCINATED_FIELD",
+          "count": 4,
+          "share": 0.023121387283236993,
+          "informational": false,
+          "description": "The document did not contain this field and the model produced a value anyway."
+        },
+        {
+          "category": "PARTIAL_VALUE",
+          "count": 3,
+          "share": 0.017341040462427744,
+          "informational": false,
+          "description": "Substantially overlapping with the truth but below the match threshold."
+        },
+        {
+          "category": "WRONG_VALUE",
+          "count": 2,
+          "share": 0.011560693641618497,
+          "informational": false,
+          "description": "Both values present and unrelated to each other."
+        }
+      ],
+      "calibration": {
+        "scored": 195,
+        "unreported": 0,
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 1,
+            "meanConfidence": 0.3,
+            "accuracy": 1,
+            "gap": 0.7
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 4,
+            "meanConfidence": 0.65,
+            "accuracy": 1,
+            "gap": 0.35
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 7,
+            "meanConfidence": 0.7800000000000001,
+            "accuracy": 0.8571428571428571,
+            "gap": 0.07714285714285696
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 59,
+            "meanConfidence": 0.8774576271186446,
+            "accuracy": 0.9491525423728814,
+            "gap": 0.07169491525423677
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 124,
+            "meanConfidence": 0.950080645161292,
+            "accuracy": 0.8709677419354839,
+            "gap": -0.0791129032258081
+          }
+        ],
+        "ece": 0.08553846153846242,
+        "mce": 0.7,
+        "brier": 0.1007066666666667,
+        "auroc": 0.43542857142857144,
+        "meanConfidence": 0.912512820512819,
+        "accuracy": 0.8974358974358975,
+        "overconfident": true,
+        "byField": {
+          "personal.name": {
+            "scored": 10,
+            "ece": 0.187,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.813
+          },
+          "personal.email": {
+            "scored": 10,
+            "ece": 0.019999999999999796,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9800000000000002
+          },
+          "personal.phone": {
+            "scored": 10,
+            "ece": 0.16399999999999976,
+            "auroc": 0.4375,
+            "accuracy": 0.8,
+            "meanConfidence": 0.9279999999999997
+          },
+          "personal.location": {
+            "scored": 7,
+            "ece": 0.07714285714285696,
+            "auroc": 0.5,
+            "accuracy": 0.8571428571428571,
+            "meanConfidence": 0.7800000000000001
+          },
+          "skills": {
+            "scored": 49,
+            "ece": 0.05877551020408134,
+            "auroc": 0.5,
+            "accuracy": 0.9387755102040817,
+            "meanConfidence": 0.8800000000000003
+          },
+          "experience.entry": {
+            "scored": 17,
+            "ece": 0.050000000000000266,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9499999999999997
+          },
+          "experience.title": {
+            "scored": 17,
+            "ece": 0.24411764705882322,
+            "auroc": 0.5,
+            "accuracy": 0.7058823529411765,
+            "meanConfidence": 0.9499999999999997
+          },
+          "experience.company": {
+            "scored": 17,
+            "ece": 0.24411764705882322,
+            "auroc": 0.5,
+            "accuracy": 0.7058823529411765,
+            "meanConfidence": 0.9499999999999997
+          },
+          "experience.duration": {
+            "scored": 17,
+            "ece": 0.050000000000000266,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9499999999999997
+          },
+          "experience.description": {
+            "scored": 17,
+            "ece": 0.050000000000000266,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9499999999999997
+          },
+          "education.entry": {
+            "scored": 5,
+            "ece": 0.11000000000000003,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.89
+          },
+          "education.degree": {
+            "scored": 5,
+            "ece": 0.22999999999999998,
+            "auroc": 0.375,
+            "accuracy": 0.8,
+            "meanConfidence": 0.89
+          },
+          "education.institution": {
+            "scored": 5,
+            "ece": 0.43,
+            "auroc": 0.3333333333333333,
+            "accuracy": 0.6,
+            "meanConfidence": 0.89
+          },
+          "education.graduationDate": {
+            "scored": 5,
+            "ece": 0.11000000000000003,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.89
+          },
+          "certifications": {
+            "scored": 4,
+            "ece": 0.15000000000000002,
+            "auroc": 0.5,
+            "accuracy": 0.75,
+            "meanConfidence": 0.9
+          }
+        }
+      },
+      "routing": [
+        {
+          "threshold": 0.5,
+          "autoAcceptRate": 0.9948717948717949,
+          "autoAcceptAccuracy": 0.8969072164948454,
+          "errorsPer100Accepted": 10.309278350515463,
+          "errorsCaught": 0
+        },
+        {
+          "threshold": 0.6,
+          "autoAcceptRate": 0.9948717948717949,
+          "autoAcceptAccuracy": 0.8969072164948454,
+          "errorsPer100Accepted": 10.309278350515463,
+          "errorsCaught": 0
+        },
+        {
+          "threshold": 0.7,
+          "autoAcceptRate": 0.9743589743589743,
+          "autoAcceptAccuracy": 0.8947368421052632,
+          "errorsPer100Accepted": 10.526315789473683,
+          "errorsCaught": 0
+        },
+        {
+          "threshold": 0.8,
+          "autoAcceptRate": 0.9384615384615385,
+          "autoAcceptAccuracy": 0.8961748633879781,
+          "errorsPer100Accepted": 10.382513661202186,
+          "errorsCaught": 0.05
+        },
+        {
+          "threshold": 0.9,
+          "autoAcceptRate": 0.6358974358974359,
+          "autoAcceptAccuracy": 0.8709677419354839,
+          "errorsPer100Accepted": 12.903225806451612,
+          "errorsCaught": 0.2
+        },
+        {
+          "threshold": 0.95,
+          "autoAcceptRate": 0.13333333333333333,
+          "autoAcceptAccuracy": 0.8846153846153846,
+          "errorsPer100Accepted": 11.538461538461538,
+          "errorsCaught": 0.85
+        }
+      ],
+      "cost": {
+        "documentsCosted": 10,
+        "meanLatencyMs": 7.1,
+        "medianLatencyMs": 1,
+        "p90LatencyMs": 36,
+        "meanPreprocessingMs": 251.8,
+        "meanPromptTokens": 0,
+        "meanCompletionTokens": 0,
+        "totalCostUsd": 0,
+        "costPer1000ResumesUsd": 0,
+        "allTokensReported": true
+      },
+      "perDocumentCounts": {
+        "r001__single-column-digital": {
+          "tp": 29,
+          "fp": 4,
+          "fn": 3,
+          "tn": 0
+        },
+        "r002__two-column-digital": {
+          "tp": 38,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r005__single-column-digital": {
+          "tp": 31,
+          "fp": 2,
+          "fn": 3,
+          "tn": 0
+        },
+        "r006__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 27,
+          "tn": 0
+        },
+        "r009__single-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 42,
+          "tn": 0
+        },
+        "r010__two-column-digital": {
+          "tp": 28,
+          "fp": 3,
+          "fn": 2,
+          "tn": 0
+        },
+        "r013__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 22,
+          "tn": 0
+        },
+        "r014__two-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 21,
+          "tn": 0
+        },
+        "r017__single-column-digital": {
+          "tp": 32,
+          "fp": 10,
+          "fn": 11,
+          "tn": 0
+        },
+        "r018__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 28,
+          "tn": 0
+        }
+      },
+      "truncatedPrompts": 0,
+      "repairedReplies": 0,
+      "failedOver": 0
+    }
+  ]
+}

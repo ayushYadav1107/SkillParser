@@ -1,0 +1,86 @@
+{
+  "id": "r052",
+  "seed": 20664693,
+  "truth": {
+    "personal": {
+      "name": "Élodie Moreira",
+      "email": "elodie_moreira@mailbox.dev",
+      "phone": "+60 589 902 391",
+      "location": "İzmir, Türkiye"
+    },
+    "skills": [
+      "SIEM tuning",
+      "Fuzzing",
+      "Burp Suite",
+      "Cryptographic protocol review",
+      "Rust",
+      "Incident response"
+    ],
+    "experience": [
+      {
+        "title": "Senior Security Engineer",
+        "company": "Wayfinder Maritime",
+        "duration": "Jan 2023-Present",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      },
+      {
+        "title": "Detection Engineer",
+        "company": "Thicket Games Studio",
+        "duration": "Apr 2020-Jan 2023",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines."
+      },
+      {
+        "title": "Security Engineer",
+        "company": "Verdigris Payments",
+        "duration": "Feb 2017-Mar 2020",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "Jul 2016"
+      }
+    ],
+    "certifications": [
+      "OSCP",
+      "GIAC Web Application Penetration Tester (GWAPT)"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL EXPERIENCE",
+      "education": "Education",
+      "skills": "SKILLS",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " · ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "short-month",
+    "summaryText": "Nine years of security work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "senior",
+    "experienceCount": 3,
+    "skillCount": 6,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

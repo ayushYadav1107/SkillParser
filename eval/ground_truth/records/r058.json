@@ -1,0 +1,76 @@
+{
+  "id": "r058",
+  "seed": 20712207,
+  "truth": {
+    "personal": {
+      "name": "Nadia Haddad",
+      "email": "nadia_haddad@protonpost.io",
+      "phone": "+91 80266 53832",
+      "location": ""
+    },
+    "skills": [
+      "Feature engineering",
+      "scikit-learn",
+      "Vector databases",
+      "ONNX Runtime",
+      "CUDA",
+      "A/B testing",
+      "MLflow",
+      "PyTorch",
+      "Causal inference",
+      "Transformers",
+      "Cross-functional collaboration",
+      "Incident command"
+    ],
+    "experience": [],
+    "education": [
+      {
+        "degree": "BSc (Hons) Data Science",
+        "institution": "University of West Marches",
+        "graduationDate": "Expected Jun 2028"
+      }
+    ],
+    "certifications": [
+      "Google Cloud Professional Machine Learning Engineer",
+      "TensorFlow Developer Certificate"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL JOURNEY",
+      "education": "Where I Studied",
+      "skills": "Things I Know",
+      "certifications": "Extra Qualifications",
+      "summary": "ABOUT ME"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "•",
+    "dateFormat": "short-month",
+    "summaryText": "Early-career ml work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [
+      "github.com/nadiahaddad",
+      "linkedin.com/in/nadiahaddad"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "new-grad",
+    "experienceCount": 0,
+    "skillCount": 12,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": false,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

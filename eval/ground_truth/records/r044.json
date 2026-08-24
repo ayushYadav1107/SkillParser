@@ -1,0 +1,91 @@
+{
+  "id": "r044",
+  "seed": 20601341,
+  "truth": {
+    "personal": {
+      "name": "JOON HAUGEN",
+      "email": "joon.haugen13@quietbox.org",
+      "phone": "+44 2524 725825",
+      "location": "Trondheim, Norway"
+    },
+    "skills": [
+      "Burp Suite",
+      "Rust",
+      "Cryptographic protocol review",
+      "Fuzzing",
+      "Threat modelling",
+      "Incident response",
+      "eBPF",
+      "OAuth 2.1",
+      "Public speaking",
+      "Cross-functional collaboration"
+    ],
+    "experience": [
+      {
+        "title": "Senior Security Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "April 2025 – February 2026",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      },
+      {
+        "title": "Application Security Engineer",
+        "company": "Palisade Energy Networks",
+        "duration": "April 2023 – April 2025",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      },
+      {
+        "title": "Detection Engineer",
+        "company": "Ravelin Mobility",
+        "duration": "November 2021 – April 2023",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Electronics and Communication",
+        "institution": "Halgren College of Technology",
+        "graduationDate": "April 2015"
+      }
+    ],
+    "certifications": [
+      "CISSP"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL JOURNEY",
+      "education": "ACADEMICS",
+      "skills": "WHAT I WORK WITH",
+      "certifications": "TRAINING",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": true,
+    "bullet": "‣",
+    "dateFormat": "long-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "linkedin.com/in/joonhaugen"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "mid",
+    "experienceCount": 3,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

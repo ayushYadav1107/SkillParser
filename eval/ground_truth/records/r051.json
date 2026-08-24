@@ -1,0 +1,103 @@
+{
+  "id": "r051",
+  "seed": 20656774,
+  "truth": {
+    "personal": {
+      "name": "Ingrid Yıldırım",
+      "email": "ingrid_yldrm@northwind-mail.net",
+      "phone": "+44 3031 588168",
+      "location": "Chennai, India"
+    },
+    "skills": [
+      "Burp Suite",
+      "OAuth 2.1",
+      "Cryptographic protocol review",
+      "Threat modelling",
+      "SIEM tuning",
+      "Incident response",
+      "Fuzzing",
+      "eBPF",
+      "Rust"
+    ],
+    "experience": [
+      {
+        "title": "Detection Engineer",
+        "company": "Coriolis Weather Systems",
+        "duration": "Nov 2022 - Current",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      },
+      {
+        "title": "Senior Security Engineer",
+        "company": "Palisade Energy Networks",
+        "duration": "Nov 2020 - Nov 2022",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      },
+      {
+        "title": "Security Engineer",
+        "company": "Ferrite Cloud",
+        "duration": "May 2019 - Nov 2020",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      },
+      {
+        "title": "Application Security Engineer",
+        "company": "Thicket Games Studio",
+        "duration": "Aug 2017 - May 2019",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      },
+      {
+        "title": "Detection Engineer",
+        "company": "Ravelin Mobility",
+        "duration": "Feb 2015 - May 2017",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MS in Computer Science",
+        "institution": "Nordvik Technical University",
+        "graduationDate": "Jun 2016"
+      }
+    ],
+    "certifications": [
+      "OSCP"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "Skills",
+      "certifications": "Certifications",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "•",
+    "dateFormat": "short-month",
+    "summaryText": "Nine years of security work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [
+      "linkedin.com/in/ingridyldrm",
+      "Open to relocation"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

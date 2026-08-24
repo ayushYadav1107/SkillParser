@@ -1,0 +1,83 @@
+{
+  "id": "r022",
+  "seed": 20427123,
+  "truth": {
+    "personal": {
+      "name": "Ravindra Nowak",
+      "email": "ravindra_nowak@northwind-mail.net",
+      "phone": "+91 98322 23140",
+      "location": "Lagos, Nigeria"
+    },
+    "skills": [
+      "A/B testing",
+      "MLflow",
+      "ONNX Runtime",
+      "scikit-learn",
+      "PyTorch",
+      "Transformers",
+      "Feature engineering",
+      "Causal inference",
+      "Vector databases",
+      "CUDA",
+      "Python",
+      "Cross-functional collaboration",
+      "Incident command"
+    ],
+    "experience": [
+      {
+        "title": "Research Engineer",
+        "company": "Tessellate AI",
+        "duration": "06/2024 — Current",
+        "description": "Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computational Biology",
+        "institution": "Ardennes Polytechnic",
+        "graduationDate": "Expected 05/2028"
+      }
+    ],
+    "certifications": [
+      "TensorFlow Developer Certificate"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WHERE I'VE WORKED",
+      "education": "Where I Studied",
+      "skills": "STACK",
+      "certifications": "ACCREDITATIONS",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "‣",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": [
+      "Wrote a from-scratch key-value store to understand write-ahead logging properly.",
+      "Open-source contributor: three merged patches to a widely used HTTP client."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 13,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

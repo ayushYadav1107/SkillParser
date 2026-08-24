@@ -1,0 +1,86 @@
+{
+  "id": "r019",
+  "seed": 20403366,
+  "truth": {
+    "personal": {
+      "name": "Yusuf Novak",
+      "email": "yusuf.novak@fastpost.email",
+      "phone": "+67 619 285 016",
+      "location": "Fukuoka, Japan"
+    },
+    "skills": [
+      "SQL",
+      "Data modelling",
+      "Great Expectations",
+      "Spark",
+      "Python",
+      "Flink",
+      "Airflow",
+      "Snowflake",
+      "Delta Lake",
+      "dbt"
+    ],
+    "experience": [
+      {
+        "title": "Senior Data Engineer",
+        "company": "Wayfinder Maritime",
+        "duration": "05/2024 — Current",
+        "description": "Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m."
+      },
+      {
+        "title": "Data Platform Engineer",
+        "company": "Alder & Finch Advisory",
+        "duration": "02/2023 — 04/2024",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Electronics and Communication",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "07/2017"
+      }
+    ],
+    "certifications": [
+      "Databricks Certified Data Engineer Professional"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL JOURNEY",
+      "education": "SCHOOLING",
+      "skills": "TOOLBOX",
+      "certifications": "BADGES",
+      "summary": "ABOUT ME"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " · ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": [
+      "Wrote a from-scratch key-value store to understand write-ahead logging properly.",
+      "Open-source contributor: three merged patches to a widely used HTTP client."
+    ],
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "mid",
+    "experienceCount": 2,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

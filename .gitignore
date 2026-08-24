@@ -43,3 +43,13 @@ next-env.d.ts
 # firebase
 firebase-debug.log
 firestore-debug.log
+
+# evaluation framework
+# Rendered documents are derived from the checked-in labels; regenerate with
+# `npm run eval:corpus`. Full run artifacts carry every field observation and run to
+# a few megabytes each — the aggregated summaries in eval/results/history/ are what
+# gets committed.
+eval/ground_truth/documents/
+eval/results/runs/
+eval/results/cache/
+.tesseract-cache/

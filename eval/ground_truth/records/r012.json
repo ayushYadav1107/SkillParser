@@ -1,0 +1,111 @@
+{
+  "id": "r012",
+  "seed": 20347933,
+  "truth": {
+    "personal": {
+      "name": "Ravindra Nwachukwu",
+      "email": "ravindran@inbox.example",
+      "phone": "+44 8559 570672",
+      "location": "Wrocław, Poland"
+    },
+    "skills": [
+      "React",
+      "Accessibility (WCAG 2.2)",
+      "CSS architecture",
+      "Design systems",
+      "WebAssembly",
+      "Next.js",
+      "Vite",
+      "Stakeholder communication",
+      "Cross-functional collaboration"
+    ],
+    "experience": [
+      {
+        "title": "Web Platform Engineer",
+        "company": "Quillon Semiconductor",
+        "duration": "July 2024-July 2026",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android."
+      },
+      {
+        "title": "Frontend Engineer",
+        "company": "Kestrel & Vale",
+        "duration": "November 2021-June 2024",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Shipped a design-system migration across 210 components without a feature freeze. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      },
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Sunstone Bioinformatics",
+        "duration": "March 2018-October 2021",
+        "description": "Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Shipped a design-system migration across 210 components without a feature freeze."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Nimbus Freight Exchange",
+        "duration": "March 2015-March 2018",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      },
+      {
+        "title": "Web Platform Engineer",
+        "company": "Coriolis Weather Systems",
+        "duration": "July 2012-March 2015",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Diploma in Software Engineering",
+        "institution": "Fenwold University",
+        "graduationDate": "May 2014"
+      },
+      {
+        "degree": "MBA, Operations",
+        "institution": "Indian Institute of Applied Sciences, Pilani",
+        "graduationDate": "August 2011"
+      }
+    ],
+    "certifications": [
+      "IAAP Certified Professional in Accessibility Core Competencies"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "CAREER SO FAR",
+      "education": "ACADEMICS",
+      "skills": "STACK",
+      "certifications": "ACCREDITATIONS",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " · ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "–",
+    "dateFormat": "long-month",
+    "summaryText": "Nine years of frontend work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": [
+      "Weekend project: a frontend benchmark suite with reproducible run scripts.",
+      "Open-source contributor: three merged patches to a widely used HTTP client."
+    ],
+    "skillsAsBullets": true,
+    "distractors": [
+      "linkedin.com/in/ravindranwachu",
+      "Open to relocation"
+    ],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

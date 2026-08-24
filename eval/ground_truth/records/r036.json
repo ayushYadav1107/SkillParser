@@ -1,0 +1,94 @@
+{
+  "id": "r036",
+  "seed": 20537989,
+  "truth": {
+    "personal": {
+      "name": "Aarav Novak",
+      "email": "aaravn@northwind-mail.net",
+      "phone": "+1 (892) 222-4871",
+      "location": "Trondheim, Norway"
+    },
+    "skills": [
+      "Event sourcing",
+      "gRPC",
+      "OpenTelemetry",
+      "Distributed systems",
+      "Terraform",
+      "Go",
+      "Cross-functional collaboration",
+      "Mentoring"
+    ],
+    "experience": [
+      {
+        "title": "Platform Engineer",
+        "company": "Ravelin Mobility",
+        "duration": "May 2023-Mar 2026",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity. Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime."
+      },
+      {
+        "title": "Backend Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "Mar 2021-Apr 2023",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity. Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime."
+      },
+      {
+        "title": "Software Development Engineer II",
+        "company": "Kestrel & Vale",
+        "duration": "Jul 2019-Mar 2021",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity. Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime."
+      },
+      {
+        "title": "Staff Software Engineer",
+        "company": "Boreal Instrument Co.",
+        "duration": "May 2018-Jul 2019",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Diploma in Software Engineering",
+        "institution": "Nordvik Technical University",
+        "graduationDate": "May 2017"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL JOURNEY",
+      "education": "Where I Studied",
+      "skills": "WHAT I WORK WITH",
+      "certifications": "ACCREDITATIONS",
+      "summary": "ABOUT ME"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "short-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "Portfolio: aaravnovak.dev",
+      "github.com/aaravnovak"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "backend",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

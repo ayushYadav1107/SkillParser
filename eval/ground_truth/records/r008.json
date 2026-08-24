@@ -1,0 +1,105 @@
+{
+  "id": "r008",
+  "seed": 20316257,
+  "truth": {
+    "personal": {
+      "name": "Hyun-woo Bhattacharya",
+      "email": "hyunwoo.bhattacharya91@lumenmail.co",
+      "phone": "+44 3649 172879",
+      "location": "Belo Horizonte, Brazil"
+    },
+    "skills": [
+      "Feature engineering",
+      "ONNX Runtime",
+      "Vector databases",
+      "Ray",
+      "scikit-learn",
+      "Causal inference",
+      "A/B testing",
+      "CUDA",
+      "Code review"
+    ],
+    "experience": [
+      {
+        "title": "Senior ML Engineer",
+        "company": "Bramblewood Insurance",
+        "duration": "Oct 2023 — Feb 2026",
+        "description": "Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months. Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters. Trained a 340M-parameter ranking model that lifted click-through rate 4.2% in a two-week online test."
+      },
+      {
+        "title": "Data Scientist",
+        "company": "Driftwood Retail Group",
+        "duration": "Mar 2020 — Oct 2023",
+        "description": "Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters."
+      },
+      {
+        "title": "Research Engineer",
+        "company": "Sunstone Bioinformatics",
+        "duration": "Jan 2017 — Nov 2019",
+        "description": "Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months."
+      },
+      {
+        "title": "Machine Learning Engineer",
+        "company": "Quillon Semiconductor",
+        "duration": "Nov 2015 — Jan 2017",
+        "description": "Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months."
+      },
+      {
+        "title": "Applied Scientist",
+        "company": "Copperline Foods",
+        "duration": "Dec 2013 — Nov 2015",
+        "description": "Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost. Trained a 340M-parameter ranking model that lifted click-through rate 4.2% in a two-week online test. Replaced hand-tuned heuristics with a calibrated gradient-boosted model, reducing manual review volume 38%."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computational Biology",
+        "institution": "Ardennes Polytechnic",
+        "graduationDate": "Apr 2021"
+      },
+      {
+        "degree": "B.E. in Information Technology",
+        "institution": "Blackwater State University",
+        "graduationDate": "Jun 2018"
+      }
+    ],
+    "certifications": [
+      "Google Cloud Professional Machine Learning Engineer"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "Selected Roles",
+      "education": "STUDIES",
+      "skills": "STACK",
+      "certifications": "TRAINING",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " | ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "short-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

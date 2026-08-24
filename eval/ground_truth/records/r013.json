@@ -1,0 +1,77 @@
+{
+  "id": "r013",
+  "seed": 20355852,
+  "truth": {
+    "personal": {
+      "name": "Priyanka van der Meulen",
+      "email": "pvandermeulen@protonpost.io",
+      "phone": "+1 (302) 086-0501",
+      "location": "Wrocław, Poland"
+    },
+    "skills": [
+      "Great Expectations",
+      "SQL",
+      "Snowflake",
+      "Python",
+      "Data modelling",
+      "dbt",
+      "Flink",
+      "Airflow",
+      "Delta Lake",
+      "Spark",
+      "Stakeholder communication",
+      "Code review"
+    ],
+    "experience": [
+      {
+        "title": "Senior Data Engineer",
+        "company": "Saltmarsh Health",
+        "duration": "Apr 2025 - May 2026",
+        "description": "Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MS in Computer Science",
+        "institution": "University of Rothbury",
+        "graduationDate": "Expected Aug 2027"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WHERE I'VE WORKED",
+      "education": "SCHOOLING",
+      "skills": "WHAT I WORK WITH",
+      "certifications": "Extra Qualifications",
+      "summary": "The Short Version"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " | ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "short-month",
+    "summaryText": "Early-career data work with a bias toward measurable outcomes. Has shipped to production continuously and has the incident reviews to prove it.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 12,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

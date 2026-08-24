@@ -1,0 +1,64 @@
+{
+  "id": "r040",
+  "seed": 20569665,
+  "truth": {
+    "personal": {
+      "name": "AMARA HAUGEN",
+      "email": "amarah@protonpost.io",
+      "phone": "205-680-0651",
+      "location": "Fukuoka, Japan"
+    },
+    "skills": [
+      "Stakeholder management",
+      "Discovery interviews",
+      "OKR planning",
+      "Pricing strategy",
+      "Roadmapping",
+      "SQL",
+      "Amplitude",
+      "Experiment design",
+      "Code review",
+      "Public speaking"
+    ],
+    "experience": [],
+    "education": [],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "EXPERIENCE",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "CORE COMPETENCIES",
+      "certifications": "Certifications",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " — ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "numeric",
+    "summaryText": "Early-career product work with a bias toward measurable outcomes. Writes things down; prefers a short design doc to a long meeting.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [
+      "Open to relocation"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "product",
+    "seniority": "new-grad",
+    "experienceCount": 0,
+    "skillCount": 10,
+    "hasEducation": false,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

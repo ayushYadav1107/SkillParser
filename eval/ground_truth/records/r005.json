@@ -1,0 +1,94 @@
+{
+  "id": "r005",
+  "seed": 20292500,
+  "truth": {
+    "personal": {
+      "name": "Ola Raghunathan",
+      "email": "ola_raghunathan@inbox.example",
+      "phone": "+91 82811 09627",
+      "location": "Rotterdam, Netherlands"
+    },
+    "skills": [
+      "Experiment design",
+      "Stakeholder management",
+      "OKR planning",
+      "Amplitude",
+      "Pricing strategy",
+      "SQL",
+      "Roadmapping",
+      "Discovery interviews",
+      "Stakeholder communication",
+      "Code review"
+    ],
+    "experience": [
+      {
+        "title": "Product Manager",
+        "company": "Coriolis Weather Systems",
+        "duration": "02/2024-06/2026",
+        "description": "Shipped the self-serve onboarding flow that removed sales from 60% of new-account activations. Ran the pricing experiment that raised ARPU 11% without measurable churn impact. Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach."
+      },
+      {
+        "title": "Senior Product Manager",
+        "company": "Boreal Instrument Co.",
+        "duration": "01/2022-02/2024",
+        "description": "Rebuilt the quarterly planning process around measurable bets; on-time delivery went from 48% to 81%."
+      },
+      {
+        "title": "Technical Program Manager",
+        "company": "Coriolis Weather Systems",
+        "duration": "04/2019-10/2021",
+        "description": "Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach. Rebuilt the quarterly planning process around measurable bets; on-time delivery went from 48% to 81%. Ran the pricing experiment that raised ARPU 11% without measurable churn impact."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MS in Computer Science",
+        "institution": "Nordvik Technical University",
+        "graduationDate": "05/2013"
+      }
+    ],
+    "certifications": [
+      "Pragmatic Institute PMC-III"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "EDUCATION",
+      "skills": "Skills",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " · ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "numeric",
+    "summaryText": "Four years of product work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": [
+      "Weekend project: a product benchmark suite with reproducible run scripts."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [
+      "github.com/olaraghun",
+      "linkedin.com/in/olaraghun"
+    ],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "product",
+    "seniority": "mid",
+    "experienceCount": 3,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

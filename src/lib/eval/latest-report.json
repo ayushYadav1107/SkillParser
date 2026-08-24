@@ -1,0 +1,768 @@
+{
+  "runId": "2026-08-24T11-10-58-972Z",
+  "finishedAt": "2026-08-24T11:11:01.392Z",
+  "documentCount": 240,
+  "corpusSeed": 20260824,
+  "harnessVersion": "1.0.0",
+  "arms": [
+    {
+      "id": "heuristic",
+      "label": "Rule-based baseline",
+      "provider": "heuristic",
+      "model": "rules-v1",
+      "strategy": "zero-shot",
+      "pdfStrategy": "column-aware",
+      "microF1": 0.7314958191390523,
+      "microF1Lower": 0.6731680486699229,
+      "microF1Upper": 0.7859860099253001,
+      "macroF1": 0.73704144414498,
+      "precision": 0.9091608929946112,
+      "recall": 0.6119170984455958,
+      "documentsScored": 120,
+      "documentsFailed": 0,
+      "documentsSkipped": 120,
+      "failureReasons": {
+        "ocr-unavailable": 120
+      },
+      "perField": [
+        {
+          "field": "personal.name",
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1": 0.975,
+          "support": 120
+        },
+        {
+          "field": "personal.email",
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 120
+        },
+        {
+          "field": "personal.phone",
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143,
+          "support": 112
+        },
+        {
+          "field": "personal.location",
+          "precision": 0.9565217391304348,
+          "recall": 0.7586206896551724,
+          "f1": 0.8461538461538461,
+          "support": 116
+        },
+        {
+          "field": "skills",
+          "precision": 0.9680555555555556,
+          "recall": 0.6371115173674589,
+          "f1": 0.7684674751929438,
+          "support": 1094
+        },
+        {
+          "field": "certifications",
+          "precision": 0.648936170212766,
+          "recall": 0.5980392156862745,
+          "f1": 0.6224489795918368,
+          "support": 102
+        },
+        {
+          "field": "experience.entry",
+          "precision": 0.9904761904761905,
+          "recall": 0.6265060240963856,
+          "f1": 0.7675276752767527,
+          "support": 332
+        },
+        {
+          "field": "experience.title",
+          "precision": 0.75,
+          "recall": 0.46987951807228917,
+          "f1": 0.5777777777777777,
+          "support": 332
+        },
+        {
+          "field": "experience.company",
+          "precision": 0.6867469879518072,
+          "recall": 0.3433734939759036,
+          "f1": 0.45783132530120485,
+          "support": 332
+        },
+        {
+          "field": "experience.duration",
+          "precision": 1,
+          "recall": 0.6265060240963856,
+          "f1": 0.7703703703703704,
+          "support": 332
+        },
+        {
+          "field": "experience.description",
+          "precision": 1,
+          "recall": 0.6265060240963856,
+          "f1": 0.7703703703703704,
+          "support": 332
+        },
+        {
+          "field": "education.entry",
+          "precision": 1,
+          "recall": 0.6343283582089553,
+          "f1": 0.776255707762557,
+          "support": 134
+        },
+        {
+          "field": "education.degree",
+          "precision": 0.8470588235294118,
+          "recall": 0.5373134328358209,
+          "f1": 0.6575342465753425,
+          "support": 134
+        },
+        {
+          "field": "education.institution",
+          "precision": 0.7411764705882353,
+          "recall": 0.4701492537313433,
+          "f1": 0.5753424657534247,
+          "support": 134
+        },
+        {
+          "field": "education.graduationDate",
+          "precision": 1,
+          "recall": 0.6343283582089553,
+          "f1": 0.776255707762557,
+          "support": 134
+        }
+      ],
+      "perGroup": [
+        {
+          "group": "Contact details",
+          "precision": 0.9121621621621622,
+          "recall": 0.8653846153846154,
+          "f1": 0.8881578947368421
+        },
+        {
+          "group": "Skills",
+          "precision": 0.9680555555555556,
+          "recall": 0.6371115173674589,
+          "f1": 0.7684674751929438
+        },
+        {
+          "group": "Certifications",
+          "precision": 0.648936170212766,
+          "recall": 0.5980392156862745,
+          "f1": 0.6224489795918368
+        },
+        {
+          "group": "Experience",
+          "precision": 0.894,
+          "recall": 0.5385542168674698,
+          "f1": 0.6721804511278195
+        },
+        {
+          "group": "Education",
+          "precision": 0.8970588235294118,
+          "recall": 0.5690298507462687,
+          "f1": 0.6963470319634704
+        }
+      ],
+      "byCondition": [
+        {
+          "label": "single-column-digital",
+          "f1": 0.7289081885856079,
+          "documents": 60
+        },
+        {
+          "label": "two-column-digital",
+          "f1": 0.7340754483611627,
+          "documents": 60
+        }
+      ],
+      "errorCounts": [
+        {
+          "category": "MISSING_FIELD",
+          "count": 1147,
+          "share": 0.6843675417661098,
+          "informational": false,
+          "description": "The document contained the value and the model returned nothing."
+        },
+        {
+          "category": "MISSED_ENTRY",
+          "count": 173,
+          "share": 0.1032219570405728,
+          "informational": false,
+          "description": "An entire experience or education entry was not returned."
+        },
+        {
+          "category": "OCR_UNAVAILABLE",
+          "count": 120,
+          "share": 0.07159904534606205,
+          "informational": false,
+          "description": "A text-only provider was given a scanned image and no OCR engine was installed."
+        },
+        {
+          "category": "COLUMN_BLEED",
+          "count": 107,
+          "share": 0.06384248210023866,
+          "informational": false,
+          "description": "The returned value is real text from a different part of the document — the reading order was wrong."
+        },
+        {
+          "category": "HALLUCINATED_FIELD",
+          "count": 56,
+          "share": 0.03341288782816229,
+          "informational": false,
+          "description": "The document did not contain this field and the model produced a value anyway."
+        },
+        {
+          "category": "PARTIAL_VALUE",
+          "count": 47,
+          "share": 0.028042959427207637,
+          "informational": false,
+          "description": "Substantially overlapping with the truth but below the match threshold."
+        },
+        {
+          "category": "WRONG_VALUE",
+          "count": 21,
+          "share": 0.012529832935560859,
+          "informational": false,
+          "description": "Both values present and unrelated to each other."
+        },
+        {
+          "category": "TRUNCATION",
+          "count": 3,
+          "share": 0.0017899761336515514,
+          "informational": false,
+          "description": "The returned value is a prefix of the true value; the read stopped early."
+        },
+        {
+          "category": "SPURIOUS_ENTRY",
+          "count": 2,
+          "share": 0.0011933174224343676,
+          "informational": false,
+          "description": "An entry was returned that corresponds to nothing in the document."
+        }
+      ],
+      "calibration": {
+        "scored": 2598,
+        "unreported": 0,
+        "ece": 0.10887605850655804,
+        "mce": 0.44999999999999996,
+        "brier": 0.09245011547343965,
+        "auroc": 0.3912136368202758,
+        "accuracy": 0.9091608929946112,
+        "meanConfidence": 0.9012856043110286,
+        "overconfident": false,
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 6,
+            "meanConfidence": 0.3,
+            "accuracy": 0.6666666666666666
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 2,
+            "meanConfidence": 0.55,
+            "accuracy": 1
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 32,
+            "meanConfidence": 0.6499999999999998,
+            "accuracy": 1
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 260,
+            "meanConfidence": 0.7606153846153849,
+            "accuracy": 0.9846153846153847
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 844,
+            "meanConfidence": 0.8778199052132674,
+            "accuracy": 0.9715639810426541
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1454,
+            "meanConfidence": 0.9485557083906709,
+            "accuracy": 0.8583218707015131
+          }
+        ]
+      },
+      "routing": [
+        {
+          "threshold": 0.5,
+          "autoAcceptRate": 0.9976905311778291,
+          "autoAcceptAccuracy": 0.9097222222222222,
+          "errorsCaught": 0.00847457627118644
+        },
+        {
+          "threshold": 0.6,
+          "autoAcceptRate": 0.9969207082371054,
+          "autoAcceptAccuracy": 0.9096525096525097,
+          "errorsCaught": 0.00847457627118644
+        },
+        {
+          "threshold": 0.7,
+          "autoAcceptRate": 0.9846035411855273,
+          "autoAcceptAccuracy": 0.90852228303362,
+          "errorsCaught": 0.00847457627118644
+        },
+        {
+          "threshold": 0.8,
+          "autoAcceptRate": 0.8845265588914549,
+          "autoAcceptAccuracy": 0.8999129677980853,
+          "errorsCaught": 0.025423728813559324
+        },
+        {
+          "threshold": 0.9,
+          "autoAcceptRate": 0.5596612779060816,
+          "autoAcceptAccuracy": 0.8583218707015131,
+          "errorsCaught": 0.1271186440677966
+        },
+        {
+          "threshold": 0.95,
+          "autoAcceptRate": 0.16474210931485758,
+          "autoAcceptAccuracy": 0.9182242990654206,
+          "errorsCaught": 0.8516949152542372
+        }
+      ],
+      "cost": {
+        "meanLatencyMs": 0.25,
+        "p90LatencyMs": 1,
+        "meanPreprocessingMs": 42.666666666666664,
+        "meanPromptTokens": 0,
+        "meanCompletionTokens": 0,
+        "costPer1000ResumesUsd": 0,
+        "allTokensReported": true
+      },
+      "truncatedPrompts": 0,
+      "repairedReplies": 0,
+      "failedOver": 0
+    },
+    {
+      "id": "heuristic-naive-pdf",
+      "label": "Rule-based baseline · naive PDF extraction",
+      "provider": "heuristic",
+      "model": "rules-v1",
+      "strategy": "zero-shot",
+      "pdfStrategy": "naive",
+      "microF1": 0.4080566952629616,
+      "microF1Lower": 0.3463913657425455,
+      "microF1Upper": 0.4694879036753502,
+      "macroF1": 0.4318595415269089,
+      "precision": 0.7283621837549934,
+      "recall": 0.283419689119171,
+      "documentsScored": 120,
+      "documentsFailed": 0,
+      "documentsSkipped": 120,
+      "failureReasons": {
+        "ocr-unavailable": 120
+      },
+      "perField": [
+        {
+          "field": "personal.name",
+          "precision": 0.525,
+          "recall": 0.525,
+          "f1": 0.525,
+          "support": 120
+        },
+        {
+          "field": "personal.email",
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 120
+        },
+        {
+          "field": "personal.phone",
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143,
+          "support": 112
+        },
+        {
+          "field": "personal.location",
+          "precision": 0.5053763440860215,
+          "recall": 0.4051724137931034,
+          "f1": 0.44976076555023925,
+          "support": 116
+        },
+        {
+          "field": "skills",
+          "precision": 0.904,
+          "recall": 0.30987202925045704,
+          "f1": 0.4615384615384615,
+          "support": 1094
+        },
+        {
+          "field": "certifications",
+          "precision": 0.31343283582089554,
+          "recall": 0.4117647058823529,
+          "f1": 0.35593220338983045,
+          "support": 102
+        },
+        {
+          "field": "experience.entry",
+          "precision": 0.4338235294117647,
+          "recall": 0.17771084337349397,
+          "f1": 0.25213675213675213,
+          "support": 332
+        },
+        {
+          "field": "experience.title",
+          "precision": 0.6779661016949152,
+          "recall": 0.12048192771084337,
+          "f1": 0.20460358056265984,
+          "support": 332
+        },
+        {
+          "field": "experience.company",
+          "precision": 0.6,
+          "recall": 0.05421686746987952,
+          "f1": 0.09944751381215469,
+          "support": 332
+        },
+        {
+          "field": "experience.duration",
+          "precision": 1,
+          "recall": 0.17771084337349397,
+          "f1": 0.30179028132992325,
+          "support": 332
+        },
+        {
+          "field": "experience.description",
+          "precision": 1,
+          "recall": 0.17771084337349397,
+          "f1": 0.30179028132992325,
+          "support": 332
+        },
+        {
+          "field": "education.entry",
+          "precision": 0.7619047619047619,
+          "recall": 0.3582089552238806,
+          "f1": 0.4873096446700508,
+          "support": 134
+        },
+        {
+          "field": "education.degree",
+          "precision": 0.8125,
+          "recall": 0.291044776119403,
+          "f1": 0.42857142857142855,
+          "support": 134
+        },
+        {
+          "field": "education.institution",
+          "precision": 0.7291666666666666,
+          "recall": 0.26119402985074625,
+          "f1": 0.3846153846153846,
+          "support": 134
+        },
+        {
+          "field": "education.graduationDate",
+          "precision": 1,
+          "recall": 0.34328358208955223,
+          "f1": 0.5111111111111112,
+          "support": 134
+        }
+      ],
+      "perGroup": [
+        {
+          "group": "Contact details",
+          "precision": 0.6966292134831461,
+          "recall": 0.6623931623931624,
+          "f1": 0.6790799561883899
+        },
+        {
+          "group": "Skills",
+          "precision": 0.904,
+          "recall": 0.30987202925045704,
+          "f1": 0.4615384615384615
+        },
+        {
+          "group": "Certifications",
+          "precision": 0.31343283582089554,
+          "recall": 0.4117647058823529,
+          "f1": 0.35593220338983045
+        },
+        {
+          "group": "Experience",
+          "precision": 0.685131195335277,
+          "recall": 0.14156626506024098,
+          "f1": 0.23464802795806294
+        },
+        {
+          "group": "Education",
+          "precision": 0.8195121951219512,
+          "recall": 0.31343283582089554,
+          "f1": 0.45344129554655865
+        }
+      ],
+      "byCondition": [
+        {
+          "label": "single-column-digital",
+          "f1": 0.6146635420154001,
+          "documents": 60
+        },
+        {
+          "label": "two-column-digital",
+          "f1": 0.14821052631578946,
+          "documents": 60
+        }
+      ],
+      "errorCounts": [
+        {
+          "category": "MISSING_FIELD",
+          "count": 2219,
+          "share": 0.7144236960721185,
+          "informational": false,
+          "description": "The document contained the value and the model returned nothing."
+        },
+        {
+          "category": "MISSED_ENTRY",
+          "count": 344,
+          "share": 0.1107533805537669,
+          "informational": false,
+          "description": "An entire experience or education entry was not returned."
+        },
+        {
+          "category": "HALLUCINATED_FIELD",
+          "count": 128,
+          "share": 0.0412105602060528,
+          "informational": false,
+          "description": "The document did not contain this field and the model produced a value anyway."
+        },
+        {
+          "category": "OCR_UNAVAILABLE",
+          "count": 120,
+          "share": 0.038634900193174504,
+          "informational": false,
+          "description": "A text-only provider was given a scanned image and no OCR engine was installed."
+        },
+        {
+          "category": "TRUNCATION",
+          "count": 93,
+          "share": 0.02994204764971024,
+          "informational": false,
+          "description": "The returned value is a prefix of the true value; the read stopped early."
+        },
+        {
+          "category": "SPURIOUS_ENTRY",
+          "count": 92,
+          "share": 0.02962009014810045,
+          "informational": false,
+          "description": "An entry was returned that corresponds to nothing in the document."
+        },
+        {
+          "category": "PARTIAL_VALUE",
+          "count": 43,
+          "share": 0.013844172569220863,
+          "informational": false,
+          "description": "Substantially overlapping with the truth but below the match threshold."
+        },
+        {
+          "category": "COLUMN_BLEED",
+          "count": 42,
+          "share": 0.013522215067611075,
+          "informational": false,
+          "description": "The returned value is real text from a different part of the document — the reading order was wrong."
+        },
+        {
+          "category": "ENTRY_MERGE",
+          "count": 15,
+          "share": 0.004829362524146813,
+          "informational": false,
+          "description": "Two or more roles or degrees were collapsed into a single entry."
+        },
+        {
+          "category": "WRONG_VALUE",
+          "count": 10,
+          "share": 0.003219575016097875,
+          "informational": false,
+          "description": "Both values present and unrelated to each other."
+        }
+      ],
+      "calibration": {
+        "scored": 1502,
+        "unreported": 0,
+        "ece": 0.14804260985352896,
+        "mce": 0.45000000000000007,
+        "brier": 0.20530798934753694,
+        "auroc": 0.6627594364985482,
+        "accuracy": 0.7283621837549934,
+        "meanConfidence": 0.8764047936085343,
+        "overconfident": true,
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 7,
+            "meanConfidence": 0.3,
+            "accuracy": 0.14285714285714285
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 7,
+            "meanConfidence": 0.45000000000000007,
+            "accuracy": 0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 4,
+            "meanConfidence": 0.55,
+            "accuracy": 0.5
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 22,
+            "meanConfidence": 0.6500000000000002,
+            "accuracy": 0.36363636363636365
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 284,
+            "meanConfidence": 0.7610563380281695,
+            "accuracy": 0.5598591549295775
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 496,
+            "meanConfidence": 0.8763508064516108,
+            "accuracy": 0.8286290322580645
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 682,
+            "meanConfidence": 0.9439882697947235,
+            "accuracy": 0.7521994134897361
+          }
+        ]
+      },
+      "routing": [
+        {
+          "threshold": 0.5,
+          "autoAcceptRate": 0.9906790945406125,
+          "autoAcceptAccuracy": 0.7345430107526881,
+          "errorsCaught": 0.031862745098039214
+        },
+        {
+          "threshold": 0.6,
+          "autoAcceptRate": 0.9880159786950732,
+          "autoAcceptAccuracy": 0.7351752021563343,
+          "errorsCaught": 0.03676470588235294
+        },
+        {
+          "threshold": 0.7,
+          "autoAcceptRate": 0.9733688415446072,
+          "autoAcceptAccuracy": 0.740766073871409,
+          "errorsCaught": 0.07107843137254902
+        },
+        {
+          "threshold": 0.8,
+          "autoAcceptRate": 0.7842876165113183,
+          "autoAcceptAccuracy": 0.7843803056027164,
+          "errorsCaught": 0.37745098039215685
+        },
+        {
+          "threshold": 0.9,
+          "autoAcceptRate": 0.4540612516644474,
+          "autoAcceptAccuracy": 0.7521994134897361,
+          "errorsCaught": 0.5857843137254902
+        },
+        {
+          "threshold": 0.95,
+          "autoAcceptRate": 0.1970705725699068,
+          "autoAcceptAccuracy": 0.9358108108108109,
+          "errorsCaught": 0.9534313725490197
+        }
+      ],
+      "cost": {
+        "meanLatencyMs": 0.14166666666666666,
+        "p90LatencyMs": 1,
+        "meanPreprocessingMs": 30.366666666666667,
+        "meanPromptTokens": 0,
+        "meanCompletionTokens": 0,
+        "costPer1000ResumesUsd": 0,
+        "allTokensReported": true
+      },
+      "truncatedPrompts": 0,
+      "repairedReplies": 0,
+      "failedOver": 0
+    }
+  ],
+  "comparisons": [
+    {
+      "baselineId": "heuristic",
+      "candidateId": "heuristic-naive-pdf",
+      "delta": -0.32343912387609064,
+      "lower": -0.3851237717376769,
+      "upper": -0.2646117249193209,
+      "pValue": 0.0009995002498750624,
+      "significant": true,
+      "latencyRatio": 0.5666666666666667,
+      "costRatio": 0,
+      "droppedDocuments": 0
+    }
+  ]
+}

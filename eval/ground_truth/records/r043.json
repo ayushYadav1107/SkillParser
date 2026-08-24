@@ -1,0 +1,90 @@
+{
+  "id": "r043",
+  "seed": 20593422,
+  "truth": {
+    "personal": {
+      "name": "Csaba Kowalczyk",
+      "email": "ckowalczyk@protonpost.io",
+      "phone": "+1 (636) 279-1556",
+      "location": "Lagos, Nigeria"
+    },
+    "skills": [
+      "OAuth 2.1",
+      "Rust",
+      "Burp Suite",
+      "eBPF",
+      "SIEM tuning",
+      "Threat modelling",
+      "Code review",
+      "Cross-functional collaboration"
+    ],
+    "experience": [
+      {
+        "title": "Detection Engineer",
+        "company": "Nimbus Freight Exchange",
+        "duration": "Mar 2025-Current",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines."
+      },
+      {
+        "title": "Senior Security Engineer",
+        "company": "Boreal Instrument Co.",
+        "duration": "May 2023-Mar 2025",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      },
+      {
+        "title": "Security Engineer",
+        "company": "Vantablack Security",
+        "duration": "May 2021-May 2023",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines. Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computer Science",
+        "institution": "Kalinga Institute of Engineering",
+        "graduationDate": "Jun 2021"
+      }
+    ],
+    "certifications": [
+      "OSCP"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "SKILLS",
+      "certifications": "CREDENTIALS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "•",
+    "dateFormat": "short-month",
+    "summaryText": "Four years of security work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "github.com/csabakowalc",
+      "Portfolio: csabakowalc.dev"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "mid",
+    "experienceCount": 3,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

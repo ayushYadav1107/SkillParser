@@ -1,0 +1,100 @@
+{
+  "id": "r017",
+  "seed": 20387528,
+  "truth": {
+    "personal": {
+      "name": "Amara Petrov",
+      "email": "amarap@inbox.example",
+      "phone": "+1 (635) 262-3536",
+      "location": "Porto, Portugal"
+    },
+    "skills": [
+      "Design systems",
+      "React",
+      "TypeScript",
+      "GraphQL",
+      "WebAssembly",
+      "Vite",
+      "CSS architecture",
+      "Accessibility (WCAG 2.2)",
+      "Playwright"
+    ],
+    "experience": [
+      {
+        "title": "UI Engineer",
+        "company": "Wayfinder Maritime",
+        "duration": "March 2024 — Current",
+        "description": "Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Shipped a design-system migration across 210 components without a feature freeze."
+      },
+      {
+        "title": "Frontend Engineer",
+        "company": "Verdigris Payments",
+        "duration": "June 2020 — January 2024",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      },
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Ashgrove Telecom",
+        "duration": "January 2018 — June 2020",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Shipped a design-system migration across 210 components without a feature freeze. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      },
+      {
+        "title": "Web Platform Engineer",
+        "company": "Tessellate AI",
+        "duration": "August 2016 — January 2018",
+        "description": "Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Shipped a design-system migration across 210 components without a feature freeze."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Ptarmigan Analytics",
+        "duration": "November 2012 — June 2016",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institution": "National Institute of Computing, Surat",
+        "graduationDate": "July 2014"
+      }
+    ],
+    "certifications": [
+      "IAAP Certified Professional in Accessibility Core Competencies"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "Skills",
+      "certifications": "Certifications",
+      "summary": "PROFESSIONAL SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "long-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

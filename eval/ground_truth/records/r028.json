@@ -1,0 +1,77 @@
+{
+  "id": "r028",
+  "seed": 20474637,
+  "truth": {
+    "personal": {
+      "name": "Yusuf da Silva Pereira",
+      "email": "ydasilvapereira@quietbox.org",
+      "phone": "+83 830 181 562",
+      "location": "Pune, India"
+    },
+    "skills": [
+      "Incident response",
+      "Burp Suite",
+      "eBPF",
+      "Threat modelling",
+      "Cryptographic protocol review",
+      "OAuth 2.1",
+      "Fuzzing",
+      "Rust",
+      "SIEM tuning",
+      "Code review"
+    ],
+    "experience": [
+      {
+        "title": "Senior Security Engineer",
+        "company": "Driftwood Retail Group",
+        "duration": "August 2024 — May 2026",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Electronics and Communication",
+        "institution": "University of Rothbury",
+        "graduationDate": "Expected June 2027"
+      }
+    ],
+    "certifications": [
+      "OSCP"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "SKILLS",
+      "certifications": "CREDENTIALS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "long-month",
+    "summaryText": "Early-career security work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

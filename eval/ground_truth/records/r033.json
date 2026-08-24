@@ -1,0 +1,87 @@
+{
+  "id": "r033",
+  "seed": 20514232,
+  "truth": {
+    "personal": {
+      "name": "PRIYANKA KIM",
+      "email": "pkim@fastpost.email",
+      "phone": "+1 (428) 357-2815",
+      "location": "Porto, Portugal"
+    },
+    "skills": [
+      "Causal inference",
+      "A/B testing",
+      "ONNX Runtime",
+      "Feature engineering",
+      "scikit-learn",
+      "Python",
+      "CUDA",
+      "Vector databases"
+    ],
+    "experience": [
+      {
+        "title": "Senior ML Engineer",
+        "company": "Saltmarsh Health",
+        "duration": "2023 — Current",
+        "description": "Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost. Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters."
+      },
+      {
+        "title": "Data Scientist",
+        "company": "Ravelin Mobility",
+        "duration": "2021 — 2023",
+        "description": "Trained a 340M-parameter ranking model that lifted click-through rate 4.2% in a two-week online test. Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters."
+      },
+      {
+        "title": "Machine Learning Engineer",
+        "company": "Ravelin Mobility",
+        "duration": "2018 — 2021",
+        "description": "Replaced hand-tuned heuristics with a calibrated gradient-boosted model, reducing manual review volume 38%. Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters. Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost."
+      },
+      {
+        "title": "Applied Scientist",
+        "company": "Nimbus Freight Exchange",
+        "duration": "2016 — 2018",
+        "description": "Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months."
+      }
+    ],
+    "education": [],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "SKILLS",
+      "certifications": "CERTIFICATIONS",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "year-only",
+    "summaryText": null,
+    "projects": [
+      "Wrote a from-scratch key-value store to understand write-ahead logging properly."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 8,
+    "hasEducation": false,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "year-only",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

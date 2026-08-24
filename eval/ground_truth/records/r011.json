@@ -1,0 +1,77 @@
+{
+  "id": "r011",
+  "seed": 20340014,
+  "truth": {
+    "personal": {
+      "name": "Bjørn Kowalczyk",
+      "email": "bjrn_kowalczyk@quietbox.org",
+      "phone": "",
+      "location": "Accra, Ghana"
+    },
+    "skills": [
+      "Data modelling",
+      "dbt",
+      "SQL",
+      "Airflow",
+      "Python",
+      "Delta Lake",
+      "Snowflake",
+      "Cross-functional collaboration",
+      "Public speaking"
+    ],
+    "experience": [
+      {
+        "title": "Analytics Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "2024 – Present",
+        "description": "Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institution": "Nordvik Technical University",
+        "graduationDate": "Expected 2027"
+      }
+    ],
+    "certifications": [
+      "Databricks Certified Data Engineer Professional",
+      "SnowPro Core Certification"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "Skills",
+      "certifications": "Certifications",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "•",
+    "dateFormat": "year-only",
+    "summaryText": "Early-career data work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": false,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "year-only",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

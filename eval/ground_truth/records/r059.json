@@ -1,0 +1,99 @@
+{
+  "id": "r059",
+  "seed": 20720126,
+  "truth": {
+    "personal": {
+      "name": "Tariq Al-Rashid",
+      "email": "tariq_alrashid@northwind-mail.net",
+      "phone": "+91 80623 74358",
+      "location": "Pune, India"
+    },
+    "skills": [
+      "Fuzzing",
+      "Cryptographic protocol review",
+      "OAuth 2.1",
+      "Incident response",
+      "Threat modelling",
+      "SIEM tuning",
+      "Burp Suite",
+      "eBPF",
+      "Rust",
+      "Stakeholder communication"
+    ],
+    "experience": [
+      {
+        "title": "Senior Security Engineer",
+        "company": "Sunstone Bioinformatics",
+        "duration": "08/2023 - present",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      },
+      {
+        "title": "Detection Engineer",
+        "company": "Cindershift Technologies",
+        "duration": "03/2022 - 08/2023",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      },
+      {
+        "title": "Application Security Engineer",
+        "company": "Driftwood Retail Group",
+        "duration": "07/2018 - 01/2022",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines."
+      },
+      {
+        "title": "Security Engineer",
+        "company": "Umbra Robotics",
+        "duration": "10/2015 - 07/2018",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "04/2018"
+      }
+    ],
+    "certifications": [
+      "CISSP",
+      "GIAC Web Application Penetration Tester (GWAPT)"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WHAT I HAVE BUILT",
+      "education": "ACADEMICS",
+      "skills": "WHAT I WORK WITH",
+      "certifications": "Extra Qualifications",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": " | ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "–",
+    "dateFormat": "numeric",
+    "summaryText": "Nine years of security work with a bias toward measurable outcomes. Writes things down; prefers a short design doc to a long meeting.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "Portfolio: tariqalrash.dev",
+      "linkedin.com/in/tariqalrash"
+    ],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

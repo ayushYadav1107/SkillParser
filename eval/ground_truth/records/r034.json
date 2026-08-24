@@ -1,0 +1,68 @@
+{
+  "id": "r034",
+  "seed": 20522151,
+  "truth": {
+    "personal": {
+      "name": "LINNEA MENSAH",
+      "email": "linnea.mensah97@lumenmail.co",
+      "phone": "+91 89980 40193",
+      "location": "Kraków, Poland"
+    },
+    "skills": [
+      "SQL",
+      "Roadmapping",
+      "Pricing strategy",
+      "OKR planning",
+      "Discovery interviews",
+      "Amplitude",
+      "Stakeholder management",
+      "Cross-functional collaboration"
+    ],
+    "experience": [],
+    "education": [
+      {
+        "degree": "MBA, Operations",
+        "institution": "Blackwater State University",
+        "graduationDate": "Expected July 2027"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "Education",
+      "skills": "CORE COMPETENCIES",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "long-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "References available on request"
+    ],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "product",
+    "seniority": "new-grad",
+    "experienceCount": 0,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

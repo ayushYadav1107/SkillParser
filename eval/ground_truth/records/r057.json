@@ -1,0 +1,101 @@
+{
+  "id": "r057",
+  "seed": 20704288,
+  "truth": {
+    "personal": {
+      "name": "Chidi Nwachukwu",
+      "email": "chidin@northwind-mail.net",
+      "phone": "+44 1700 905844",
+      "location": "Accra, Ghana"
+    },
+    "skills": [
+      "Terraform",
+      "Go",
+      "Distributed systems",
+      "Kubernetes",
+      "Kafka",
+      "Spring Boot",
+      "Java"
+    ],
+    "experience": [
+      {
+        "title": "Platform Engineer",
+        "company": "Thicket Games Studio",
+        "duration": "Jan 2025-May 2026",
+        "description": "Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model. Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime. Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      },
+      {
+        "title": "Staff Software Engineer",
+        "company": "Nimbus Freight Exchange",
+        "duration": "Jan 2023-Jan 2025",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity."
+      },
+      {
+        "title": "Senior Backend Engineer",
+        "company": "Bramblewood Insurance",
+        "duration": "Mar 2021-Nov 2022",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity."
+      },
+      {
+        "title": "Backend Engineer",
+        "company": "Vantablack Security",
+        "duration": "Dec 2018-Mar 2021",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity. Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model. Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      },
+      {
+        "title": "Software Development Engineer II",
+        "company": "Boreal Instrument Co.",
+        "duration": "Feb 2016-Dec 2018",
+        "description": "Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      }
+    ],
+    "education": [
+      {
+        "degree": "M.Tech in Artificial Intelligence",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "Jul 2016"
+      },
+      {
+        "degree": "MBA, Operations",
+        "institution": "Indian Institute of Applied Sciences, Pilani",
+        "graduationDate": "Jun 2013"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "Skills",
+      "certifications": "CREDENTIALS",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "–",
+    "dateFormat": "short-month",
+    "summaryText": "Nine years of backend work with a bias toward measurable outcomes. Has shipped to production continuously and has the incident reviews to prove it.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "backend",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 7,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

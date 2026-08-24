@@ -1,0 +1,192 @@
+# SkillParser evaluation report
+
+**Run** `2026-08-24T11-10-58-972Z` · 240 documents · corpus seed `20260824` · harness v1.0.0
+
+Reproduce with:
+```bash
+npm run eval:corpus     # regenerate the documents from the checked-in labels
+npm run eval -- --arms=heuristic,heuristic-naive-pdf
+```
+
+> The corpus is **synthetic**: structured records are generated first and rendered into
+> documents, so every label is correct by construction and no real personal data is
+> involved. Generated resumes are cleaner than real ones, so these scores are an
+> **upper bound** on real-world accuracy. They are meant to be read comparatively —
+> arm against arm under identical conditions — not as an absolute capability claim.
+
+## Headline
+
+| Arm | Micro-F1 (95% CI) | Macro-F1 | Scored | Failed | Skipped |
+| --- | --- | --- | ---: | ---: | ---: |
+| Rule-based baseline | 0.731 [0.673, 0.786] | 0.737 | 120 | 0 | 120 |
+| Rule-based baseline · naive PDF extraction | 0.408 [0.346, 0.469] | 0.432 | 120 | 0 | 120 |
+
+Micro pools every field instance, so it is dominated by the numerous fields (skills). Macro averages the per-field F1s, giving `email` the same weight as `skills`. They answer different questions and both are reported.
+
+- **Rule-based baseline** did not score 120 document(s): 120× ocr-unavailable. These contribute nothing to the metrics above.
+- **Rule-based baseline · naive PDF extraction** did not score 120 document(s): 120× ocr-unavailable. These contribute nothing to the metrics above.
+
+## Arm comparisons
+
+Paired bootstrap over documents (2000 resamples). Paired because both arms saw the same corpus, so per-document difficulty cancels and the test is far more sensitive than comparing two independent intervals. Overlapping CIs in the table above do **not** imply a non-significant difference.
+
+| Baseline | Candidate | ΔMicro-F1 (95% CI) | Significance | Latency ×  | Cost × |
+| --- | --- | --- | --- | ---: | ---: |
+| heuristic | heuristic-naive-pdf | -0.323 [-0.385, -0.265] | p < 0.001 ✓ | 0.57× | — |
+
+## Per-field precision / recall / F1
+
+### Rule-based baseline
+
+| Field | P | R | F1 | Support | Mean similarity |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `personal.name` | 0.975 | 0.975 | 0.975 | 120 | 0.991 |
+| `personal.email` | 1.000 | 1.000 | 1.000 | 120 | — |
+| `personal.phone` | 0.714 | 0.714 | 0.714 | 112 | — |
+| `personal.location` | 0.957 | 0.759 | 0.846 | 116 | 0.962 |
+| `skills` | 0.968 | 0.637 | 0.768 | 1094 | 0.999 |
+| `certifications` | 0.649 | 0.598 | 0.622 | 102 | 0.988 |
+| `experience.entry` | 0.990 | 0.627 | 0.768 | 332 | 0.774 |
+| `experience.title` | 0.750 | 0.470 | 0.578 | 332 | 0.800 |
+| `experience.company` | 0.687 | 0.343 | 0.458 | 332 | 0.750 |
+| `experience.duration` | 1.000 | 0.627 | 0.770 | 332 | 1.000 |
+| `experience.description` | 1.000 | 0.627 | 0.770 | 332 | 0.991 |
+| `education.entry` | 1.000 | 0.634 | 0.776 | 134 | 0.883 |
+| `education.degree` | 0.847 | 0.537 | 0.658 | 134 | 0.941 |
+| `education.institution` | 0.741 | 0.470 | 0.575 | 134 | 0.794 |
+| `education.graduationDate` | 1.000 | 0.634 | 0.776 | 134 | 0.906 |
+
+### Rule-based baseline · naive PDF extraction
+
+| Field | P | R | F1 | Support | Mean similarity |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| `personal.name` | 0.525 | 0.525 | 0.525 | 120 | 0.830 |
+| `personal.email` | 1.000 | 1.000 | 1.000 | 120 | — |
+| `personal.phone` | 0.714 | 0.714 | 0.714 | 112 | — |
+| `personal.location` | 0.505 | 0.405 | 0.450 | 116 | 0.849 |
+| `skills` | 0.904 | 0.310 | 0.462 | 1094 | 0.999 |
+| `certifications` | 0.313 | 0.412 | 0.356 | 102 | 0.992 |
+| `experience.entry` | 0.434 | 0.178 | 0.252 | 332 | 0.651 |
+| `experience.title` | 0.678 | 0.120 | 0.205 | 332 | 0.746 |
+| `experience.company` | 0.600 | 0.054 | 0.099 | 332 | 0.678 |
+| `experience.duration` | 1.000 | 0.178 | 0.302 | 332 | 1.000 |
+| `experience.description` | 1.000 | 0.178 | 0.302 | 332 | 0.949 |
+| `education.entry` | 0.762 | 0.358 | 0.487 | 134 | 0.887 |
+| `education.degree` | 0.813 | 0.291 | 0.429 | 134 | 0.931 |
+| `education.institution` | 0.729 | 0.261 | 0.385 | 134 | 0.825 |
+| `education.graduationDate` | 1.000 | 0.343 | 0.511 | 134 | 0.917 |
+
+## By condition (2×2 factorial: layout × modality)
+
+Every record is rendered in all four cells, so layout and modality vary with the content held constant. A difference between cells is therefore attributable to the cell, not to a different pile of documents.
+
+| Arm | single-column-digital | two-column-digital |
+| --- | ---: | ---: |
+| heuristic | 0.729 (n=60) | 0.734 (n=60) |
+| heuristic-naive-pdf | 0.615 (n=60) | 0.148 (n=60) |
+
+## Error analysis
+
+Every failed field instance is assigned exactly one category, most-specific first. Two categories are informational and cost nothing in the F1 above: `DATE_FORMAT_MISMATCH` (right interval, different notation) and `SCHEMA_REPAIR` (the reply needed structural repair before it could be read).
+
+### Rule-based baseline
+
+| Category | Count | Share of scored errors | What it means |
+| --- | ---: | ---: | --- |
+| `MISSING_FIELD` | 1147 | 68.4% | The document contained the value and the model returned nothing. |
+| `MISSED_ENTRY` | 173 | 10.3% | An entire experience or education entry was not returned. |
+| `OCR_UNAVAILABLE` | 120 | 7.2% | A text-only provider was given a scanned image and no OCR engine was installed. |
+| `COLUMN_BLEED` | 107 | 6.4% | The returned value is real text from a different part of the document — the reading order was wrong. |
+| `HALLUCINATED_FIELD` | 56 | 3.3% | The document did not contain this field and the model produced a value anyway. |
+| `PARTIAL_VALUE` | 47 | 2.8% | Substantially overlapping with the truth but below the match threshold. |
+| `WRONG_VALUE` | 21 | 1.3% | Both values present and unrelated to each other. |
+| `TRUNCATION` | 3 | 0.2% | The returned value is a prefix of the true value; the read stopped early. |
+| `SPURIOUS_ENTRY` | 2 | 0.1% | An entry was returned that corresponds to nothing in the document. |
+
+Prompts truncated to fit the token budget: **0**. Replies needing schema repair: **0**. Documents that fell through to a fallback model or provider: **0**.
+
+### Rule-based baseline · naive PDF extraction
+
+| Category | Count | Share of scored errors | What it means |
+| --- | ---: | ---: | --- |
+| `MISSING_FIELD` | 2219 | 71.4% | The document contained the value and the model returned nothing. |
+| `MISSED_ENTRY` | 344 | 11.1% | An entire experience or education entry was not returned. |
+| `HALLUCINATED_FIELD` | 128 | 4.1% | The document did not contain this field and the model produced a value anyway. |
+| `OCR_UNAVAILABLE` | 120 | 3.9% | A text-only provider was given a scanned image and no OCR engine was installed. |
+| `TRUNCATION` | 93 | 3.0% | The returned value is a prefix of the true value; the read stopped early. |
+| `SPURIOUS_ENTRY` | 92 | 3.0% | An entry was returned that corresponds to nothing in the document. |
+| `PARTIAL_VALUE` | 43 | 1.4% | Substantially overlapping with the truth but below the match threshold. |
+| `COLUMN_BLEED` | 42 | 1.4% | The returned value is real text from a different part of the document — the reading order was wrong. |
+| `ENTRY_MERGE` | 15 | 0.5% | Two or more roles or degrees were collapsed into a single entry. |
+| `WRONG_VALUE` | 10 | 0.3% | Both values present and unrelated to each other. |
+
+Prompts truncated to fit the token budget: **0**. Replies needing schema repair: **0**. Documents that fell through to a fallback model or provider: **0**.
+
+## Confidence calibration
+
+Two separate questions. **Discrimination** (AUROC): do higher-confidence extractions turn out right more often? **Calibration** (ECE): when the model says 0.8, is it right 80% of the time? A model can have one without the other, and which one it has decides whether the score is usable as a probability or only as a ranking.
+
+| Arm | Scored | Unreported | Accuracy | Mean conf. | ECE ↓ | MCE ↓ | Brier ↓ | AUROC ↑ | Verdict |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| heuristic | 2598 | 0 | 0.909 | 0.901 | 0.109 | 0.450 | 0.092 | 0.391 | no ranking signal; roughly calibrated (underconfident) |
+| heuristic-naive-pdf | 1502 | 0 | 0.728 | 0.876 | 0.148 | 0.450 | 0.205 | 0.663 | ranks weakly; roughly calibrated (overconfident) |
+
+`Unreported` counts predictions the provider returned no confidence for. They are excluded rather than imputed — substituting a default would manufacture the signal being measured. Misses are excluded too: a model cannot be uncertain about a field it never mentioned.
+
+### Rule-based baseline — reliability
+
+| Confidence bin | n | Mean conf. | Accuracy | Gap |
+| --- | ---: | ---: | ---: | ---: |
+| 0.3–0.4 | 6 | 0.300 | 0.667 | +0.367 |
+| 0.5–0.6 | 2 | 0.550 | 1.000 | +0.450 |
+| 0.6–0.7 | 32 | 0.650 | 1.000 | +0.350 |
+| 0.7–0.8 | 260 | 0.761 | 0.985 | +0.224 |
+| 0.8–0.9 | 844 | 0.878 | 0.972 | +0.094 |
+| 0.9–1.0 | 1454 | 0.949 | 0.858 | -0.090 |
+
+**Operating points** — auto-accept above a threshold, route the rest to human review:
+
+| Threshold | Auto-accepted | Accuracy when accepted | Errors per 100 accepted | Share of errors caught |
+| ---: | ---: | ---: | ---: | ---: |
+| 0.50 | 99.8% | 0.910 | 9.0 | 0.8% |
+| 0.60 | 99.7% | 0.910 | 9.0 | 0.8% |
+| 0.70 | 98.5% | 0.909 | 9.1 | 0.8% |
+| 0.80 | 88.5% | 0.900 | 10.0 | 2.5% |
+| 0.90 | 56.0% | 0.858 | 14.2 | 12.7% |
+| 0.95 | 16.5% | 0.918 | 8.2 | 85.2% |
+
+### Rule-based baseline · naive PDF extraction — reliability
+
+| Confidence bin | n | Mean conf. | Accuracy | Gap |
+| --- | ---: | ---: | ---: | ---: |
+| 0.3–0.4 | 7 | 0.300 | 0.143 | -0.157 |
+| 0.4–0.5 | 7 | 0.450 | 0.000 | -0.450 |
+| 0.5–0.6 | 4 | 0.550 | 0.500 | -0.050 |
+| 0.6–0.7 | 22 | 0.650 | 0.364 | -0.286 |
+| 0.7–0.8 | 284 | 0.761 | 0.560 | -0.201 |
+| 0.8–0.9 | 496 | 0.876 | 0.829 | -0.048 |
+| 0.9–1.0 | 682 | 0.944 | 0.752 | -0.192 |
+
+**Operating points** — auto-accept above a threshold, route the rest to human review:
+
+| Threshold | Auto-accepted | Accuracy when accepted | Errors per 100 accepted | Share of errors caught |
+| ---: | ---: | ---: | ---: | ---: |
+| 0.50 | 99.1% | 0.735 | 26.5 | 3.2% |
+| 0.60 | 98.8% | 0.735 | 26.5 | 3.7% |
+| 0.70 | 97.3% | 0.741 | 25.9 | 7.1% |
+| 0.80 | 78.4% | 0.784 | 21.6 | 37.7% |
+| 0.90 | 45.4% | 0.752 | 24.8 | 58.6% |
+| 0.95 | 19.7% | 0.936 | 6.4 | 95.3% |
+
+## Cost and latency
+
+| Arm | Mean latency | p90 latency | Preproc. | Prompt tok. | Completion tok. | Cost / 1000 resumes |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| heuristic | 0 ms | 1 ms | 43 ms | 0 | 0 | $0.00 |
+| heuristic-naive-pdf | 0 ms | 1 ms | 30 ms | 0 | 0 | $0.00 |
+
+Preprocessing (PDF text extraction or OCR) is reported separately from model latency, because it belongs to the pipeline rather than the model — and for the text-only provider it is often the larger of the two. Costs marked *(est.)* were computed from a character-based token estimate because the provider did not report usage.
+
+---
+
+Generated by `eval/report.ts` (harness v1.0.0) at 2026-08-24T11:11:01.392Z.

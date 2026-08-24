@@ -1,0 +1,94 @@
+{
+  "id": "r004",
+  "seed": 20284581,
+  "truth": {
+    "personal": {
+      "name": "LARS DEMIREL",
+      "email": "lars.demirel77@lumenmail.co",
+      "phone": "",
+      "location": "Hyderabad, India"
+    },
+    "skills": [
+      "Causal inference",
+      "Python",
+      "Transformers",
+      "ONNX Runtime",
+      "PyTorch",
+      "MLflow",
+      "Feature engineering",
+      "scikit-learn",
+      "A/B testing"
+    ],
+    "experience": [
+      {
+        "title": "Applied Scientist",
+        "company": "Ferrite Cloud",
+        "duration": "07/2024-06/2026",
+        "description": "Replaced hand-tuned heuristics with a calibrated gradient-boosted model, reducing manual review volume 38%."
+      },
+      {
+        "title": "Machine Learning Engineer",
+        "company": "Sunstone Bioinformatics",
+        "duration": "08/2022-07/2024",
+        "description": "Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters. Trained a 340M-parameter ranking model that lifted click-through rate 4.2% in a two-week online test. Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost."
+      },
+      {
+        "title": "Senior ML Engineer",
+        "company": "Sunstone Bioinformatics",
+        "duration": "10/2018-05/2022",
+        "description": "Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters."
+      },
+      {
+        "title": "Data Scientist",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "08/2015-10/2018",
+        "description": "Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost. Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months. Trained a 340M-parameter ranking model that lifted click-through rate 4.2% in a two-week online test."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MBA, Operations",
+        "institution": "Indian Institute of Applied Sciences, Pilani",
+        "graduationDate": "05/2013"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "Certifications",
+      "summary": "PROFESSIONAL SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": true,
+    "bullet": "•",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "References available on request"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": false,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

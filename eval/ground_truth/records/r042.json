@@ -1,0 +1,90 @@
+{
+  "id": "r042",
+  "seed": 20585503,
+  "truth": {
+    "personal": {
+      "name": "XIULAN HAUGEN",
+      "email": "xiulanh@inbox.example",
+      "phone": "",
+      "location": "Porto, Portugal"
+    },
+    "skills": [
+      "GraphQL",
+      "Design systems",
+      "Vite",
+      "Playwright",
+      "WebAssembly",
+      "Next.js",
+      "Cross-functional collaboration",
+      "Technical writing"
+    ],
+    "experience": [
+      {
+        "title": "Frontend Engineer",
+        "company": "Quillon Semiconductor",
+        "duration": "11/2024 - present",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      },
+      {
+        "title": "Web Platform Engineer",
+        "company": "Quillon Semiconductor",
+        "duration": "06/2022 - 11/2024",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Tessellate AI",
+        "duration": "06/2021 - 06/2022",
+        "description": "Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Shipped a design-system migration across 210 components without a feature freeze."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computational Biology",
+        "institution": "Nordvik Technical University",
+        "graduationDate": "04/2013"
+      }
+    ],
+    "certifications": [
+      "IAAP Certified Professional in Accessibility Core Competencies"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "PROFESSIONAL SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": " | ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "numeric",
+    "summaryText": "Four years of frontend work with a bias toward measurable outcomes. Has shipped to production continuously and has the incident reviews to prove it.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "linkedin.com/in/xiulanhaugen",
+      "Portfolio: xiulanhaugen.dev"
+    ],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "mid",
+    "experienceCount": 3,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": false,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

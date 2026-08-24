@@ -1,0 +1,75 @@
+{
+  "id": "r053",
+  "seed": 20672612,
+  "truth": {
+    "personal": {
+      "name": "LARS KOWALCZYK",
+      "email": "lkowalczyk@lumenmail.co",
+      "phone": "",
+      "location": "Chennai, India"
+    },
+    "skills": [
+      "TypeScript",
+      "GraphQL",
+      "Accessibility (WCAG 2.2)",
+      "CSS architecture",
+      "WebAssembly",
+      "Next.js",
+      "Vite",
+      "Design systems",
+      "Playwright",
+      "React"
+    ],
+    "experience": [
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Vantablack Security",
+        "duration": "05/2024 – Present",
+        "description": "Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android."
+      }
+    ],
+    "education": [
+      {
+        "degree": "PhD in Statistical Signal Processing",
+        "institution": "Blackwater State University",
+        "graduationDate": "Expected 04/2028"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "EXPERIENCE",
+      "education": "Education",
+      "skills": "SKILLS",
+      "certifications": "CREDENTIALS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " | ",
+    "nameCase": "upper",
+    "serifBody": true,
+    "bullet": "–",
+    "dateFormat": "numeric",
+    "summaryText": "Early-career frontend work with a bias toward measurable outcomes. Writes things down; prefers a short design doc to a long meeting.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": false,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

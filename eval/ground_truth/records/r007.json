@@ -1,0 +1,88 @@
+{
+  "id": "r007",
+  "seed": 20308338,
+  "truth": {
+    "personal": {
+      "name": "Ola Haugen",
+      "email": "olah@quietbox.org",
+      "phone": "489-862-4725",
+      "location": "Belo Horizonte, Brazil"
+    },
+    "skills": [
+      "Vite",
+      "GraphQL",
+      "WebAssembly",
+      "React",
+      "Next.js",
+      "Design systems",
+      "Playwright",
+      "TypeScript",
+      "Accessibility (WCAG 2.2)"
+    ],
+    "experience": [
+      {
+        "title": "Frontend Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "Apr 2025 – May 2026",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      },
+      {
+        "title": "Web Platform Engineer",
+        "company": "Palisade Energy Networks",
+        "duration": "Jul 2024 – Apr 2025",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MSc Machine Learning",
+        "institution": "Halgren College of Technology",
+        "graduationDate": "Aug 2020"
+      }
+    ],
+    "certifications": [
+      "IAAP Certified Professional in Accessibility Core Competencies"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "Skills",
+      "certifications": "CERTIFICATIONS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " | ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "short-month",
+    "summaryText": "Four years of frontend work with a bias toward measurable outcomes. Happiest on problems where the requirements are still being argued about.",
+    "projects": [
+      "Wrote a from-scratch key-value store to understand write-ahead logging properly.",
+      "Built a static-site generator used by ~400 people; still maintained."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [
+      "github.com/olahaugen",
+      "References available on request"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "mid",
+    "experienceCount": 2,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

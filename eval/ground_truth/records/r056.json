@@ -1,0 +1,101 @@
+{
+  "id": "r056",
+  "seed": 20696369,
+  "truth": {
+    "personal": {
+      "name": "Ola Zhao",
+      "email": "ola.zhao@protonpost.io",
+      "phone": "+91 91081 17565",
+      "location": "Seoul, South Korea"
+    },
+    "skills": [
+      "Spark",
+      "Flink",
+      "Snowflake",
+      "SQL",
+      "Great Expectations",
+      "Delta Lake",
+      "Data modelling",
+      "dbt",
+      "Airflow",
+      "Python"
+    ],
+    "experience": [
+      {
+        "title": "Senior Data Engineer",
+        "company": "Saltmarsh Health",
+        "duration": "2024 – present",
+        "description": "Built the lineage graph that the finance team now uses to sign off on revenue reporting. Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m."
+      },
+      {
+        "title": "Data Engineer",
+        "company": "Ptarmigan Analytics",
+        "duration": "2023 – 2024",
+        "description": "Built the lineage graph that the finance team now uses to sign off on revenue reporting. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year."
+      },
+      {
+        "title": "Analytics Engineer",
+        "company": "Ferrite Cloud",
+        "duration": "2019 – 2022",
+        "description": "Built the lineage graph that the finance team now uses to sign off on revenue reporting."
+      },
+      {
+        "title": "Data Platform Engineer",
+        "company": "Nimbus Freight Exchange",
+        "duration": "2015 – 2019",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Diploma in Software Engineering",
+        "institution": "Nordvik Technical University",
+        "graduationDate": "2016"
+      },
+      {
+        "degree": "BSc (Hons) Data Science",
+        "institution": "Blackwater State University",
+        "graduationDate": "2012"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL JOURNEY",
+      "education": "STUDIES",
+      "skills": "TOOLBOX",
+      "certifications": "Extra Qualifications",
+      "summary": "ABOUT ME"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "-",
+    "dateFormat": "year-only",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "References available on request",
+      "Portfolio: olazhao.dev"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "year-only",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

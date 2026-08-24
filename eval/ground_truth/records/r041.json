@@ -1,0 +1,83 @@
+{
+  "id": "r041",
+  "seed": 20577584,
+  "truth": {
+    "personal": {
+      "name": "Meera Nowak",
+      "email": "meera.nowak47@fastpost.email",
+      "phone": "+85 048 713 591",
+      "location": "Nairobi, Kenya"
+    },
+    "skills": [
+      "Rust",
+      "eBPF",
+      "Incident response",
+      "OAuth 2.1",
+      "Threat modelling",
+      "Fuzzing",
+      "SIEM tuning",
+      "Burp Suite",
+      "Cryptographic protocol review"
+    ],
+    "experience": [
+      {
+        "title": "Application Security Engineer",
+        "company": "Ravelin Mobility",
+        "duration": "Sep 2024-Feb 2026",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      },
+      {
+        "title": "Detection Engineer",
+        "company": "Wayfinder Maritime",
+        "duration": "Sep 2023-Sep 2024",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines."
+      }
+    ],
+    "education": [
+      {
+        "degree": "M.Tech in Artificial Intelligence",
+        "institution": "National Institute of Computing, Surat",
+        "graduationDate": "Jun 2015"
+      }
+    ],
+    "certifications": [
+      "GIAC Web Application Penetration Tester (GWAPT)",
+      "CISSP"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL EXPERIENCE",
+      "education": "Education",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "CREDENTIALS",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "short-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "mid",
+    "experienceCount": 2,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

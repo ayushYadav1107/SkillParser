@@ -1,0 +1,94 @@
+{
+  "id": "r054",
+  "seed": 20680531,
+  "truth": {
+    "personal": {
+      "name": "Chidi van der Meulen",
+      "email": "chidi.vandermeulen@quietbox.org",
+      "phone": "+92 264 562 812",
+      "location": "Pune, India"
+    },
+    "skills": [
+      "gRPC",
+      "Java",
+      "PostgreSQL",
+      "Kubernetes",
+      "Kafka",
+      "Redis",
+      "Spring Boot",
+      "Event sourcing",
+      "Terraform",
+      "OpenTelemetry",
+      "Technical writing",
+      "Code review"
+    ],
+    "experience": [
+      {
+        "title": "Platform Engineer",
+        "company": "Bramblewood Insurance",
+        "duration": "2024-Current",
+        "description": "Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model. Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike. Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime."
+      },
+      {
+        "title": "Staff Software Engineer",
+        "company": "Thicket Games Studio",
+        "duration": "2022-2024",
+        "description": "Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms. Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime. Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike."
+      },
+      {
+        "title": "Senior Backend Engineer",
+        "company": "Vantablack Security",
+        "duration": "2018-2022",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity. Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike. Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MBA, Operations",
+        "institution": "Kalinga Institute of Engineering",
+        "graduationDate": "2012"
+      }
+    ],
+    "certifications": [
+      "Certified Kubernetes Administrator (CKA)",
+      "AWS Certified Solutions Architect – Associate"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "EMPLOYMENT HISTORY",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "CERTIFICATIONS",
+      "summary": "PROFESSIONAL SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "year-only",
+    "summaryText": "Nine years of backend work with a bias toward measurable outcomes. Writes things down; prefers a short design doc to a long meeting.",
+    "projects": [
+      "Open-source contributor: three merged patches to a widely used HTTP client."
+    ],
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "backend",
+    "seniority": "senior",
+    "experienceCount": 3,
+    "skillCount": 12,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "year-only",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

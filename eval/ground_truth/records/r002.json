@@ -1,0 +1,96 @@
+{
+  "id": "r002",
+  "seed": 20268743,
+  "truth": {
+    "personal": {
+      "name": "Rin Novak",
+      "email": "rin_novak@inbox.example",
+      "phone": "+1 (559) 904-5260",
+      "location": "Gothenburg, Sweden"
+    },
+    "skills": [
+      "Fuzzing",
+      "Cryptographic protocol review",
+      "Burp Suite",
+      "Threat modelling",
+      "Incident response",
+      "SIEM tuning",
+      "OAuth 2.1",
+      "Rust",
+      "eBPF",
+      "Technical writing"
+    ],
+    "experience": [
+      {
+        "title": "Application Security Engineer",
+        "company": "Alder & Finch Advisory",
+        "duration": "2023 - 2026",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      },
+      {
+        "title": "Senior Security Engineer",
+        "company": "Alder & Finch Advisory",
+        "duration": "2020 - 2023",
+        "description": "Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch. Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months. Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines."
+      },
+      {
+        "title": "Detection Engineer",
+        "company": "Cindershift Technologies",
+        "duration": "2018 - 2020",
+        "description": "Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines."
+      },
+      {
+        "title": "Security Engineer",
+        "company": "Boreal Instrument Co.",
+        "duration": "2015 - 2018",
+        "description": "Cut mean time to detect from 41 hours to 90 minutes by rewriting the detection rules around behavioural baselines. Drove the migration off long-lived static credentials to workload identity across 300 CI pipelines. Ran the fuzzing programme that surfaced 19 memory-safety defects in the media decoder before launch."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computational Biology",
+        "institution": "Institute of Data Sciences, Bhopal",
+        "graduationDate": "2016"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "SKILLS",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "year-only",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "Portfolio: rinnovak.dev",
+      "References available on request"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 10,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "year-only",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

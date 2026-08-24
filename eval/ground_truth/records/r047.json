@@ -1,0 +1,92 @@
+{
+  "id": "r047",
+  "seed": 20625098,
+  "truth": {
+    "personal": {
+      "name": "NOUR MENSAH",
+      "email": "nour.mensah26@protonpost.io",
+      "phone": "+1 (552) 746-1453",
+      "location": "Gothenburg, Sweden"
+    },
+    "skills": [
+      "Great Expectations",
+      "Data modelling",
+      "Python",
+      "Snowflake",
+      "Delta Lake",
+      "Airflow",
+      "Stakeholder communication"
+    ],
+    "experience": [
+      {
+        "title": "Senior Data Engineer",
+        "company": "Meridian Freight Labs",
+        "duration": "07/2022 – 01/2026",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Built the lineage graph that the finance team now uses to sign off on revenue reporting."
+      },
+      {
+        "title": "Data Platform Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "08/2018 – 03/2022",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Built the lineage graph that the finance team now uses to sign off on revenue reporting."
+      },
+      {
+        "title": "Analytics Engineer",
+        "company": "Ptarmigan Analytics",
+        "duration": "02/2017 – 08/2018",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget. Introduced contract tests at the ingestion boundary, reducing downstream data incidents 62% year over year. Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computational Biology",
+        "institution": "National Institute of Computing, Surat",
+        "graduationDate": "07/2019"
+      },
+      {
+        "degree": "M.Tech in Artificial Intelligence",
+        "institution": "Institute of Data Sciences, Bhopal",
+        "graduationDate": "05/2014"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WHAT I HAVE BUILT",
+      "education": "ACADEMICS",
+      "skills": "WHAT I WORK WITH",
+      "certifications": "TRAINING",
+      "summary": "IN SHORT"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [
+      "Portfolio: nourmensah.dev",
+      "linkedin.com/in/nourmensah"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "senior",
+    "experienceCount": 3,
+    "skillCount": 7,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

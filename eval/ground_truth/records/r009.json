@@ -1,0 +1,103 @@
+{
+  "id": "r009",
+  "seed": 20324176,
+  "truth": {
+    "personal": {
+      "name": "Tomasz Ó Súilleabháin",
+      "email": "tomasz.osuilleabhain@lumenmail.co",
+      "phone": "+44 0251 792086",
+      "location": "Accra, Ghana"
+    },
+    "skills": [
+      "scikit-learn",
+      "CUDA",
+      "MLflow",
+      "Causal inference",
+      "Transformers",
+      "PyTorch"
+    ],
+    "experience": [
+      {
+        "title": "Senior ML Engineer",
+        "company": "Boreal Instrument Co.",
+        "duration": "Jan 2023 – present",
+        "description": "Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months."
+      },
+      {
+        "title": "Research Engineer",
+        "company": "Saltmarsh Health",
+        "duration": "Apr 2020 – Jan 2023",
+        "description": "Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost. Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months."
+      },
+      {
+        "title": "Data Scientist",
+        "company": "Nimbus Freight Exchange",
+        "duration": "Apr 2018 – Apr 2020",
+        "description": "Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months. Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost. Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters."
+      },
+      {
+        "title": "Machine Learning Engineer",
+        "company": "Meridian Freight Labs",
+        "duration": "Sep 2014 – Apr 2018",
+        "description": "Distilled a 7B document classifier into a 400M student, holding 98.1% of macro-F1 at a fifth of the serving cost. Replaced hand-tuned heuristics with a calibrated gradient-boosted model, reducing manual review volume 38%."
+      },
+      {
+        "title": "Applied Scientist",
+        "company": "Vantablack Security",
+        "duration": "Oct 2011 – Sep 2014",
+        "description": "Replaced hand-tuned heuristics with a calibrated gradient-boosted model, reducing manual review volume 38%."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MSc Machine Learning",
+        "institution": "Institute of Data Sciences, Bhopal",
+        "graduationDate": "Apr 2013"
+      },
+      {
+        "degree": "Diploma in Software Engineering",
+        "institution": "Institute of Data Sciences, Bhopal",
+        "graduationDate": "Aug 2010"
+      }
+    ],
+    "certifications": [
+      "TensorFlow Developer Certificate",
+      "Google Cloud Professional Machine Learning Engineer"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL JOURNEY",
+      "education": "SCHOOLING",
+      "skills": "Things I Know",
+      "certifications": "ACCREDITATIONS",
+      "summary": "The Short Version"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "short-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "senior",
+    "experienceCount": 5,
+    "skillCount": 6,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "r030",
+  "seed": 20490475,
+  "truth": {
+    "personal": {
+      "name": "Ravindra Raghunathan",
+      "email": "ravindra_raghunathan@northwind-mail.net",
+      "phone": "+37 122 991 825",
+      "location": "Hyderabad, India"
+    },
+    "skills": [
+      "Roadmapping",
+      "Stakeholder management",
+      "Discovery interviews",
+      "OKR planning",
+      "Experiment design",
+      "Amplitude",
+      "Pricing strategy"
+    ],
+    "experience": [
+      {
+        "title": "Senior Product Manager",
+        "company": "Copperline Foods",
+        "duration": "Jan 2024 — Feb 2026",
+        "description": "Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Diploma in Software Engineering",
+        "institution": "Institute of Data Sciences, Bhopal",
+        "graduationDate": "Jun 2026"
+      }
+    ],
+    "certifications": [
+      "Pragmatic Institute PMC-III"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "EMPLOYMENT HISTORY",
+      "education": "EDUCATION",
+      "skills": "TECHNOLOGIES",
+      "certifications": "CREDENTIALS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " | ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "•",
+    "dateFormat": "short-month",
+    "summaryText": "Early-career product work with a bias toward measurable outcomes. Writes things down; prefers a short design doc to a long meeting.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "github.com/ravindraraghun",
+      "Open to relocation"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "product",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 7,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

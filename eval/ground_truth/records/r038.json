@@ -1,0 +1,69 @@
+{
+  "id": "r038",
+  "seed": 20553827,
+  "truth": {
+    "personal": {
+      "name": "Xiulan Park",
+      "email": "xiulan.park29@fastpost.email",
+      "phone": "+91 98102 69083",
+      "location": "Seoul, South Korea"
+    },
+    "skills": [
+      "ONNX Runtime",
+      "PyTorch",
+      "CUDA",
+      "Vector databases",
+      "A/B testing",
+      "Python",
+      "Ray",
+      "Transformers"
+    ],
+    "experience": [],
+    "education": [
+      {
+        "degree": "B.E. in Information Technology",
+        "institution": "Institute of Data Sciences, Bhopal",
+        "graduationDate": "Expected 2028"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "PROFILE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "year-only",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "Portfolio: xiulanpark.dev",
+      "github.com/xiulanpark"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "new-grad",
+    "experienceCount": 0,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "year-only",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

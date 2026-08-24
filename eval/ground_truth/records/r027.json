@@ -1,0 +1,96 @@
+{
+  "id": "r027",
+  "seed": 20466718,
+  "truth": {
+    "personal": {
+      "name": "Linnea Carvalho",
+      "email": "linneac@protonpost.io",
+      "phone": "235-773-6763",
+      "location": "Fukuoka, Japan"
+    },
+    "skills": [
+      "Discovery interviews",
+      "Roadmapping",
+      "Experiment design",
+      "Pricing strategy",
+      "Stakeholder management",
+      "OKR planning",
+      "Amplitude",
+      "SQL"
+    ],
+    "experience": [
+      {
+        "title": "Product Manager",
+        "company": "Halcyon Grid Systems",
+        "duration": "2023 — 2026",
+        "description": "Shipped the self-serve onboarding flow that removed sales from 60% of new-account activations. Rebuilt the quarterly planning process around measurable bets; on-time delivery went from 48% to 81%."
+      },
+      {
+        "title": "Product Analyst",
+        "company": "Sunstone Bioinformatics",
+        "duration": "2020 — 2022",
+        "description": "Rebuilt the quarterly planning process around measurable bets; on-time delivery went from 48% to 81%. Shipped the self-serve onboarding flow that removed sales from 60% of new-account activations. Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach."
+      },
+      {
+        "title": "Technical Program Manager",
+        "company": "Verdigris Payments",
+        "duration": "2017 — 2020",
+        "description": "Rebuilt the quarterly planning process around measurable bets; on-time delivery went from 48% to 81%. Shipped the self-serve onboarding flow that removed sales from 60% of new-account activations. Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach."
+      },
+      {
+        "title": "Senior Product Manager",
+        "company": "Alder & Finch Advisory",
+        "duration": "2013 — 2016",
+        "description": "Killed three features representing 40% of the roadmap after usage analysis showed under 2% weekly reach. Ran the pricing experiment that raised ARPU 11% without measurable churn impact. Shipped the self-serve onboarding flow that removed sales from 60% of new-account activations."
+      }
+    ],
+    "education": [
+      {
+        "degree": "PhD in Statistical Signal Processing",
+        "institution": "University of West Marches",
+        "graduationDate": "2018"
+      }
+    ],
+    "certifications": [
+      "Certified Scrum Product Owner (CSPO)",
+      "Pragmatic Institute PMC-III"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "PROFESSIONAL EXPERIENCE",
+      "education": "Education",
+      "skills": "Skills",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " · ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "year-only",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [
+      "References available on request"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "product",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 8,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "year-only",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

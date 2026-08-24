@@ -1,0 +1,74 @@
+{
+  "id": "r032",
+  "seed": 20506313,
+  "truth": {
+    "personal": {
+      "name": "Saoirse Petrov",
+      "email": "saoirsep@mailbox.dev",
+      "phone": "+1 (945) 040-5869",
+      "location": "Porto, Portugal"
+    },
+    "skills": [
+      "dbt",
+      "Snowflake",
+      "Airflow",
+      "Python",
+      "SQL",
+      "Delta Lake",
+      "Great Expectations",
+      "Incident command",
+      "Stakeholder communication"
+    ],
+    "experience": [
+      {
+        "title": "Data Platform Engineer",
+        "company": "Ravelin Mobility",
+        "duration": "12/2023 – 02/2026",
+        "description": "Consolidated 14 overlapping reporting pipelines into a single dbt project, cutting nightly runtime from 5h to 47m."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computer Science",
+        "institution": "National Institute of Computing, Surat",
+        "graduationDate": "Expected 08/2027"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "EXPERIENCE",
+      "education": "Education",
+      "skills": "SKILLS",
+      "certifications": "LICENSES & CERTIFICATIONS",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-title-date-stacked",
+    "contactSeparator": " — ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "•",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-title-date-stacked"
+  }
+}

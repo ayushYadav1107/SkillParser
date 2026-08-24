@@ -1,0 +1,71 @@
+{
+  "id": "r026",
+  "seed": 20458799,
+  "truth": {
+    "personal": {
+      "name": "Nadia Demirel",
+      "email": "nadiad@mailbox.dev",
+      "phone": "+1 (400) 621-3429",
+      "location": "Rotterdam, Netherlands"
+    },
+    "skills": [
+      "Burp Suite",
+      "Threat modelling",
+      "OAuth 2.1",
+      "eBPF",
+      "Cryptographic protocol review",
+      "Rust",
+      "SIEM tuning",
+      "Incident response",
+      "Fuzzing"
+    ],
+    "experience": [
+      {
+        "title": "Senior Security Engineer",
+        "company": "Nimbus Freight Exchange",
+        "duration": "January 2025-Current",
+        "description": "Found and fixed an authorisation bypass in the partner API that had been exploitable for 14 months."
+      }
+    ],
+    "education": [],
+    "certifications": [
+      "GIAC Web Application Penetration Tester (GWAPT)",
+      "CISSP"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "WHERE I'VE WORKED",
+      "education": "ACADEMICS",
+      "skills": "STACK",
+      "certifications": "TRAINING",
+      "summary": "ABOUT ME"
+    },
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-inline-company",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": true,
+    "bullet": "-",
+    "dateFormat": "long-month",
+    "summaryText": "Early-career security work with a bias toward measurable outcomes. Writes things down; prefers a short design doc to a long meeting.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "security",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 9,
+    "hasEducation": false,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "creative",
+    "entryHeaderStyle": "title-inline-company"
+  }
+}

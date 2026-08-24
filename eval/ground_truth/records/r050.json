@@ -1,0 +1,80 @@
+{
+  "id": "r050",
+  "seed": 20648855,
+  "truth": {
+    "personal": {
+      "name": "Yusuf Carvalho",
+      "email": "yusuf.carvalho69@fastpost.email",
+      "phone": "283-255-7276",
+      "location": "Chennai, India"
+    },
+    "skills": [
+      "Python",
+      "Great Expectations",
+      "Flink",
+      "SQL",
+      "dbt",
+      "Delta Lake",
+      "Spark",
+      "Data modelling",
+      "Airflow",
+      "Snowflake",
+      "Cross-functional collaboration",
+      "Incident command"
+    ],
+    "experience": [
+      {
+        "title": "Data Engineer",
+        "company": "Alder & Finch Advisory",
+        "duration": "Aug 2024-Current",
+        "description": "Backfilled six years of clickstream into a partitioned lakehouse without exceeding the existing warehouse budget."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computational Biology",
+        "institution": "Blackwater State University",
+        "graduationDate": "Expected Apr 2027"
+      }
+    ],
+    "certifications": [
+      "SnowPro Core Certification",
+      "Databricks Certified Data Engineer Professional"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "EXPERIENCE",
+      "education": "Education",
+      "skills": "CORE COMPETENCIES",
+      "certifications": "Certifications",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title",
+    "contactSeparator": " · ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "short-month",
+    "summaryText": null,
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "data",
+    "seniority": "new-grad",
+    "experienceCount": 1,
+    "skillCount": 12,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "short-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "company-inline-title"
+  }
+}

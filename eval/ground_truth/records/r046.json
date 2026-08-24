@@ -1,0 +1,106 @@
+{
+  "id": "r046",
+  "seed": 20617179,
+  "truth": {
+    "personal": {
+      "name": "Tomasz Zhao",
+      "email": "tzhao@quietbox.org",
+      "phone": "+1 (981) 101-5399",
+      "location": "Belo Horizonte, Brazil"
+    },
+    "skills": [
+      "OpenTelemetry",
+      "Spring Boot",
+      "Distributed systems",
+      "PostgreSQL",
+      "gRPC",
+      "Go",
+      "Redis",
+      "Event sourcing",
+      "Kubernetes",
+      "Kafka",
+      "Terraform",
+      "Java"
+    ],
+    "experience": [
+      {
+        "title": "Platform Engineer",
+        "company": "Driftwood Retail Group",
+        "duration": "03/2024 – 06/2026",
+        "description": "Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      },
+      {
+        "title": "Senior Backend Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "10/2021 – 03/2024",
+        "description": "Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime. Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model. Introduced backpressure to the ingest pipeline, holding throughput at 40k events/second under a 6x traffic spike."
+      },
+      {
+        "title": "Staff Software Engineer",
+        "company": "NorthPeak Logistics GmbH",
+        "duration": "03/2020 – 10/2021",
+        "description": "Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model."
+      },
+      {
+        "title": "Software Development Engineer II",
+        "company": "Cindershift Technologies",
+        "duration": "09/2018 – 02/2020",
+        "description": "Reduced cloud spend 31% by rightsizing node pools and moving batch work to spot capacity. Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model. Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      }
+    ],
+    "education": [
+      {
+        "degree": "M.Tech in Artificial Intelligence",
+        "institution": "University of Rothbury",
+        "graduationDate": "05/2020"
+      },
+      {
+        "degree": "PhD in Statistical Signal Processing",
+        "institution": "University of Rothbury",
+        "graduationDate": "08/2017"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "WORK EXPERIENCE",
+      "education": "EDUCATION",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "CREDENTIALS",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": "  •  ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "•",
+    "dateFormat": "numeric",
+    "summaryText": null,
+    "projects": [
+      "Open-source contributor: three merged patches to a widely used HTTP client.",
+      "Weekend project: a backend benchmark suite with reproducible run scripts."
+    ],
+    "skillsAsBullets": true,
+    "distractors": [
+      "linkedin.com/in/tomaszzhao",
+      "Portfolio: tomaszzhao.dev"
+    ],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "backend",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 12,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "r015",
+  "seed": 20371690,
+  "truth": {
+    "personal": {
+      "name": "PRIYANKA NOWAK",
+      "email": "priyanka.nowak50@lumenmail.co",
+      "phone": "+91 83336 33886",
+      "location": "Pune, India"
+    },
+    "skills": [
+      "Java",
+      "Redis",
+      "Go",
+      "Event sourcing",
+      "Terraform",
+      "Kafka",
+      "gRPC",
+      "Spring Boot",
+      "OpenTelemetry",
+      "Distributed systems",
+      "PostgreSQL",
+      "Kubernetes",
+      "Cross-functional collaboration"
+    ],
+    "experience": [
+      {
+        "title": "Senior Backend Engineer",
+        "company": "Umbra Robotics",
+        "duration": "May 2023-present",
+        "description": "Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      },
+      {
+        "title": "Staff Software Engineer",
+        "company": "Saltmarsh Health",
+        "duration": "August 2021-May 2023",
+        "description": "Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms."
+      },
+      {
+        "title": "Platform Engineer",
+        "company": "Saltmarsh Health",
+        "duration": "December 2018-August 2021",
+        "description": "Migrated 43 services off a shared Postgres instance onto per-service databases with zero downtime."
+      },
+      {
+        "title": "Software Development Engineer II",
+        "company": "Cindershift Technologies",
+        "duration": "January 2016-December 2018",
+        "description": "Designed the idempotency layer for the payments API, eliminating duplicate charges during retry storms. Cut p99 checkout latency from 840ms to 210ms by replacing a synchronous fan-out with a materialised read model."
+      }
+    ],
+    "education": [
+      {
+        "degree": "BSc Computer Science",
+        "institution": "Nordvik Technical University",
+        "graduationDate": "August 2020"
+      }
+    ],
+    "certifications": [
+      "AWS Certified Solutions Architect – Associate"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "TECHNOLOGIES",
+      "certifications": "Certifications",
+      "summary": "SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates",
+    "contactSeparator": "  •  ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "-",
+    "dateFormat": "long-month",
+    "summaryText": "Nine years of backend work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "Open to relocation"
+    ],
+    "skillCategories": true
+  },
+  "meta": {
+    "discipline": "backend",
+    "seniority": "senior",
+    "experienceCount": 4,
+    "skillCount": 13,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "long-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "right-aligned-dates"
+  }
+}

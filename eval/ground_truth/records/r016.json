@@ -1,0 +1,86 @@
+{
+  "id": "r016",
+  "seed": 20379609,
+  "truth": {
+    "personal": {
+      "name": "TOMASZ ADEYEMI",
+      "email": "tomasz.adeyemi@protonpost.io",
+      "phone": "+44 8316 890840",
+      "location": "Lagos, Nigeria"
+    },
+    "skills": [
+      "TypeScript",
+      "WebAssembly",
+      "Playwright",
+      "React",
+      "Accessibility (WCAG 2.2)",
+      "Design systems",
+      "Vite"
+    ],
+    "experience": [
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Ptarmigan Analytics",
+        "duration": "June 2024 — April 2026",
+        "description": "Introduced visual regression testing, catching 27 layout defects before release in the first quarter. Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android."
+      },
+      {
+        "title": "Web Platform Engineer",
+        "company": "Verdigris Payments",
+        "duration": "October 2020 — June 2024",
+        "description": "Shipped a design-system migration across 210 components without a feature freeze. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Sunstone Bioinformatics",
+        "duration": "December 2017 — October 2020",
+        "description": "Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.E. in Information Technology",
+        "institution": "Blackwater State University",
+        "graduationDate": "May 2013"
+      }
+    ],
+    "certifications": [
+      "IAAP Certified Professional in Accessibility Core Competencies"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "TECHNOLOGIES",
+      "certifications": "Certifications",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " — ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "long-month",
+    "summaryText": "Nine years of frontend work with a bias toward measurable outcomes. Has shipped to production continuously and has the incident reviews to prove it.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "senior",
+    "experienceCount": 3,
+    "skillCount": 7,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "long-month",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

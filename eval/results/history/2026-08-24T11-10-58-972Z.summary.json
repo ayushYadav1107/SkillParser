@@ -1,0 +1,3028 @@
+{
+  "metadata": {
+    "runId": "2026-08-24T11-10-58-972Z",
+    "startedAt": "2026-08-24T11:10:58.972Z",
+    "finishedAt": "2026-08-24T11:11:01.392Z",
+    "corpusSeed": 20260824,
+    "corpusGeneratorVersion": "1.0.0",
+    "harnessVersion": "1.0.0",
+    "conditions": [
+      "single-column-digital",
+      "two-column-digital",
+      "single-column-scanned",
+      "two-column-scanned"
+    ],
+    "documentCount": 240
+  },
+  "summaries": [
+    {
+      "spec": {
+        "id": "heuristic",
+        "label": "Rule-based baseline",
+        "provider": "heuristic",
+        "model": "rules-v1",
+        "strategy": "zero-shot",
+        "pdfStrategy": "column-aware",
+        "requestConfidence": true
+      },
+      "documentsAttempted": 240,
+      "documentsScored": 120,
+      "documentsFailed": 0,
+      "documentsSkipped": 120,
+      "failureReasons": {
+        "ocr-unavailable": 120
+      },
+      "micro": {
+        "precision": 0.9091608929946112,
+        "recall": 0.6119170984455958,
+        "f1": 0.7314958191390523,
+        "support": 3860,
+        "counts": {
+          "tp": 2362,
+          "fp": 236,
+          "fn": 1498,
+          "tn": 12
+        }
+      },
+      "microF1Interval": {
+        "point": 0.7314958191390523,
+        "lower": 0.6731680486699229,
+        "upper": 0.7859860099253001,
+        "level": 0.95,
+        "resamples": 2000
+      },
+      "macroF1": 0.73704144414498,
+      "macroF1Interval": {
+        "point": 0.73704144414498,
+        "lower": 0.6841981352106606,
+        "upper": 0.7846507625019172,
+        "level": 0.95,
+        "resamples": 2000
+      },
+      "perField": [
+        {
+          "field": "personal.name",
+          "precision": 0.975,
+          "recall": 0.975,
+          "f1": 0.975,
+          "support": 120,
+          "counts": {
+            "tp": 117,
+            "fp": 3,
+            "fn": 3,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9905555555555554
+        },
+        {
+          "field": "personal.email",
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 120,
+          "counts": {
+            "tp": 120,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0
+          },
+          "meanSimilarity": null
+        },
+        {
+          "field": "personal.phone",
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143,
+          "support": 112,
+          "counts": {
+            "tp": 80,
+            "fp": 32,
+            "fn": 32,
+            "tn": 8
+          },
+          "meanSimilarity": null
+        },
+        {
+          "field": "personal.location",
+          "precision": 0.9565217391304348,
+          "recall": 0.7586206896551724,
+          "f1": 0.8461538461538461,
+          "support": 116,
+          "counts": {
+            "tp": 88,
+            "fp": 4,
+            "fn": 28,
+            "tn": 4
+          },
+          "meanSimilarity": 0.962400309267317
+        },
+        {
+          "field": "skills",
+          "precision": 0.9680555555555556,
+          "recall": 0.6371115173674589,
+          "f1": 0.7684674751929438,
+          "support": 1094,
+          "counts": {
+            "tp": 697,
+            "fp": 23,
+            "fn": 397,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9994281045751634
+        },
+        {
+          "field": "certifications",
+          "precision": 0.648936170212766,
+          "recall": 0.5980392156862745,
+          "f1": 0.6224489795918368,
+          "support": 102,
+          "counts": {
+            "tp": 61,
+            "fp": 33,
+            "fn": 41,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9882726644289874
+        },
+        {
+          "field": "experience.entry",
+          "precision": 0.9904761904761905,
+          "recall": 0.6265060240963856,
+          "f1": 0.7675276752767527,
+          "support": 332,
+          "counts": {
+            "tp": 208,
+            "fp": 2,
+            "fn": 124,
+            "tn": 0
+          },
+          "meanSimilarity": 0.7744058647828158
+        },
+        {
+          "field": "experience.title",
+          "precision": 0.75,
+          "recall": 0.46987951807228917,
+          "f1": 0.5777777777777777,
+          "support": 332,
+          "counts": {
+            "tp": 156,
+            "fp": 52,
+            "fn": 176,
+            "tn": 0
+          },
+          "meanSimilarity": 0.7999835136144019
+        },
+        {
+          "field": "experience.company",
+          "precision": 0.6867469879518072,
+          "recall": 0.3433734939759036,
+          "f1": 0.45783132530120485,
+          "support": 332,
+          "counts": {
+            "tp": 114,
+            "fp": 52,
+            "fn": 218,
+            "tn": 0
+          },
+          "meanSimilarity": 0.7503146549022486
+        },
+        {
+          "field": "experience.duration",
+          "precision": 1,
+          "recall": 0.6265060240963856,
+          "f1": 0.7703703703703704,
+          "support": 332,
+          "counts": {
+            "tp": 208,
+            "fp": 0,
+            "fn": 124,
+            "tn": 0
+          },
+          "meanSimilarity": 1
+        },
+        {
+          "field": "experience.description",
+          "precision": 1,
+          "recall": 0.6265060240963856,
+          "f1": 0.7703703703703704,
+          "support": 332,
+          "counts": {
+            "tp": 208,
+            "fp": 0,
+            "fn": 124,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9907301331386924
+        },
+        {
+          "field": "education.entry",
+          "precision": 1,
+          "recall": 0.6343283582089553,
+          "f1": 0.776255707762557,
+          "support": 134,
+          "counts": {
+            "tp": 85,
+            "fp": 0,
+            "fn": 49,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8828194292736612
+        },
+        {
+          "field": "education.degree",
+          "precision": 0.8470588235294118,
+          "recall": 0.5373134328358209,
+          "f1": 0.6575342465753425,
+          "support": 134,
+          "counts": {
+            "tp": 72,
+            "fp": 13,
+            "fn": 62,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9410576351752824
+        },
+        {
+          "field": "education.institution",
+          "precision": 0.7411764705882353,
+          "recall": 0.4701492537313433,
+          "f1": 0.5753424657534247,
+          "support": 134,
+          "counts": {
+            "tp": 63,
+            "fp": 22,
+            "fn": 71,
+            "tn": 0
+          },
+          "meanSimilarity": 0.7939511476240306
+        },
+        {
+          "field": "education.graduationDate",
+          "precision": 1,
+          "recall": 0.6343283582089553,
+          "f1": 0.776255707762557,
+          "support": 134,
+          "counts": {
+            "tp": 85,
+            "fp": 0,
+            "fn": 49,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9058823529411761
+        }
+      ],
+      "perGroup": [
+        {
+          "group": "Contact details",
+          "micro": {
+            "precision": 0.9121621621621622,
+            "recall": 0.8653846153846154,
+            "f1": 0.8881578947368421,
+            "support": 468,
+            "counts": {
+              "tp": 405,
+              "fp": 39,
+              "fn": 63,
+              "tn": 12
+            }
+          }
+        },
+        {
+          "group": "Skills",
+          "micro": {
+            "precision": 0.9680555555555556,
+            "recall": 0.6371115173674589,
+            "f1": 0.7684674751929438,
+            "support": 1094,
+            "counts": {
+              "tp": 697,
+              "fp": 23,
+              "fn": 397,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Certifications",
+          "micro": {
+            "precision": 0.648936170212766,
+            "recall": 0.5980392156862745,
+            "f1": 0.6224489795918368,
+            "support": 102,
+            "counts": {
+              "tp": 61,
+              "fp": 33,
+              "fn": 41,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Experience",
+          "micro": {
+            "precision": 0.894,
+            "recall": 0.5385542168674698,
+            "f1": 0.6721804511278195,
+            "support": 1660,
+            "counts": {
+              "tp": 894,
+              "fp": 106,
+              "fn": 766,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Education",
+          "micro": {
+            "precision": 0.8970588235294118,
+            "recall": 0.5690298507462687,
+            "f1": 0.6963470319634704,
+            "support": 536,
+            "counts": {
+              "tp": 305,
+              "fp": 35,
+              "fn": 231,
+              "tn": 0
+            }
+          }
+        }
+      ],
+      "byCondition": [
+        {
+          "label": "single-column-digital",
+          "documents": 60,
+          "micro": {
+            "precision": 0.9080370942812983,
+            "recall": 0.6088082901554405,
+            "f1": 0.7289081885856079,
+            "support": 1930,
+            "counts": {
+              "tp": 1175,
+              "fp": 119,
+              "fn": 755,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.7289081885856079,
+            "lower": 0.6466284929941433,
+            "upper": 0.797750508995724,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        },
+        {
+          "label": "two-column-digital",
+          "documents": 60,
+          "micro": {
+            "precision": 0.9102760736196319,
+            "recall": 0.6150259067357513,
+            "f1": 0.7340754483611627,
+            "support": 1930,
+            "counts": {
+              "tp": 1187,
+              "fp": 117,
+              "fn": 743,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.7340754483611627,
+            "lower": 0.6447401695615481,
+            "upper": 0.8068303340674041,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "byLayout": [
+        {
+          "label": "single-column",
+          "documents": 60,
+          "micro": {
+            "precision": 0.9080370942812983,
+            "recall": 0.6088082901554405,
+            "f1": 0.7289081885856079,
+            "support": 1930,
+            "counts": {
+              "tp": 1175,
+              "fp": 119,
+              "fn": 755,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.7289081885856079,
+            "lower": 0.6466284929941433,
+            "upper": 0.797750508995724,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        },
+        {
+          "label": "two-column",
+          "documents": 60,
+          "micro": {
+            "precision": 0.9102760736196319,
+            "recall": 0.6150259067357513,
+            "f1": 0.7340754483611627,
+            "support": 1930,
+            "counts": {
+              "tp": 1187,
+              "fp": 117,
+              "fn": 743,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.7340754483611627,
+            "lower": 0.6447401695615481,
+            "upper": 0.8068303340674041,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "byModality": [
+        {
+          "label": "digital",
+          "documents": 120,
+          "micro": {
+            "precision": 0.9091608929946112,
+            "recall": 0.6119170984455958,
+            "f1": 0.7314958191390523,
+            "support": 3860,
+            "counts": {
+              "tp": 2362,
+              "fp": 236,
+              "fn": 1498,
+              "tn": 12
+            }
+          },
+          "microF1Interval": {
+            "point": 0.7314958191390523,
+            "lower": 0.6731680486699229,
+            "upper": 0.7859860099253001,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "errorCounts": [
+        {
+          "category": "MISSING_FIELD",
+          "count": 1147,
+          "share": 0.6843675417661098,
+          "informational": false,
+          "description": "The document contained the value and the model returned nothing."
+        },
+        {
+          "category": "MISSED_ENTRY",
+          "count": 173,
+          "share": 0.1032219570405728,
+          "informational": false,
+          "description": "An entire experience or education entry was not returned."
+        },
+        {
+          "category": "OCR_UNAVAILABLE",
+          "count": 120,
+          "share": 0.07159904534606205,
+          "informational": false,
+          "description": "A text-only provider was given a scanned image and no OCR engine was installed."
+        },
+        {
+          "category": "COLUMN_BLEED",
+          "count": 107,
+          "share": 0.06384248210023866,
+          "informational": false,
+          "description": "The returned value is real text from a different part of the document — the reading order was wrong."
+        },
+        {
+          "category": "HALLUCINATED_FIELD",
+          "count": 56,
+          "share": 0.03341288782816229,
+          "informational": false,
+          "description": "The document did not contain this field and the model produced a value anyway."
+        },
+        {
+          "category": "PARTIAL_VALUE",
+          "count": 47,
+          "share": 0.028042959427207637,
+          "informational": false,
+          "description": "Substantially overlapping with the truth but below the match threshold."
+        },
+        {
+          "category": "WRONG_VALUE",
+          "count": 21,
+          "share": 0.012529832935560859,
+          "informational": false,
+          "description": "Both values present and unrelated to each other."
+        },
+        {
+          "category": "TRUNCATION",
+          "count": 3,
+          "share": 0.0017899761336515514,
+          "informational": false,
+          "description": "The returned value is a prefix of the true value; the read stopped early."
+        },
+        {
+          "category": "SPURIOUS_ENTRY",
+          "count": 2,
+          "share": 0.0011933174224343676,
+          "informational": false,
+          "description": "An entry was returned that corresponds to nothing in the document."
+        }
+      ],
+      "calibration": {
+        "scored": 2598,
+        "unreported": 0,
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 6,
+            "meanConfidence": 0.3,
+            "accuracy": 0.6666666666666666,
+            "gap": 0.36666666666666664
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 2,
+            "meanConfidence": 0.55,
+            "accuracy": 1,
+            "gap": 0.44999999999999996
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 32,
+            "meanConfidence": 0.6499999999999998,
+            "accuracy": 1,
+            "gap": 0.3500000000000002
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 260,
+            "meanConfidence": 0.7606153846153849,
+            "accuracy": 0.9846153846153847,
+            "gap": 0.22399999999999975
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 844,
+            "meanConfidence": 0.8778199052132674,
+            "accuracy": 0.9715639810426541,
+            "gap": 0.09374407582938671
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 1454,
+            "meanConfidence": 0.9485557083906709,
+            "accuracy": 0.8583218707015131,
+            "gap": -0.09023383768915783
+          }
+        ],
+        "ece": 0.10887605850655804,
+        "mce": 0.44999999999999996,
+        "brier": 0.09245011547343965,
+        "auroc": 0.3912136368202758,
+        "meanConfidence": 0.9012856043110286,
+        "accuracy": 0.9091608929946112,
+        "overconfident": false,
+        "byField": {
+          "personal.name": {
+            "scored": 120,
+            "ece": 0.13883333333333253,
+            "auroc": 0.8133903133903134,
+            "accuracy": 0.975,
+            "meanConfidence": 0.8361666666666674
+          },
+          "personal.email": {
+            "scored": 120,
+            "ece": 0.01999999999999902,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.980000000000001
+          },
+          "personal.phone": {
+            "scored": 112,
+            "ece": 0.2514285714285702,
+            "auroc": 0.425,
+            "accuracy": 0.7142857142857143,
+            "meanConfidence": 0.9271428571428555
+          },
+          "personal.location": {
+            "scored": 92,
+            "ece": 0.176521739130434,
+            "auroc": 0.5,
+            "accuracy": 0.9565217391304348,
+            "meanConfidence": 0.7800000000000008
+          },
+          "skills": {
+            "scored": 720,
+            "ece": 0.08805555555555944,
+            "auroc": 0.5,
+            "accuracy": 0.9680555555555556,
+            "meanConfidence": 0.8799999999999961
+          },
+          "experience.entry": {
+            "scored": 210,
+            "ece": 0.0804761904761911,
+            "auroc": 0.39903846153846156,
+            "accuracy": 0.9904761904761905,
+            "meanConfidence": 0.909999999999998
+          },
+          "experience.title": {
+            "scored": 208,
+            "ece": 0.26057692307692265,
+            "auroc": 0.36538461538461536,
+            "accuracy": 0.75,
+            "meanConfidence": 0.9096153846153828
+          },
+          "experience.company": {
+            "scored": 166,
+            "ece": 0.2632530120481922,
+            "auroc": 0.5,
+            "accuracy": 0.6867469879518072,
+            "meanConfidence": 0.9499999999999994
+          },
+          "experience.duration": {
+            "scored": 208,
+            "ece": 0.0903846153846159,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9096153846153828
+          },
+          "experience.description": {
+            "scored": 208,
+            "ece": 0.0903846153846159,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9096153846153828
+          },
+          "education.entry": {
+            "scored": 85,
+            "ece": 0.07823529411764579,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9217647058823543
+          },
+          "education.degree": {
+            "scored": 85,
+            "ece": 0.14058823529411887,
+            "auroc": 0.4444444444444444,
+            "accuracy": 0.8470588235294118,
+            "meanConfidence": 0.9217647058823543
+          },
+          "education.institution": {
+            "scored": 85,
+            "ece": 0.24647058823529536,
+            "auroc": 0.4365079365079365,
+            "accuracy": 0.7411764705882353,
+            "meanConfidence": 0.9217647058823543
+          },
+          "education.graduationDate": {
+            "scored": 85,
+            "ece": 0.07823529411764579,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9217647058823543
+          },
+          "certifications": {
+            "scored": 94,
+            "ece": 0.2510638297872346,
+            "auroc": 0.5,
+            "accuracy": 0.648936170212766,
+            "meanConfidence": 0.9000000000000006
+          }
+        }
+      },
+      "routing": [
+        {
+          "threshold": 0.5,
+          "autoAcceptRate": 0.9976905311778291,
+          "autoAcceptAccuracy": 0.9097222222222222,
+          "errorsPer100Accepted": 9.027777777777777,
+          "errorsCaught": 0.00847457627118644
+        },
+        {
+          "threshold": 0.6,
+          "autoAcceptRate": 0.9969207082371054,
+          "autoAcceptAccuracy": 0.9096525096525097,
+          "errorsPer100Accepted": 9.034749034749034,
+          "errorsCaught": 0.00847457627118644
+        },
+        {
+          "threshold": 0.7,
+          "autoAcceptRate": 0.9846035411855273,
+          "autoAcceptAccuracy": 0.90852228303362,
+          "errorsPer100Accepted": 9.147771696638,
+          "errorsCaught": 0.00847457627118644
+        },
+        {
+          "threshold": 0.8,
+          "autoAcceptRate": 0.8845265588914549,
+          "autoAcceptAccuracy": 0.8999129677980853,
+          "errorsPer100Accepted": 10.008703220191471,
+          "errorsCaught": 0.025423728813559324
+        },
+        {
+          "threshold": 0.9,
+          "autoAcceptRate": 0.5596612779060816,
+          "autoAcceptAccuracy": 0.8583218707015131,
+          "errorsPer100Accepted": 14.167812929848694,
+          "errorsCaught": 0.1271186440677966
+        },
+        {
+          "threshold": 0.95,
+          "autoAcceptRate": 0.16474210931485758,
+          "autoAcceptAccuracy": 0.9182242990654206,
+          "errorsPer100Accepted": 8.177570093457943,
+          "errorsCaught": 0.8516949152542372
+        }
+      ],
+      "cost": {
+        "documentsCosted": 120,
+        "meanLatencyMs": 0.25,
+        "medianLatencyMs": 0,
+        "p90LatencyMs": 1,
+        "meanPreprocessingMs": 42.666666666666664,
+        "meanPromptTokens": 0,
+        "meanCompletionTokens": 0,
+        "totalCostUsd": 0,
+        "costPer1000ResumesUsd": 0,
+        "allTokensReported": true
+      },
+      "perDocumentCounts": {
+        "r001__single-column-digital": {
+          "tp": 29,
+          "fp": 4,
+          "fn": 3,
+          "tn": 0
+        },
+        "r001__two-column-digital": {
+          "tp": 30,
+          "fp": 2,
+          "fn": 2,
+          "tn": 0
+        },
+        "r002__single-column-digital": {
+          "tp": 37,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "r002__two-column-digital": {
+          "tp": 38,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r003__single-column-digital": {
+          "tp": 40,
+          "fp": 1,
+          "fn": 6,
+          "tn": 0
+        },
+        "r003__two-column-digital": {
+          "tp": 40,
+          "fp": 1,
+          "fn": 6,
+          "tn": 0
+        },
+        "r004__single-column-digital": {
+          "tp": 26,
+          "fp": 10,
+          "fn": 10,
+          "tn": 1
+        },
+        "r004__two-column-digital": {
+          "tp": 26,
+          "fp": 10,
+          "fn": 10,
+          "tn": 1
+        },
+        "r005__single-column-digital": {
+          "tp": 31,
+          "fp": 2,
+          "fn": 3,
+          "tn": 0
+        },
+        "r005__two-column-digital": {
+          "tp": 33,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        },
+        "r006__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 27,
+          "tn": 0
+        },
+        "r006__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 27,
+          "tn": 0
+        },
+        "r007__single-column-digital": {
+          "tp": 24,
+          "fp": 4,
+          "fn": 4,
+          "tn": 0
+        },
+        "r007__two-column-digital": {
+          "tp": 23,
+          "fp": 5,
+          "fn": 5,
+          "tn": 0
+        },
+        "r008__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 43,
+          "tn": 0
+        },
+        "r008__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 43,
+          "tn": 0
+        },
+        "r009__single-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 42,
+          "tn": 0
+        },
+        "r009__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 41,
+          "tn": 0
+        },
+        "r010__single-column-digital": {
+          "tp": 29,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        },
+        "r010__two-column-digital": {
+          "tp": 28,
+          "fp": 3,
+          "fn": 2,
+          "tn": 0
+        },
+        "r011__single-column-digital": {
+          "tp": 23,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "r011__two-column-digital": {
+          "tp": 22,
+          "fp": 1,
+          "fn": 1,
+          "tn": 1
+        },
+        "r012__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 44,
+          "tn": 0
+        },
+        "r012__two-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 44,
+          "tn": 0
+        },
+        "r013__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 22,
+          "tn": 0
+        },
+        "r013__two-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 22,
+          "tn": 0
+        },
+        "r014__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 21,
+          "tn": 0
+        },
+        "r014__two-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 21,
+          "tn": 0
+        },
+        "r015__single-column-digital": {
+          "tp": 34,
+          "fp": 4,
+          "fn": 8,
+          "tn": 0
+        },
+        "r015__two-column-digital": {
+          "tp": 37,
+          "fp": 1,
+          "fn": 5,
+          "tn": 0
+        },
+        "r016__single-column-digital": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "r016__two-column-digital": {
+          "tp": 30,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        },
+        "r017__single-column-digital": {
+          "tp": 32,
+          "fp": 10,
+          "fn": 11,
+          "tn": 0
+        },
+        "r017__two-column-digital": {
+          "tp": 31,
+          "fp": 12,
+          "fn": 12,
+          "tn": 0
+        },
+        "r018__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 28,
+          "tn": 0
+        },
+        "r018__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 28,
+          "tn": 0
+        },
+        "r019__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 25,
+          "tn": 0
+        },
+        "r019__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 25,
+          "tn": 0
+        },
+        "r020__single-column-digital": {
+          "tp": 23,
+          "fp": 11,
+          "fn": 12,
+          "tn": 0
+        },
+        "r020__two-column-digital": {
+          "tp": 1,
+          "fp": 24,
+          "fn": 34,
+          "tn": 0
+        },
+        "r021__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 18,
+          "tn": 0
+        },
+        "r021__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 18,
+          "tn": 0
+        },
+        "r022__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 24,
+          "tn": 0
+        },
+        "r022__two-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 24,
+          "tn": 0
+        },
+        "r023__single-column-digital": {
+          "tp": 21,
+          "fp": 4,
+          "fn": 6,
+          "tn": 0
+        },
+        "r023__two-column-digital": {
+          "tp": 23,
+          "fp": 2,
+          "fn": 4,
+          "tn": 0
+        },
+        "r024__single-column-digital": {
+          "tp": 39,
+          "fp": 3,
+          "fn": 4,
+          "tn": 0
+        },
+        "r024__two-column-digital": {
+          "tp": 42,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        },
+        "r025__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 41,
+          "tn": 0
+        },
+        "r025__two-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 41,
+          "tn": 0
+        },
+        "r026__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 16,
+          "tn": 0
+        },
+        "r026__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 16,
+          "tn": 0
+        },
+        "r027__single-column-digital": {
+          "tp": 38,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r027__two-column-digital": {
+          "tp": 38,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r028__single-column-digital": {
+          "tp": 20,
+          "fp": 2,
+          "fn": 4,
+          "tn": 0
+        },
+        "r028__two-column-digital": {
+          "tp": 21,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "r029__single-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 34,
+          "tn": 1
+        },
+        "r029__two-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 34,
+          "tn": 1
+        },
+        "r030__single-column-digital": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r030__two-column-digital": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r031__single-column-digital": {
+          "tp": 22,
+          "fp": 5,
+          "fn": 9,
+          "tn": 0
+        },
+        "r031__two-column-digital": {
+          "tp": 22,
+          "fp": 5,
+          "fn": 9,
+          "tn": 0
+        },
+        "r032__single-column-digital": {
+          "tp": 18,
+          "fp": 3,
+          "fn": 4,
+          "tn": 0
+        },
+        "r032__two-column-digital": {
+          "tp": 20,
+          "fp": 2,
+          "fn": 2,
+          "tn": 0
+        },
+        "r033__single-column-digital": {
+          "tp": 32,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r033__two-column-digital": {
+          "tp": 32,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r034__single-column-digital": {
+          "tp": 10,
+          "fp": 6,
+          "fn": 6,
+          "tn": 0
+        },
+        "r034__two-column-digital": {
+          "tp": 13,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "r035__single-column-digital": {
+          "tp": 16,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "r035__two-column-digital": {
+          "tp": 16,
+          "fp": 2,
+          "fn": 3,
+          "tn": 0
+        },
+        "r036__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 32,
+          "tn": 0
+        },
+        "r036__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 32,
+          "tn": 0
+        },
+        "r037__single-column-digital": {
+          "tp": 46,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r037__two-column-digital": {
+          "tp": 46,
+          "fp": 1,
+          "fn": 0,
+          "tn": 0
+        },
+        "r038__single-column-digital": {
+          "tp": 14,
+          "fp": 1,
+          "fn": 2,
+          "tn": 0
+        },
+        "r038__two-column-digital": {
+          "tp": 15,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        },
+        "r039__single-column-digital": {
+          "tp": 31,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0
+        },
+        "r039__two-column-digital": {
+          "tp": 31,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0
+        },
+        "r040__single-column-digital": {
+          "tp": 13,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "r040__two-column-digital": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r041__single-column-digital": {
+          "tp": 24,
+          "fp": 4,
+          "fn": 5,
+          "tn": 0
+        },
+        "r041__two-column-digital": {
+          "tp": 25,
+          "fp": 5,
+          "fn": 4,
+          "tn": 0
+        },
+        "r042__single-column-digital": {
+          "tp": 29,
+          "fp": 1,
+          "fn": 2,
+          "tn": 1
+        },
+        "r042__two-column-digital": {
+          "tp": 30,
+          "fp": 1,
+          "fn": 1,
+          "tn": 1
+        },
+        "r043__single-column-digital": {
+          "tp": 26,
+          "fp": 6,
+          "fn": 6,
+          "tn": 0
+        },
+        "r043__two-column-digital": {
+          "tp": 26,
+          "fp": 6,
+          "fn": 6,
+          "tn": 0
+        },
+        "r044__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 30,
+          "tn": 0
+        },
+        "r044__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 30,
+          "tn": 0
+        },
+        "r045__single-column-digital": {
+          "tp": 36,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r045__two-column-digital": {
+          "tp": 36,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r046__single-column-digital": {
+          "tp": 44,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r046__two-column-digital": {
+          "tp": 44,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r047__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 30,
+          "tn": 0
+        },
+        "r047__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 30,
+          "tn": 0
+        },
+        "r048__single-column-digital": {
+          "tp": 25,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0
+        },
+        "r048__two-column-digital": {
+          "tp": 26,
+          "fp": 0,
+          "fn": 2,
+          "tn": 0
+        },
+        "r049__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 29,
+          "tn": 0
+        },
+        "r049__two-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 29,
+          "tn": 0
+        },
+        "r050__single-column-digital": {
+          "tp": 17,
+          "fp": 10,
+          "fn": 10,
+          "tn": 0
+        },
+        "r050__two-column-digital": {
+          "tp": 25,
+          "fp": 3,
+          "fn": 2,
+          "tn": 0
+        },
+        "r051__single-column-digital": {
+          "tp": 36,
+          "fp": 1,
+          "fn": 7,
+          "tn": 0
+        },
+        "r051__two-column-digital": {
+          "tp": 37,
+          "fp": 1,
+          "fn": 6,
+          "tn": 0
+        },
+        "r052__single-column-digital": {
+          "tp": 30,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "r052__two-column-digital": {
+          "tp": 29,
+          "fp": 2,
+          "fn": 2,
+          "tn": 0
+        },
+        "r053__single-column-digital": {
+          "tp": 21,
+          "fp": 1,
+          "fn": 1,
+          "tn": 1
+        },
+        "r053__two-column-digital": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "r054__single-column-digital": {
+          "tp": 28,
+          "fp": 8,
+          "fn": 9,
+          "tn": 0
+        },
+        "r054__two-column-digital": {
+          "tp": 29,
+          "fp": 8,
+          "fn": 8,
+          "tn": 0
+        },
+        "r055__single-column-digital": {
+          "tp": 16,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "r055__two-column-digital": {
+          "tp": 17,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r056__single-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 40,
+          "tn": 0
+        },
+        "r056__two-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 39,
+          "tn": 0
+        },
+        "r057__single-column-digital": {
+          "tp": 39,
+          "fp": 3,
+          "fn": 5,
+          "tn": 0
+        },
+        "r057__two-column-digital": {
+          "tp": 42,
+          "fp": 2,
+          "fn": 2,
+          "tn": 0
+        },
+        "r058__single-column-digital": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 19,
+          "tn": 1
+        },
+        "r058__two-column-digital": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 19,
+          "tn": 1
+        },
+        "r059__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 37,
+          "tn": 0
+        },
+        "r059__two-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 37,
+          "tn": 0
+        },
+        "r060__single-column-digital": {
+          "tp": 38,
+          "fp": 1,
+          "fn": 1,
+          "tn": 0
+        },
+        "r060__two-column-digital": {
+          "tp": 37,
+          "fp": 2,
+          "fn": 2,
+          "tn": 0
+        }
+      },
+      "truncatedPrompts": 0,
+      "repairedReplies": 0,
+      "failedOver": 0
+    },
+    {
+      "spec": {
+        "id": "heuristic-naive-pdf",
+        "label": "Rule-based baseline · naive PDF extraction",
+        "provider": "heuristic",
+        "model": "rules-v1",
+        "strategy": "zero-shot",
+        "pdfStrategy": "naive",
+        "requestConfidence": true
+      },
+      "documentsAttempted": 240,
+      "documentsScored": 120,
+      "documentsFailed": 0,
+      "documentsSkipped": 120,
+      "failureReasons": {
+        "ocr-unavailable": 120
+      },
+      "micro": {
+        "precision": 0.7283621837549934,
+        "recall": 0.283419689119171,
+        "f1": 0.4080566952629616,
+        "support": 3860,
+        "counts": {
+          "tp": 1094,
+          "fp": 408,
+          "fn": 2766,
+          "tn": 12
+        }
+      },
+      "microF1Interval": {
+        "point": 0.4080566952629616,
+        "lower": 0.3463913657425455,
+        "upper": 0.4694879036753502,
+        "level": 0.95,
+        "resamples": 2000
+      },
+      "macroF1": 0.4318595415269089,
+      "macroF1Interval": {
+        "point": 0.4318595415269089,
+        "lower": 0.3782911668078967,
+        "upper": 0.48755974300861543,
+        "level": 0.95,
+        "resamples": 2000
+      },
+      "perField": [
+        {
+          "field": "personal.name",
+          "precision": 0.525,
+          "recall": 0.525,
+          "f1": 0.525,
+          "support": 120,
+          "counts": {
+            "tp": 63,
+            "fp": 57,
+            "fn": 57,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8303055418816288
+        },
+        {
+          "field": "personal.email",
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "support": 120,
+          "counts": {
+            "tp": 120,
+            "fp": 0,
+            "fn": 0,
+            "tn": 0
+          },
+          "meanSimilarity": null
+        },
+        {
+          "field": "personal.phone",
+          "precision": 0.7142857142857143,
+          "recall": 0.7142857142857143,
+          "f1": 0.7142857142857143,
+          "support": 112,
+          "counts": {
+            "tp": 80,
+            "fp": 32,
+            "fn": 32,
+            "tn": 8
+          },
+          "meanSimilarity": null
+        },
+        {
+          "field": "personal.location",
+          "precision": 0.5053763440860215,
+          "recall": 0.4051724137931034,
+          "f1": 0.44976076555023925,
+          "support": 116,
+          "counts": {
+            "tp": 47,
+            "fp": 46,
+            "fn": 69,
+            "tn": 4
+          },
+          "meanSimilarity": 0.8494917549946007
+        },
+        {
+          "field": "skills",
+          "precision": 0.904,
+          "recall": 0.30987202925045704,
+          "f1": 0.4615384615384615,
+          "support": 1094,
+          "counts": {
+            "tp": 339,
+            "fp": 36,
+            "fn": 755,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9988241560144215
+        },
+        {
+          "field": "certifications",
+          "precision": 0.31343283582089554,
+          "recall": 0.4117647058823529,
+          "f1": 0.35593220338983045,
+          "support": 102,
+          "counts": {
+            "tp": 42,
+            "fp": 92,
+            "fn": 60,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9917734500004908
+        },
+        {
+          "field": "experience.entry",
+          "precision": 0.4338235294117647,
+          "recall": 0.17771084337349397,
+          "f1": 0.25213675213675213,
+          "support": 332,
+          "counts": {
+            "tp": 59,
+            "fp": 77,
+            "fn": 273,
+            "tn": 0
+          },
+          "meanSimilarity": 0.650527656280759
+        },
+        {
+          "field": "experience.title",
+          "precision": 0.6779661016949152,
+          "recall": 0.12048192771084337,
+          "f1": 0.20460358056265984,
+          "support": 332,
+          "counts": {
+            "tp": 40,
+            "fp": 19,
+            "fn": 292,
+            "tn": 0
+          },
+          "meanSimilarity": 0.7456503372596698
+        },
+        {
+          "field": "experience.company",
+          "precision": 0.6,
+          "recall": 0.05421686746987952,
+          "f1": 0.09944751381215469,
+          "support": 332,
+          "counts": {
+            "tp": 18,
+            "fp": 12,
+            "fn": 314,
+            "tn": 0
+          },
+          "meanSimilarity": 0.6784842044486449
+        },
+        {
+          "field": "experience.duration",
+          "precision": 1,
+          "recall": 0.17771084337349397,
+          "f1": 0.30179028132992325,
+          "support": 332,
+          "counts": {
+            "tp": 59,
+            "fp": 0,
+            "fn": 273,
+            "tn": 0
+          },
+          "meanSimilarity": 1
+        },
+        {
+          "field": "experience.description",
+          "precision": 1,
+          "recall": 0.17771084337349397,
+          "f1": 0.30179028132992325,
+          "support": 332,
+          "counts": {
+            "tp": 59,
+            "fp": 0,
+            "fn": 273,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9493563417681489
+        },
+        {
+          "field": "education.entry",
+          "precision": 0.7619047619047619,
+          "recall": 0.3582089552238806,
+          "f1": 0.4873096446700508,
+          "support": 134,
+          "counts": {
+            "tp": 48,
+            "fp": 15,
+            "fn": 86,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8865735362257857
+        },
+        {
+          "field": "education.degree",
+          "precision": 0.8125,
+          "recall": 0.291044776119403,
+          "f1": 0.42857142857142855,
+          "support": 134,
+          "counts": {
+            "tp": 39,
+            "fp": 9,
+            "fn": 95,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9314318783068782
+        },
+        {
+          "field": "education.institution",
+          "precision": 0.7291666666666666,
+          "recall": 0.26119402985074625,
+          "f1": 0.3846153846153846,
+          "support": 134,
+          "counts": {
+            "tp": 35,
+            "fp": 13,
+            "fn": 99,
+            "tn": 0
+          },
+          "meanSimilarity": 0.8245567155126926
+        },
+        {
+          "field": "education.graduationDate",
+          "precision": 1,
+          "recall": 0.34328358208955223,
+          "f1": 0.5111111111111112,
+          "support": 134,
+          "counts": {
+            "tp": 46,
+            "fp": 0,
+            "fn": 88,
+            "tn": 0
+          },
+          "meanSimilarity": 0.9166666666666667
+        }
+      ],
+      "perGroup": [
+        {
+          "group": "Contact details",
+          "micro": {
+            "precision": 0.6966292134831461,
+            "recall": 0.6623931623931624,
+            "f1": 0.6790799561883899,
+            "support": 468,
+            "counts": {
+              "tp": 310,
+              "fp": 135,
+              "fn": 158,
+              "tn": 12
+            }
+          }
+        },
+        {
+          "group": "Skills",
+          "micro": {
+            "precision": 0.904,
+            "recall": 0.30987202925045704,
+            "f1": 0.4615384615384615,
+            "support": 1094,
+            "counts": {
+              "tp": 339,
+              "fp": 36,
+              "fn": 755,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Certifications",
+          "micro": {
+            "precision": 0.31343283582089554,
+            "recall": 0.4117647058823529,
+            "f1": 0.35593220338983045,
+            "support": 102,
+            "counts": {
+              "tp": 42,
+              "fp": 92,
+              "fn": 60,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Experience",
+          "micro": {
+            "precision": 0.685131195335277,
+            "recall": 0.14156626506024098,
+            "f1": 0.23464802795806294,
+            "support": 1660,
+            "counts": {
+              "tp": 235,
+              "fp": 108,
+              "fn": 1425,
+              "tn": 0
+            }
+          }
+        },
+        {
+          "group": "Education",
+          "micro": {
+            "precision": 0.8195121951219512,
+            "recall": 0.31343283582089554,
+            "f1": 0.45344129554655865,
+            "support": 536,
+            "counts": {
+              "tp": 168,
+              "fp": 37,
+              "fn": 368,
+              "tn": 0
+            }
+          }
+        }
+      ],
+      "byCondition": [
+        {
+          "label": "single-column-digital",
+          "documents": 60,
+          "micro": {
+            "precision": 0.8684957426679281,
+            "recall": 0.47564766839378236,
+            "f1": 0.6146635420154001,
+            "support": 1930,
+            "counts": {
+              "tp": 918,
+              "fp": 139,
+              "fn": 1012,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.6146635420154001,
+            "lower": 0.5422497671246125,
+            "upper": 0.6777376061523765,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        },
+        {
+          "label": "two-column-digital",
+          "documents": 60,
+          "micro": {
+            "precision": 0.3955056179775281,
+            "recall": 0.09119170984455958,
+            "f1": 0.14821052631578946,
+            "support": 1930,
+            "counts": {
+              "tp": 176,
+              "fp": 269,
+              "fn": 1754,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.14821052631578946,
+            "lower": 0.12077558080340617,
+            "upper": 0.17905465305731263,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "byLayout": [
+        {
+          "label": "single-column",
+          "documents": 60,
+          "micro": {
+            "precision": 0.8684957426679281,
+            "recall": 0.47564766839378236,
+            "f1": 0.6146635420154001,
+            "support": 1930,
+            "counts": {
+              "tp": 918,
+              "fp": 139,
+              "fn": 1012,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.6146635420154001,
+            "lower": 0.5422497671246125,
+            "upper": 0.6777376061523765,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        },
+        {
+          "label": "two-column",
+          "documents": 60,
+          "micro": {
+            "precision": 0.3955056179775281,
+            "recall": 0.09119170984455958,
+            "f1": 0.14821052631578946,
+            "support": 1930,
+            "counts": {
+              "tp": 176,
+              "fp": 269,
+              "fn": 1754,
+              "tn": 6
+            }
+          },
+          "microF1Interval": {
+            "point": 0.14821052631578946,
+            "lower": 0.12077558080340617,
+            "upper": 0.17905465305731263,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "byModality": [
+        {
+          "label": "digital",
+          "documents": 120,
+          "micro": {
+            "precision": 0.7283621837549934,
+            "recall": 0.283419689119171,
+            "f1": 0.4080566952629616,
+            "support": 3860,
+            "counts": {
+              "tp": 1094,
+              "fp": 408,
+              "fn": 2766,
+              "tn": 12
+            }
+          },
+          "microF1Interval": {
+            "point": 0.4080566952629616,
+            "lower": 0.3463913657425455,
+            "upper": 0.4694879036753502,
+            "level": 0.95,
+            "resamples": 2000
+          }
+        }
+      ],
+      "errorCounts": [
+        {
+          "category": "MISSING_FIELD",
+          "count": 2219,
+          "share": 0.7144236960721185,
+          "informational": false,
+          "description": "The document contained the value and the model returned nothing."
+        },
+        {
+          "category": "MISSED_ENTRY",
+          "count": 344,
+          "share": 0.1107533805537669,
+          "informational": false,
+          "description": "An entire experience or education entry was not returned."
+        },
+        {
+          "category": "HALLUCINATED_FIELD",
+          "count": 128,
+          "share": 0.0412105602060528,
+          "informational": false,
+          "description": "The document did not contain this field and the model produced a value anyway."
+        },
+        {
+          "category": "OCR_UNAVAILABLE",
+          "count": 120,
+          "share": 0.038634900193174504,
+          "informational": false,
+          "description": "A text-only provider was given a scanned image and no OCR engine was installed."
+        },
+        {
+          "category": "TRUNCATION",
+          "count": 93,
+          "share": 0.02994204764971024,
+          "informational": false,
+          "description": "The returned value is a prefix of the true value; the read stopped early."
+        },
+        {
+          "category": "SPURIOUS_ENTRY",
+          "count": 92,
+          "share": 0.02962009014810045,
+          "informational": false,
+          "description": "An entry was returned that corresponds to nothing in the document."
+        },
+        {
+          "category": "PARTIAL_VALUE",
+          "count": 43,
+          "share": 0.013844172569220863,
+          "informational": false,
+          "description": "Substantially overlapping with the truth but below the match threshold."
+        },
+        {
+          "category": "COLUMN_BLEED",
+          "count": 42,
+          "share": 0.013522215067611075,
+          "informational": false,
+          "description": "The returned value is real text from a different part of the document — the reading order was wrong."
+        },
+        {
+          "category": "ENTRY_MERGE",
+          "count": 15,
+          "share": 0.004829362524146813,
+          "informational": false,
+          "description": "Two or more roles or degrees were collapsed into a single entry."
+        },
+        {
+          "category": "WRONG_VALUE",
+          "count": 10,
+          "share": 0.003219575016097875,
+          "informational": false,
+          "description": "Both values present and unrelated to each other."
+        }
+      ],
+      "calibration": {
+        "scored": 1502,
+        "unreported": 0,
+        "bins": [
+          {
+            "lower": 0,
+            "upper": 0.1,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "count": 0,
+            "meanConfidence": 0,
+            "accuracy": 0,
+            "gap": 0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "count": 7,
+            "meanConfidence": 0.3,
+            "accuracy": 0.14285714285714285,
+            "gap": -0.15714285714285714
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "count": 7,
+            "meanConfidence": 0.45000000000000007,
+            "accuracy": 0,
+            "gap": -0.45000000000000007
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "count": 4,
+            "meanConfidence": 0.55,
+            "accuracy": 0.5,
+            "gap": -0.050000000000000044
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "count": 22,
+            "meanConfidence": 0.6500000000000002,
+            "accuracy": 0.36363636363636365,
+            "gap": -0.2863636363636366
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "count": 284,
+            "meanConfidence": 0.7610563380281695,
+            "accuracy": 0.5598591549295775,
+            "gap": -0.20119718309859203
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "count": 496,
+            "meanConfidence": 0.8763508064516108,
+            "accuracy": 0.8286290322580645,
+            "gap": -0.047721774193546285
+          },
+          {
+            "lower": 0.9,
+            "upper": 1,
+            "count": 682,
+            "meanConfidence": 0.9439882697947235,
+            "accuracy": 0.7521994134897361,
+            "gap": -0.19178885630498743
+          }
+        ],
+        "ece": 0.14804260985352896,
+        "mce": 0.45000000000000007,
+        "brier": 0.20530798934753694,
+        "auroc": 0.6627594364985482,
+        "meanConfidence": 0.8764047936085343,
+        "accuracy": 0.7283621837549934,
+        "overconfident": true,
+        "byField": {
+          "personal.name": {
+            "scored": 120,
+            "ece": 0.30108333333333404,
+            "auroc": 0.5477582846003899,
+            "accuracy": 0.525,
+            "meanConfidence": 0.8260833333333338
+          },
+          "personal.email": {
+            "scored": 120,
+            "ece": 0.01999999999999902,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.980000000000001
+          },
+          "personal.phone": {
+            "scored": 112,
+            "ece": 0.2514285714285702,
+            "auroc": 0.425,
+            "accuracy": 0.7142857142857143,
+            "meanConfidence": 0.9271428571428555
+          },
+          "personal.location": {
+            "scored": 93,
+            "ece": 0.2746236559139793,
+            "auroc": 0.5,
+            "accuracy": 0.5053763440860215,
+            "meanConfidence": 0.7800000000000008
+          },
+          "skills": {
+            "scored": 375,
+            "ece": 0.024000000000003352,
+            "auroc": 0.5,
+            "accuracy": 0.904,
+            "meanConfidence": 0.8799999999999967
+          },
+          "experience.entry": {
+            "scored": 136,
+            "ece": 0.3477941176470586,
+            "auroc": 0.7635923398635263,
+            "accuracy": 0.4338235294117647,
+            "meanConfidence": 0.7816176470588241
+          },
+          "experience.title": {
+            "scored": 59,
+            "ece": 0.18220338983050827,
+            "auroc": 0.40921052631578947,
+            "accuracy": 0.6779661016949152,
+            "meanConfidence": 0.8516949152542377
+          },
+          "experience.company": {
+            "scored": 30,
+            "ece": 0.34999999999999953,
+            "auroc": 0.5,
+            "accuracy": 0.6,
+            "meanConfidence": 0.9499999999999995
+          },
+          "experience.duration": {
+            "scored": 59,
+            "ece": 0.148305084745763,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.8516949152542377
+          },
+          "experience.description": {
+            "scored": 59,
+            "ece": 0.148305084745763,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.8516949152542377
+          },
+          "education.entry": {
+            "scored": 63,
+            "ece": 0.17460317460317443,
+            "auroc": 0.9763888888888889,
+            "accuracy": 0.7619047619047619,
+            "meanConfidence": 0.8666666666666669
+          },
+          "education.degree": {
+            "scored": 48,
+            "ece": 0.14791666666666686,
+            "auroc": 0.5142450142450142,
+            "accuracy": 0.8125,
+            "meanConfidence": 0.9312500000000004
+          },
+          "education.institution": {
+            "scored": 48,
+            "ece": 0.23125000000000026,
+            "auroc": 0.5439560439560439,
+            "accuracy": 0.7291666666666666,
+            "meanConfidence": 0.9312500000000004
+          },
+          "education.graduationDate": {
+            "scored": 46,
+            "ece": 0.06304347826086928,
+            "auroc": 0.5,
+            "accuracy": 1,
+            "meanConfidence": 0.9369565217391306
+          },
+          "certifications": {
+            "scored": 134,
+            "ece": 0.5865671641791066,
+            "auroc": 0.5,
+            "accuracy": 0.31343283582089554,
+            "meanConfidence": 0.9000000000000021
+          }
+        }
+      },
+      "routing": [
+        {
+          "threshold": 0.5,
+          "autoAcceptRate": 0.9906790945406125,
+          "autoAcceptAccuracy": 0.7345430107526881,
+          "errorsPer100Accepted": 26.54569892473118,
+          "errorsCaught": 0.031862745098039214
+        },
+        {
+          "threshold": 0.6,
+          "autoAcceptRate": 0.9880159786950732,
+          "autoAcceptAccuracy": 0.7351752021563343,
+          "errorsPer100Accepted": 26.482479784366575,
+          "errorsCaught": 0.03676470588235294
+        },
+        {
+          "threshold": 0.7,
+          "autoAcceptRate": 0.9733688415446072,
+          "autoAcceptAccuracy": 0.740766073871409,
+          "errorsPer100Accepted": 25.923392612859097,
+          "errorsCaught": 0.07107843137254902
+        },
+        {
+          "threshold": 0.8,
+          "autoAcceptRate": 0.7842876165113183,
+          "autoAcceptAccuracy": 0.7843803056027164,
+          "errorsPer100Accepted": 21.561969439728355,
+          "errorsCaught": 0.37745098039215685
+        },
+        {
+          "threshold": 0.9,
+          "autoAcceptRate": 0.4540612516644474,
+          "autoAcceptAccuracy": 0.7521994134897361,
+          "errorsPer100Accepted": 24.780058651026394,
+          "errorsCaught": 0.5857843137254902
+        },
+        {
+          "threshold": 0.95,
+          "autoAcceptRate": 0.1970705725699068,
+          "autoAcceptAccuracy": 0.9358108108108109,
+          "errorsPer100Accepted": 6.418918918918918,
+          "errorsCaught": 0.9534313725490197
+        }
+      ],
+      "cost": {
+        "documentsCosted": 120,
+        "meanLatencyMs": 0.14166666666666666,
+        "medianLatencyMs": 0,
+        "p90LatencyMs": 1,
+        "meanPreprocessingMs": 30.366666666666667,
+        "meanPromptTokens": 0,
+        "meanCompletionTokens": 0,
+        "totalCostUsd": 0,
+        "costPer1000ResumesUsd": 0,
+        "allTokensReported": true
+      },
+      "perDocumentCounts": {
+        "r001__single-column-digital": {
+          "tp": 22,
+          "fp": 6,
+          "fn": 10,
+          "tn": 0
+        },
+        "r001__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 30,
+          "tn": 0
+        },
+        "r002__single-column-digital": {
+          "tp": 25,
+          "fp": 3,
+          "fn": 13,
+          "tn": 0
+        },
+        "r002__two-column-digital": {
+          "tp": 8,
+          "fp": 8,
+          "fn": 30,
+          "tn": 0
+        },
+        "r003__single-column-digital": {
+          "tp": 40,
+          "fp": 1,
+          "fn": 6,
+          "tn": 0
+        },
+        "r003__two-column-digital": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 45,
+          "tn": 0
+        },
+        "r004__single-column-digital": {
+          "tp": 17,
+          "fp": 7,
+          "fn": 19,
+          "tn": 1
+        },
+        "r004__two-column-digital": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 35,
+          "tn": 1
+        },
+        "r005__single-column-digital": {
+          "tp": 21,
+          "fp": 4,
+          "fn": 13,
+          "tn": 0
+        },
+        "r005__two-column-digital": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 33,
+          "tn": 0
+        },
+        "r006__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 27,
+          "tn": 0
+        },
+        "r006__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 29,
+          "tn": 0
+        },
+        "r007__single-column-digital": {
+          "tp": 21,
+          "fp": 3,
+          "fn": 7,
+          "tn": 0
+        },
+        "r007__two-column-digital": {
+          "tp": 6,
+          "fp": 4,
+          "fn": 22,
+          "tn": 0
+        },
+        "r008__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 43,
+          "tn": 0
+        },
+        "r008__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 43,
+          "tn": 0
+        },
+        "r009__single-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 42,
+          "tn": 0
+        },
+        "r009__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 43,
+          "tn": 0
+        },
+        "r010__single-column-digital": {
+          "tp": 24,
+          "fp": 2,
+          "fn": 6,
+          "tn": 0
+        },
+        "r010__two-column-digital": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 29,
+          "tn": 0
+        },
+        "r011__single-column-digital": {
+          "tp": 23,
+          "fp": 0,
+          "fn": 0,
+          "tn": 1
+        },
+        "r011__two-column-digital": {
+          "tp": 3,
+          "fp": 4,
+          "fn": 20,
+          "tn": 1
+        },
+        "r012__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 44,
+          "tn": 0
+        },
+        "r012__two-column-digital": {
+          "tp": 2,
+          "fp": 15,
+          "fn": 45,
+          "tn": 0
+        },
+        "r013__single-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 23,
+          "tn": 0
+        },
+        "r013__two-column-digital": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 23,
+          "tn": 0
+        },
+        "r014__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 21,
+          "tn": 0
+        },
+        "r014__two-column-digital": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 22,
+          "tn": 0
+        },
+        "r015__single-column-digital": {
+          "tp": 34,
+          "fp": 4,
+          "fn": 8,
+          "tn": 0
+        },
+        "r015__two-column-digital": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 41,
+          "tn": 0
+        },
+        "r016__single-column-digital": {
+          "tp": 20,
+          "fp": 2,
+          "fn": 11,
+          "tn": 0
+        },
+        "r016__two-column-digital": {
+          "tp": 6,
+          "fp": 5,
+          "fn": 25,
+          "tn": 0
+        },
+        "r017__single-column-digital": {
+          "tp": 20,
+          "fp": 6,
+          "fn": 23,
+          "tn": 0
+        },
+        "r017__two-column-digital": {
+          "tp": 2,
+          "fp": 21,
+          "fn": 41,
+          "tn": 0
+        },
+        "r018__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 28,
+          "tn": 0
+        },
+        "r018__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 30,
+          "tn": 0
+        },
+        "r019__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 25,
+          "tn": 0
+        },
+        "r019__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 27,
+          "tn": 0
+        },
+        "r020__single-column-digital": {
+          "tp": 14,
+          "fp": 8,
+          "fn": 21,
+          "tn": 0
+        },
+        "r020__two-column-digital": {
+          "tp": 1,
+          "fp": 24,
+          "fn": 34,
+          "tn": 0
+        },
+        "r021__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 18,
+          "tn": 0
+        },
+        "r021__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 20,
+          "tn": 0
+        },
+        "r022__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 24,
+          "tn": 0
+        },
+        "r022__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 25,
+          "tn": 0
+        },
+        "r023__single-column-digital": {
+          "tp": 21,
+          "fp": 4,
+          "fn": 6,
+          "tn": 0
+        },
+        "r023__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 25,
+          "tn": 0
+        },
+        "r024__single-column-digital": {
+          "tp": 22,
+          "fp": 7,
+          "fn": 21,
+          "tn": 0
+        },
+        "r024__two-column-digital": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 42,
+          "tn": 0
+        },
+        "r025__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 41,
+          "tn": 0
+        },
+        "r025__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 42,
+          "tn": 0
+        },
+        "r026__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 16,
+          "tn": 0
+        },
+        "r026__two-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 17,
+          "tn": 0
+        },
+        "r027__single-column-digital": {
+          "tp": 26,
+          "fp": 3,
+          "fn": 12,
+          "tn": 0
+        },
+        "r027__two-column-digital": {
+          "tp": 5,
+          "fp": 7,
+          "fn": 33,
+          "tn": 0
+        },
+        "r028__single-column-digital": {
+          "tp": 20,
+          "fp": 2,
+          "fn": 4,
+          "tn": 0
+        },
+        "r028__two-column-digital": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 20,
+          "tn": 0
+        },
+        "r029__single-column-digital": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 34,
+          "tn": 1
+        },
+        "r029__two-column-digital": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 35,
+          "tn": 1
+        },
+        "r030__single-column-digital": {
+          "tp": 21,
+          "fp": 0,
+          "fn": 0,
+          "tn": 0
+        },
+        "r030__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 19,
+          "tn": 0
+        },
+        "r031__single-column-digital": {
+          "tp": 16,
+          "fp": 3,
+          "fn": 15,
+          "tn": 0
+        },
+        "r031__two-column-digital": {
+          "tp": 3,
+          "fp": 5,
+          "fn": 28,
+          "tn": 0
+        },
+        "r032__single-column-digital": {
+          "tp": 18,
+          "fp": 3,
+          "fn": 4,
+          "tn": 0
+        },
+        "r032__two-column-digital": {
+          "tp": 6,
+          "fp": 2,
+          "fn": 16,
+          "tn": 0
+        },
+        "r033__single-column-digital": {
+          "tp": 20,
+          "fp": 3,
+          "fn": 12,
+          "tn": 0
+        },
+        "r033__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 30,
+          "tn": 0
+        },
+        "r034__single-column-digital": {
+          "tp": 10,
+          "fp": 6,
+          "fn": 6,
+          "tn": 0
+        },
+        "r034__two-column-digital": {
+          "tp": 3,
+          "fp": 5,
+          "fn": 13,
+          "tn": 0
+        },
+        "r035__single-column-digital": {
+          "tp": 16,
+          "fp": 3,
+          "fn": 3,
+          "tn": 0
+        },
+        "r035__two-column-digital": {
+          "tp": 6,
+          "fp": 3,
+          "fn": 13,
+          "tn": 0
+        },
+        "r036__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 32,
+          "tn": 0
+        },
+        "r036__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 34,
+          "tn": 0
+        },
+        "r037__single-column-digital": {
+          "tp": 22,
+          "fp": 4,
+          "fn": 24,
+          "tn": 0
+        },
+        "r037__two-column-digital": {
+          "tp": 3,
+          "fp": 31,
+          "fn": 43,
+          "tn": 0
+        },
+        "r038__single-column-digital": {
+          "tp": 14,
+          "fp": 1,
+          "fn": 2,
+          "tn": 0
+        },
+        "r038__two-column-digital": {
+          "tp": 6,
+          "fp": 2,
+          "fn": 10,
+          "tn": 0
+        },
+        "r039__single-column-digital": {
+          "tp": 27,
+          "fp": 0,
+          "fn": 7,
+          "tn": 0
+        },
+        "r039__two-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 30,
+          "tn": 0
+        },
+        "r040__single-column-digital": {
+          "tp": 13,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "r040__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 12,
+          "tn": 0
+        },
+        "r041__single-column-digital": {
+          "tp": 21,
+          "fp": 3,
+          "fn": 8,
+          "tn": 0
+        },
+        "r041__two-column-digital": {
+          "tp": 4,
+          "fp": 3,
+          "fn": 25,
+          "tn": 0
+        },
+        "r042__single-column-digital": {
+          "tp": 19,
+          "fp": 3,
+          "fn": 12,
+          "tn": 1
+        },
+        "r042__two-column-digital": {
+          "tp": 3,
+          "fp": 6,
+          "fn": 28,
+          "tn": 1
+        },
+        "r043__single-column-digital": {
+          "tp": 20,
+          "fp": 4,
+          "fn": 12,
+          "tn": 0
+        },
+        "r043__two-column-digital": {
+          "tp": 6,
+          "fp": 5,
+          "fn": 26,
+          "tn": 0
+        },
+        "r044__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 30,
+          "tn": 0
+        },
+        "r044__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 32,
+          "tn": 0
+        },
+        "r045__single-column-digital": {
+          "tp": 22,
+          "fp": 2,
+          "fn": 14,
+          "tn": 0
+        },
+        "r045__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 34,
+          "tn": 0
+        },
+        "r046__single-column-digital": {
+          "tp": 25,
+          "fp": 3,
+          "fn": 19,
+          "tn": 0
+        },
+        "r046__two-column-digital": {
+          "tp": 3,
+          "fp": 6,
+          "fn": 41,
+          "tn": 0
+        },
+        "r047__single-column-digital": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 30,
+          "tn": 0
+        },
+        "r047__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 32,
+          "tn": 0
+        },
+        "r048__single-column-digital": {
+          "tp": 25,
+          "fp": 0,
+          "fn": 3,
+          "tn": 0
+        },
+        "r048__two-column-digital": {
+          "tp": 10,
+          "fp": 3,
+          "fn": 18,
+          "tn": 0
+        },
+        "r049__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 29,
+          "tn": 0
+        },
+        "r049__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 30,
+          "tn": 0
+        },
+        "r050__single-column-digital": {
+          "tp": 17,
+          "fp": 10,
+          "fn": 10,
+          "tn": 0
+        },
+        "r050__two-column-digital": {
+          "tp": 8,
+          "fp": 3,
+          "fn": 19,
+          "tn": 0
+        },
+        "r051__single-column-digital": {
+          "tp": 36,
+          "fp": 1,
+          "fn": 7,
+          "tn": 0
+        },
+        "r051__two-column-digital": {
+          "tp": 2,
+          "fp": 23,
+          "fn": 41,
+          "tn": 0
+        },
+        "r052__single-column-digital": {
+          "tp": 20,
+          "fp": 2,
+          "fn": 11,
+          "tn": 0
+        },
+        "r052__two-column-digital": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 29,
+          "tn": 0
+        },
+        "r053__single-column-digital": {
+          "tp": 21,
+          "fp": 1,
+          "fn": 1,
+          "tn": 1
+        },
+        "r053__two-column-digital": {
+          "tp": 1,
+          "fp": 4,
+          "fn": 21,
+          "tn": 1
+        },
+        "r054__single-column-digital": {
+          "tp": 22,
+          "fp": 6,
+          "fn": 15,
+          "tn": 0
+        },
+        "r054__two-column-digital": {
+          "tp": 2,
+          "fp": 6,
+          "fn": 35,
+          "tn": 0
+        },
+        "r055__single-column-digital": {
+          "tp": 16,
+          "fp": 0,
+          "fn": 1,
+          "tn": 0
+        },
+        "r055__two-column-digital": {
+          "tp": 7,
+          "fp": 2,
+          "fn": 10,
+          "tn": 0
+        },
+        "r056__single-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 40,
+          "tn": 0
+        },
+        "r056__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 40,
+          "tn": 0
+        },
+        "r057__single-column-digital": {
+          "tp": 17,
+          "fp": 5,
+          "fn": 27,
+          "tn": 0
+        },
+        "r057__two-column-digital": {
+          "tp": 2,
+          "fp": 2,
+          "fn": 42,
+          "tn": 0
+        },
+        "r058__single-column-digital": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 19,
+          "tn": 1
+        },
+        "r058__two-column-digital": {
+          "tp": 1,
+          "fp": 2,
+          "fn": 20,
+          "tn": 1
+        },
+        "r059__single-column-digital": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 37,
+          "tn": 0
+        },
+        "r059__two-column-digital": {
+          "tp": 1,
+          "fp": 3,
+          "fn": 39,
+          "tn": 0
+        },
+        "r060__single-column-digital": {
+          "tp": 24,
+          "fp": 3,
+          "fn": 15,
+          "tn": 0
+        },
+        "r060__two-column-digital": {
+          "tp": 1,
+          "fp": 6,
+          "fn": 38,
+          "tn": 0
+        }
+      },
+      "truncatedPrompts": 0,
+      "repairedReplies": 0,
+      "failedOver": 0
+    }
+  ]
+}

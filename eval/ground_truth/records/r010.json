@@ -1,0 +1,84 @@
+{
+  "id": "r010",
+  "seed": 20332095,
+  "truth": {
+    "personal": {
+      "name": "Tomasz Demirel",
+      "email": "tdemirel@fastpost.email",
+      "phone": "+91 80187 55633",
+      "location": "Brno, Czechia"
+    },
+    "skills": [
+      "Causal inference",
+      "Vector databases",
+      "CUDA",
+      "PyTorch",
+      "Ray",
+      "Transformers",
+      "scikit-learn",
+      "Python",
+      "MLflow",
+      "Feature engineering",
+      "Public speaking"
+    ],
+    "experience": [
+      {
+        "title": "Applied Scientist",
+        "company": "Wayfinder Maritime",
+        "duration": "02/2024-Present",
+        "description": "Trained a 340M-parameter ranking model that lifted click-through rate 4.2% in a two-week online test. Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months."
+      },
+      {
+        "title": "Research Engineer",
+        "company": "Wayfinder Maritime",
+        "duration": "03/2023-02/2024",
+        "description": "Diagnosed a training/serving skew that had been suppressing recall 9 points for eight months. Trained a 340M-parameter ranking model that lifted click-through rate 4.2% in a two-week online test. Built the offline evaluation harness the team now gates every model launch on; cut regression escapes to zero over four quarters."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech in Computer Science and Engineering",
+        "institution": "University of West Marches",
+        "graduationDate": "08/2020"
+      }
+    ],
+    "certifications": [
+      "Google Cloud Professional Machine Learning Engineer"
+    ]
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "Education",
+      "skills": "TECHNOLOGIES",
+      "certifications": "CREDENTIALS",
+      "summary": "OBJECTIVE"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " | ",
+    "nameCase": "title",
+    "serifBody": false,
+    "bullet": "–",
+    "dateFormat": "numeric",
+    "summaryText": "Four years of ml work with a bias toward measurable outcomes. Comfortable owning a system end to end, from design review through on-call.",
+    "projects": null,
+    "skillsAsBullets": true,
+    "distractors": [],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "ml",
+    "seniority": "mid",
+    "experienceCount": 2,
+    "skillCount": 11,
+    "hasEducation": true,
+    "hasCertifications": true,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": true,
+    "dateFormat": "numeric",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}

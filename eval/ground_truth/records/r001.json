@@ -1,0 +1,88 @@
+{
+  "id": "r001",
+  "seed": 20260824,
+  "truth": {
+    "personal": {
+      "name": "HYUN-WOO BERGSTRÖM",
+      "email": "hyunwoob@mailbox.dev",
+      "phone": "+1 (476) 008-8414",
+      "location": "Pune, India"
+    },
+    "skills": [
+      "WebAssembly",
+      "TypeScript",
+      "Accessibility (WCAG 2.2)",
+      "Vite",
+      "Design systems",
+      "Next.js",
+      "React",
+      "Playwright",
+      "CSS architecture"
+    ],
+    "experience": [
+      {
+        "title": "Senior Frontend Engineer",
+        "company": "Tessellate AI",
+        "duration": "2024-Present",
+        "description": "Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      },
+      {
+        "title": "Frontend Engineer",
+        "company": "Alder & Finch Advisory",
+        "duration": "2023-2024",
+        "description": "Led the accessibility remediation that took the checkout flow from 41 to zero critical axe violations. Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Shipped a design-system migration across 210 components without a feature freeze."
+      },
+      {
+        "title": "UI Engineer",
+        "company": "Driftwood Retail Group",
+        "duration": "2022-2023",
+        "description": "Rebuilt the dashboard shell around route-level code splitting, dropping time-to-interactive from 6.1s to 1.8s on mid-tier Android. Introduced visual regression testing, catching 27 layout defects before release in the first quarter."
+      }
+    ],
+    "education": [
+      {
+        "degree": "MBA, Operations",
+        "institution": "Universidade de Braganca",
+        "graduationDate": "2023"
+      }
+    ],
+    "certifications": []
+  },
+  "style": {
+    "headings": {
+      "experience": "Experience",
+      "education": "ACADEMIC BACKGROUND",
+      "skills": "TECHNICAL SKILLS",
+      "certifications": "Certifications",
+      "summary": "PROFESSIONAL SUMMARY"
+    },
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked",
+    "contactSeparator": " | ",
+    "nameCase": "upper",
+    "serifBody": false,
+    "bullet": "‣",
+    "dateFormat": "year-only",
+    "summaryText": "Four years of frontend work with a bias toward measurable outcomes. Has shipped to production continuously and has the incident reviews to prove it.",
+    "projects": null,
+    "skillsAsBullets": false,
+    "distractors": [
+      "linkedin.com/in/hyunwoobergst"
+    ],
+    "skillCategories": false
+  },
+  "meta": {
+    "discipline": "frontend",
+    "seniority": "mid",
+    "experienceCount": 3,
+    "skillCount": 9,
+    "hasEducation": true,
+    "hasCertifications": false,
+    "hasPhone": true,
+    "hasLocation": true,
+    "hasRepeatEmployer": false,
+    "dateFormat": "year-only",
+    "headingStyle": "conventional",
+    "entryHeaderStyle": "title-company-date-stacked"
+  }
+}
