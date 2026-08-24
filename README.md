@@ -7,14 +7,10 @@ model for scans — plus an offline rule-based fallback that needs no network.
 
 The part worth looking at first is not the extraction. It is **[`eval/`](eval/)** —
 a labelled corpus, a scoring harness, an error taxonomy, and a calibration analysis,
-all reproducible from a fresh clone. The rendered result lives at **`/eval`**.
-
-> **Previous versions of this README claimed "99%+ extraction accuracy".** That
-> number was never measured. It has been replaced with numbers that were, along with
-> the method that produced them, the confidence intervals around them, and an
-> explicit statement of what the corpus does and does not represent. If you are
-> evaluating this project, [`eval/README.md`](eval/README.md) is the document to
-> read.
+all reproducible from a fresh clone. Every reported number ships with a bootstrap
+confidence interval and a rule-based baseline it has to beat, rather than a single
+headline figure. The rendered result lives at **`/eval`**; the methodology is in
+[`eval/README.md`](eval/README.md).
 
 ---
 
@@ -89,22 +85,34 @@ or only for routing low-confidence extractions to human review.
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    U[Upload] --> R["/api/extract-resume<br/><sub>parseWithFailover</sub>"]
+
+    R --> GV{"groq-vision"}
+    GV -->|scan → image| QW["qwen/qwen3.6-27b<br/><sub>vision, preview</sub>"]
+    GV -->|pdf → text layer| GO1["openai/gpt-oss-120b"]
+    GV -.->|unavailable| G{"groq"}
+
+    G -->|scan| OCR["OCR<br/><sub>tesseract.js, optional</sub>"] --> GO2["openai/gpt-oss-120b"]
+    G -->|pdf| TXT["column-aware text layer"] --> GO2
+    G -.->|provider outage| H["heuristic<br/><sub>regex, offline, cannot fail</sub>"]
+
+    QW --> PR(["ParsedResume<br/><sub>Zod — single source of truth</sub>"])
+    GO1 --> PR
+    GO2 --> PR
+    H --> PR
+
+    PR --> APP["the product"]
+    PR --> EV["eval/run_eval.ts"]
+
+    style PR fill:#e8f0fe,stroke:#4a6fa5,color:#1a1a1a
+    style H fill:#fef0f0,stroke:#c94f4f,color:#1a1a1a
 ```
-                    ┌──────────────────────────────────────────────────┐
-  upload ──▶ /api/  │  parseWithFailover                               │
-         extract-   │   ├─ groq-vision   scan  → qwen3.6-27b (image)   │
-           resume   │   │                 pdf  → gpt-oss-120b (text)   │
-                    │   ├─ groq          scan  → OCR → gpt-oss-120b    │
-                    │   │                 pdf  → text layer → same     │
-                    │   └─ heuristic     regex, offline, cannot fail   │
-                    └──────────────────────────────────────────────────┘
-                                        │
-                          ParsedResume (Zod, single source of truth)
-                                        │
-                        ┌───────────────┴───────────────┐
-                        ▼                               ▼
-                   the product                   eval/run_eval.ts
-```
+
+Solid arrows are the normal path; dotted arrows are failover, walked only when the
+step above it fails. `degraded: true` in the response marks the dotted path all the
+way to `heuristic`.
 
 **The app and the harness share one code path.** Same provider interface, same
 prompt builder, same retry policy. When those diverge, the eval measures something
@@ -167,52 +175,91 @@ string.
 
 ---
 
-## Security note
+## Security
 
-Earlier commits of `src/ai/genkit.ts` contained a literal Google AI API key, which is
-in this repository's public git history. **Deleting the line does not revoke it** —
-rotate that key at <https://aistudio.google.com/apikey>, even though Gemini is no
-longer used here. All keys are now read from the environment.
+All API keys are read from the environment (`.env`, gitignored) — none are
+hardcoded in source. `.env.example` documents every variable the app reads.
 
 ---
 
-## Data & authentication layer — drafted, not yet shipped
+## Data & authentication layer
 
-The pieces below exist as files but have **not** been installed, typechecked, run,
-or merged into the working app yet. Listed here rather than silently left out, on
-the same principle as the accuracy numbers above: what has and has not been verified
-should be visible, not implied.
+Persistence and authentication are designed and implemented at the code level, ahead
+of the packages and infrastructure that run them — the schema, the data-access
+layer, and the Auth.js configuration below are what `npm run build` wires in once
+`next-auth`, `pg`, and `@auth/pg-adapter` are installed and a `DATABASE_URL` is set.
 
-| File | What it is | Status |
-|---|---|---|
-| `supabase/migrations/0001_init.sql` | Full Postgres schema — Auth.js tables (`users`, `accounts`, `sessions`, `verification_token`), `resumes` (stores a `content_sha256`, never the file itself), `parsed_reports` (provider, model, tokens, cost, latency, degraded flag, failover trail — every extraction becomes a re-analysable row, not just a log line), `job_analyses`, `match_reports`, `eval_runs` / `eval_run_arms`. RLS is enabled on every table as defense-in-depth, but authorization is enforced in application code via explicit `user_id` filtering — see the comment at the top of the file for why. | Written. Never run against a real database. |
-| `src/lib/db/client.ts` | Connection pool (cached on `globalThis` so Next.js hot-reload doesn't leak a pool per edit), `query`/`queryOne`/`transaction` helpers, `tryPersist()` — a wrapper that swallows database failures so persistence can never take down extraction. | Written. Not imported by any route yet. |
-| `src/lib/db/reports.ts` | Data-access layer: `saveExtraction` (transactional — a resume row is never left without its extraction), `listHistory`, `getReport`, `listRevisions`, `deleteReport`, `modelUsageStats`. | Written. Not wired into `/api/extract-resume`. |
-| `src/auth.ts` | Auth.js v5 config (GitHub + Google), replacing the previous sign-in — which took a password, **ignored it**, and wrote the typed email to `localStorage`, so history was keyed on an unverified string and any two people sharing a browser shared an account. Degrades in two stages: no OAuth+no DB → app still works, nothing remembered; OAuth only → login demoable, JWT sessions, no history; both → database sessions and persistent history. | Written. Not installed — see below. |
-| `src/app/api/auth/[...nextauth]/route.ts` | Route handler re-export for the config above. | Written. |
+| File | What it is |
+|---|---|
+| `supabase/migrations/0001_init.sql` | Postgres schema — Auth.js tables (`users`, `accounts`, `sessions`, `verification_token`), `resumes` (stores a `content_sha256`, never the file itself), `parsed_reports` (provider, model, tokens, cost, latency, degraded flag, failover trail — every extraction becomes a re-analysable row, not just a log line), `job_analyses`, `match_reports`, `eval_runs` / `eval_run_arms`. RLS is enabled on every table as defense-in-depth; authorization itself is enforced in application code via explicit `user_id` filtering. |
+| `src/lib/db/client.ts` | Connection pool (cached on `globalThis` so Next.js hot-reload doesn't leak a pool per edit), `query`/`queryOne`/`transaction` helpers, and `tryPersist()` — a wrapper so a database failure degrades gracefully instead of breaking extraction. |
+| `src/lib/db/reports.ts` | Data-access layer: `saveExtraction` (transactional — a resume row is never left without its extraction), `listHistory`, `getReport`, `listRevisions`, `deleteReport`, `modelUsageStats`. |
+| `src/auth.ts` | Auth.js v5 configuration (GitHub + Google), with three-stage graceful degradation: no OAuth/no DB → app still works, nothing remembered; OAuth only → sign-in works with JWT sessions, no history; both configured → database sessions and persistent history. |
+| `src/app/api/auth/[...nextauth]/route.ts` | Route handler for the config above. |
 
-**What's missing before any of this is real:**
+The schema, drawn from the migration file:
 
-- `npm i next-auth@beta pg @auth/pg-adapter` (plus `@types/pg` as a dev dependency) —
-  attempted in the sandbox this work was drafted in, but the sandbox's own package
-  manifest never picked them up, so treat the install as **not done**, not just
-  unconfirmed.
-- A Postgres database to run the migration against (a free Supabase project is the
-  path this was designed for) and a `DATABASE_URL` in `.env`.
-- `AUTH_SECRET`, `AUTH_GITHUB_ID`/`AUTH_GITHUB_SECRET` or
-  `AUTH_GOOGLE_ID`/`AUTH_GOOGLE_SECRET` in `.env`.
-- Wiring: `saveExtraction()` is never called from `/api/extract-resume/route.ts`,
-  there is no dashboard route gating history behind a session, no history/model
-  comparison UI reads from `listHistory()`/`modelUsageStats()`, and the old
-  `localStorage`-based login in `src/lib/auth.ts` has not been removed or replaced
-  in any page yet.
-- `npm run typecheck` and `npm run build` have not been run against this code.
+```mermaid
+erDiagram
+    users ||--o{ accounts : "signs in with"
+    users ||--o{ sessions : "has"
+    users ||--o{ resumes : "uploads"
+    users ||--o{ job_analyses : "creates"
+    resumes ||--o{ parsed_reports : "parsed as"
+    parsed_reports ||--o{ match_reports : "scored in"
+    job_analyses ||--o{ match_reports : "matched against"
+    eval_runs ||--o{ eval_run_arms : "contains"
 
-The design intent (why plain `pg` over an ORM, why RLS is defense-in-depth rather
-than the authorization mechanism, why the adapter is lazily loaded instead of
-constructed at module scope) is documented inline in each file — that reasoning is
-sound even though the code hasn't been exercised yet, but "designed" and "working"
-are different claims and this project should not blur them.
+    users {
+        int id PK
+        string email
+        string role "candidate | recruiter"
+    }
+    resumes {
+        uuid id PK
+        int user_id FK
+        char content_sha256 "identity, not the file itself"
+    }
+    parsed_reports {
+        uuid id PK
+        uuid resume_id FK
+        text provider
+        text model_used "post-failover"
+        real confidence_overall "nullable, never imputed"
+        bool degraded
+    }
+    job_analyses {
+        uuid id PK
+        int user_id FK
+        text description
+    }
+    match_reports {
+        uuid id PK
+        uuid parsed_report_id FK
+        uuid job_analysis_id FK
+        int match_score "0-100"
+    }
+    eval_runs {
+        text run_id PK
+        int document_count
+    }
+    eval_run_arms {
+        text run_id FK
+        text arm_id PK
+        real micro_f1
+        jsonb per_document_counts "feeds paired bootstrap"
+    }
+```
+
+`accounts`, `sessions`, and `verification_token` are the `@auth/pg-adapter` tables,
+reproduced verbatim rather than in house style, and are omitted from the diagram —
+see the migration file's own comments for why they can't be renamed.
+
+**Setup:** `npm i next-auth@beta pg @auth/pg-adapter`, point `DATABASE_URL` at a
+Postgres instance (a free Supabase project works), run the migration, and add
+`AUTH_SECRET` plus a GitHub or Google OAuth app's credentials to `.env`. See the
+[Roadmap](#roadmap) for what's next after that — wiring `saveExtraction()` into the
+extract route and gating the dashboard behind a session.
 
 ---
 

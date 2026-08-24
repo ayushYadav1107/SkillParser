@@ -1,4 +1,3 @@
-'use server';
 /**
  * @fileOverview Extracting structured information from a candidate's resume.
  *

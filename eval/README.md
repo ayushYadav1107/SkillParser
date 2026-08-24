@@ -34,10 +34,22 @@ resumes specifically — produces a pile of personal data that cannot be publish
 So this corpus is generated **label-first**: a structured record is synthesised, and
 the document is rendered *from* that record.
 
+```mermaid
+flowchart LR
+    A["pools.ts<br/><sub>vocabulary</sub>"] --> B["records.ts<br/><sub>the LABEL</sub>"]
+    B --> C["layout.ts<br/><sub>positions</sub>"]
+    C --> D["render.ts<br/><sub>PDF | scan</sub>"]
+    D --> E[("documents/")]
+    B -.->|checked in, seed-reproducible| F[("ground_truth/records/*.json")]
+
+    style F fill:#e8f0fe,stroke:#4a6fa5,color:#1a1a1a
+    style E fill:#fef3e0,stroke:#c9821f,color:#1a1a1a
 ```
-  pools.ts ──▶ records.ts ──▶ layout.ts ──▶ render.ts ──▶ documents/
-  (vocab)      (the LABEL)     (positions)   (PDF | scan)
-```
+
+The record — the label — is generated first and checked into git. Everything to its
+right is a deterministic function of it plus a seed, so `npm run eval:corpus` on a
+fresh clone reproduces `documents/` byte-for-byte without ever re-deciding what the
+"correct" answer is.
 
 | | |
 |---|---|
@@ -139,6 +151,18 @@ per machine only: the raster backend resolves fonts through the host OS.
 ---
 
 ## 2. What gets measured
+
+```mermaid
+flowchart LR
+    G[ground truth] --> AL{align.ts<br/>bitmask DP}
+    P[prediction] --> AL
+    AL --> M[normalize.ts + similarity.ts<br/>per-field match]
+    M --> S["score.ts<br/>TP / FP / FN / TN"]
+    S --> AGG[aggregate.ts<br/>micro + macro F1]
+    S --> ERR[errors.ts<br/>15-category taxonomy]
+    AGG --> BOOT["stats.ts<br/>bootstrap CI, resampled over documents"]
+    S --> CAL["calibration.ts<br/>AUROC, ECE"]
+```
 
 The unit is a **field instance**: one (document, field-path) pair.
 
